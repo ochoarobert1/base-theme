@@ -110,8 +110,6 @@ function proyecto_load_js() {
 
 add_action('init', 'proyecto_load_js');
 
-
-
 /* --------------------------------------------------------------
     ADD THEME SUPPORT
 -------------------------------------------------------------- */
@@ -119,6 +117,32 @@ add_action('init', 'proyecto_load_js');
 load_theme_textdomain('PROYECTO', get_template_directory() . '/languages');
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
+
+/* --------------------------------------------------------------
+    CUSTOM ADMIN LOGIN
+-------------------------------------------------------------- */
+
+add_action('login_head', 'custom_login_logo');
+function custom_login_logo() {
+    echo '
+    <style type="text/css">
+        body{
+            background-image:url(' . get_bloginfo('template_directory') . '/images/login-bg.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        h1 {
+            background-image:url(' . get_bloginfo('template_directory') . '/images/logo.png) !important;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        a { background-image:none !important;}
+        .login form{-webkit-border-radius: 0px; border-radius: 0px; background-color: rgba(255,255,255,0.7);}
+        .login label{color: black; font-weight:bold;}
+    </style>
+    ';
+}
 
 /* --------------------------------------------------------------
     ADD CUSTOM METABOX
