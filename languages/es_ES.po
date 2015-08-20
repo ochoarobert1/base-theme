@@ -1,0 +1,342 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: JP Blank\n"
+"POT-Creation-Date: 2015-08-06 10:37-0430\n"
+"PO-Revision-Date: 2015-08-06 10:37-0430\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x:2c,1;_ex:2c,1\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../functions.php:43
+msgctxt "Post Type General Name"
+msgid "Portafolio"
+msgstr ""
+
+#: ../functions.php:44
+msgctxt "Post Type Singular Name"
+msgid "Item"
+msgstr ""
+
+#: ../functions.php:45 ../functions.php:46
+msgid "Portafolio"
+msgstr ""
+
+#: ../functions.php:47
+msgid "Item Padre:"
+msgstr ""
+
+#: ../functions.php:48
+msgid "Todos los Items"
+msgstr ""
+
+#: ../functions.php:49
+msgid "Agregar Item"
+msgstr ""
+
+#: ../functions.php:50
+msgid "Agregar"
+msgstr ""
+
+#: ../functions.php:51
+msgid "Nuevo Item"
+msgstr ""
+
+#: ../functions.php:52
+msgid "Editar Item"
+msgstr ""
+
+#: ../functions.php:53
+msgid "Actualizar Item"
+msgstr ""
+
+#: ../functions.php:54
+msgid "Ver Item"
+msgstr ""
+
+#: ../functions.php:55
+msgid "Buscar Item"
+msgstr ""
+
+#: ../functions.php:56
+msgid "No encontrado"
+msgstr ""
+
+#: ../functions.php:57
+msgid "No encontrado en papelera"
+msgstr ""
+
+#: ../functions.php:60
+msgid "portafolio"
+msgstr ""
+
+#: ../functions.php:61
+msgid "Trabajos realizados"
+msgstr ""
+
+#~ msgctxt "Post Type General Name"
+#~ msgid "Sliders"
+#~ msgstr "Sliders"
+
+#~ msgctxt "Post Type Singular Name"
+#~ msgid "Slide"
+#~ msgstr "Diapositiva"
+
+#~ msgid "Slider"
+#~ msgstr "Slider"
+
+#~ msgid "Parent Slide:"
+#~ msgstr "Diapositiva Padre:"
+
+#~ msgid "All Slides"
+#~ msgstr "Todas Las diapositivas"
+
+#~ msgid "Add New Slide"
+#~ msgstr "Añadir Nueva Diapositiva"
+
+#~ msgid "Add Slide"
+#~ msgstr "Añadir Diapositiva"
+
+#~ msgid "New Slide"
+#~ msgstr "Nueva Diapositiva"
+
+#~ msgid "Edit Slide"
+#~ msgstr "Editar Diapositiva"
+
+#~ msgid "Update Slide"
+#~ msgstr "Actualizar Diapositiva"
+
+#~ msgid "View Slide"
+#~ msgstr "Ver Diapositiva"
+
+#~ msgid "Search Slide"
+#~ msgstr "Buscar Diapositiva"
+
+#~ msgid "Slide Not found"
+#~ msgstr "Diapositiva no encontrada"
+
+#~ msgid "Not found in Trash"
+#~ msgstr "No encontrada en papelera"
+
+#~ msgid "Slide"
+#~ msgstr "Diapositiva"
+
+#~ msgid "Slider in front-page"
+#~ msgstr "Diapositivas en Slider en la pagina principal"
+
+#~ msgctxt "Post Type General Name"
+#~ msgid "Services"
+#~ msgstr "Servicios"
+
+#~ msgctxt "Post Type Singular Name"
+#~ msgid "Service"
+#~ msgstr "Servicio"
+
+#~ msgid "Services"
+#~ msgstr "Servicios"
+
+#~ msgid "Parent Service:"
+#~ msgstr "Servicio Padre:"
+
+#~ msgid "All Services"
+#~ msgstr "Todos los Servicios"
+
+#~ msgid "Add New Service"
+#~ msgstr "Añadir Nuevo Servicio"
+
+#~ msgid "Add Service"
+#~ msgstr "Añadir Servicio"
+
+#~ msgid "New Service"
+#~ msgstr "Nuevo Servicio"
+
+#~ msgid "Edit Service"
+#~ msgstr "Editar Servicio"
+
+#~ msgid "Update Service"
+#~ msgstr "Actualizar Servicio"
+
+#~ msgid "View Service"
+#~ msgstr "Ver Servicio"
+
+#~ msgid "Search Service"
+#~ msgstr "Buscar Servicio"
+
+#~ msgid "Service Not found"
+#~ msgstr "Servicio no encontrado"
+
+#~ msgid "Service"
+#~ msgstr "Servicio"
+
+#~ msgid "Services provided"
+#~ msgstr "Servicios que ofrece la empresa"
+
+#~ msgctxt "Taxonomy General Name"
+#~ msgid "Service Types"
+#~ msgstr "Tipos de Servicios"
+
+#~ msgctxt "Taxonomy Singular Name"
+#~ msgid "Service Type"
+#~ msgstr "Tipo de Servicio"
+
+#~ msgid "Service type"
+#~ msgstr "Tipo de Servicio"
+
+#~ msgid "All Service type"
+#~ msgstr "Todos los Tipo de Servicios"
+
+#~ msgid "Parent Service type"
+#~ msgstr "Tipo de Servicio Padre:"
+
+#~ msgid "Parent Service type:"
+#~ msgstr " Tipo de Servicio Padre:"
+
+#~ msgid "New Service type Name"
+#~ msgstr "Nuevo Tipo de Servicio"
+
+#~ msgid "Add New Service type"
+#~ msgstr "Añadir Tipo de Servicio"
+
+#~ msgid "Edit Service type"
+#~ msgstr "Editar Tipo de Servicio"
+
+#~ msgid "Update Service type"
+#~ msgstr "Actualizar Tipo de servicio"
+
+#~ msgid "View Service type"
+#~ msgstr "Ver Tipo de Servicio"
+
+#~ msgid "Separate Service type Service typewith commas"
+#~ msgstr "Separar tipos de servicio con comas"
+
+#~ msgid "Add or remove Service type"
+#~ msgstr "Añadir o Remover Tipos de Servicio"
+
+#~ msgid "Choose from the most used"
+#~ msgstr "Escoger de los más usados"
+
+#~ msgid "Popular Service type"
+#~ msgstr " Tipo de servicios populares"
+
+#~ msgid "Search Service type"
+#~ msgstr "Buscar Tipo de Servicio"
+
+#~ msgid "Not Found"
+#~ msgstr "No encontrado"
+
+#~ msgid "Home"
+#~ msgstr "Inicio"
+
+#~ msgid "About Us"
+#~ msgstr "¿Quiénes Somos?"
+
+#~ msgid "Blog"
+#~ msgstr "Blog"
+
+#~ msgid "Legal"
+#~ msgstr "Legal"
+
+#~ msgid "Affiliates"
+#~ msgstr "Afiliados"
+
+#~ msgid "Cookie Policy"
+#~ msgstr "Política de Cookies"
+
+#~ msgid "Calling Guide"
+#~ msgstr "Guía Telefónica"
+
+#~ msgid "Pay as you Go"
+#~ msgstr "Postpago"
+
+#~ msgid "Smart Home Phone Service"
+#~ msgstr "Servicio Telefónico Inteligente"
+
+#~ msgid "GSM / Sim card"
+#~ msgstr "GSM / Sim card"
+
+#~ msgid "Android App"
+#~ msgstr "Android App"
+
+#~ msgid "Apple iOS App"
+#~ msgstr "Apple iOS App"
+
+#~ msgid "Windows Phone App"
+#~ msgstr "Windows Phone App"
+
+#~ msgid "Facebook App"
+#~ msgstr "Facebook App"
+
+#, fuzzy
+#~ msgid "Search Item"
+#~ msgstr "Buscar"
+
+#~ msgid "Phone Services"
+#~ msgstr "Servicios Telefónicos"
+
+#, fuzzy
+#~ msgid "Pay as yo Go"
+#~ msgstr "Postpago"
+
+#, fuzzy
+#~ msgid "Smart Phone Unlimited"
+#~ msgstr "Servicio Telefónico Inteligente"
+
+#, fuzzy
+#~ msgid "Smart Phone 500 Min"
+#~ msgstr "Servicio Telefónico Inteligente"
+
+#, fuzzy
+#~ msgid "Global Roaming Pay as you Go"
+#~ msgstr "Postpago"
+
+#~ msgid "Our Apps"
+#~ msgstr "Aplicaciones"
+
+#~ msgid "Sign In"
+#~ msgstr "Registrarse"
+
+#, fuzzy
+#~ msgid "Search Rates"
+#~ msgstr "Buscar"
+
+#~ msgid "Blue"
+#~ msgstr "Azul"
+
+#~ msgid "Green"
+#~ msgstr "Verde"
+
+#~ msgid "Purple"
+#~ msgstr "Púrpura"
+
+#~ msgid "Red"
+#~ msgstr "Rojo"
+
+#~ msgid "Yellow"
+#~ msgstr "Amarillo"
+
+#, fuzzy
+#~ msgid "Worlwide Service"
+#~ msgstr "Servicios Telefónicos"
+
+#~ msgid "Search"
+#~ msgstr "Buscar"
+
+#~ msgid "4 things Global Link"
+#~ msgstr "4 cosas en las que Global Link"
+
+#~ msgid "is really good at!"
+#~ msgstr "es realmente bueno!"
+
+#~ msgid "Online Support"
+#~ msgstr "Soporte En-línea"
+
+#~ msgid "about-us"
+#~ msgstr "¿Quiénes Somos?"
