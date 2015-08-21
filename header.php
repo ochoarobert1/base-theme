@@ -46,6 +46,5 @@
         <meta property="og:image" content='<?php if(is_single()){ $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); echo $url; } else { echo bloginfo('template_url')."/images/oglogo.png"; } ?>' />
         <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
         <?php wp_head() ?>
-
     </head>
     <body <?php body_class() ?>>

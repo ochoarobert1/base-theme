@@ -28,7 +28,7 @@ $(document).ready(function () {
         cursorcolor: '#BE1B20',
         cursorborder: '0px',
         cursorborderradius: '0px',
-        background: '#2C70B7',
+        background: '#000000',
         hwacceleration: false,
         scrollspeed: 60,
         mousescrollstep: 85,
