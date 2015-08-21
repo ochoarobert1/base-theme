@@ -1,9 +1,10 @@
 <?php get_header(); ?>
-<div class="container">
+<main class="container" role="main">
     <div class="row">
-        <div class="col-md-12">
-        </div>
+        <section class="col-md-12">
+            <!-- contents -->
+        </section>
     </div>
-</div>
+</main>
 <?php
 get_footer();

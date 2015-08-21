@@ -1,5 +1,5 @@
 <?php get_template_part('contacto-submit') ?>
-<form action="./" method="post" class="form margint30" role="form" id="contact-form">
+<form action="./" method="post" class="form margint30" role="form" id="contact-form" role="form">
     <div class="form-group">
         <input type="text" class="form-control validate[required]" id="nombre" name="nombre" placeholder="Nombre *">
     </div>

@@ -1,9 +1,7 @@
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
+<footer class="container" role="contentinfo">
+    <div class="row">
+        <div class="col-md-12">
 
-            </div>
         </div>
     </div>
 </footer>

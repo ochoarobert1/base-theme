@@ -1,11 +1,16 @@
 <?php get_header(); ?>
 <?php the_post(); ?>
-<div class="container">
+<main class="container" role="main">
     <div class="row">
-        <div class="col-md-12">
-            <?php the_content(); ?>
-        </div>
+        <section class="col-md-12">
+            <h1><?php the_title(); ?></h1>
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <?php the_content(); ?>
+                <?php comments_template( '', true ); // Remove if you don't want comments ?>
+                <br class="clear">
+                <?php edit_post_link(); ?>
+            </article>
+        </section>
     </div>
-</div>
-<?php
-get_footer();
+</main>
+<?php get_footer(); ?>

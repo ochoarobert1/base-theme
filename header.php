@@ -2,10 +2,11 @@
 <html <?php language_attributes() ?>>
     <head>
         <meta charset="<?php bloginfo('charset') ?>">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-        <link rel="profile" href="http://gmpg.org/xfn/11">
-        <link rel="shortcut icon" href="<?php bloginfo('template_url') ?>/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+        <link rel="profile" href="http://gmpg.org/xfn/11" />
+        <link href="//www.google-analytics.com" rel="dns-prefetch" />
+        <link href="<?php echo get_template_directory_uri(); ?>/favicon.ico" rel="shortcut icon" />
         <meta name="robot" content="NOODP, INDEX, FOLLOW" />
         <meta name="author" content="PROYECTO" />
         <meta name="language" content="VE" />
