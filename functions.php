@@ -127,6 +127,7 @@ function custom_login_logo() {
     echo '
     <style type="text/css">
         body{
+            background-color: #000 !important;
             background-image:url(' . get_bloginfo('template_directory') . '/images/login-bg.jpg);
             background-repeat: no-repeat;
             background-position: center;
@@ -138,11 +139,18 @@ function custom_login_logo() {
             background-position: center;
         }
         a { background-image:none !important;}
-        .login form{-webkit-border-radius: 0px; border-radius: 0px; background-color: rgba(255,255,255,0.7);}
-        .login label{color: black; font-weight:bold;}
+        .login form{-webkit-border-radius: 5px; border-radius: 5px; background-color: rgba(255,255,255,0.5);}
+        .login label{color: black; font-weight: 500;}
     </style>
     ';
 }
+
+if (! function_exists('dashboard_footer') ){
+    function dashboard_footer() {
+        _e( '<span id="footer-thankyou">Thank you for creating with <a href="http://wordpress.org/" >WordPress.</a> - Theme developed By <a href="http://robertochoa.com.ve/" >Robert Ochoa</a></span>', 'PROYECTO' );
+    }
+}
+add_filter('admin_footer_text', 'dashboard_footer');
 
 /* --------------------------------------------------------------
     ADD CUSTOM METABOX
@@ -231,46 +239,20 @@ if (function_exists('add_image_size')) {
     ADD CUSTOM WALKER BOOTSTRAP
 -------------------------------------------------------------- */
 
-class BS3_Walker_Nav_Menu extends Walker_Nav_Menu {
+// WALKER COMPLETO TOMADO DESDE EL NAVBAR COLLAPSE
+require_once('inc/wp_bootstrap_navwalker.php');
 
-    function display_element( $element, &$children_elements, $max_depth, $depth, $args, &$output ) {
-        $id_field = $this->db_fields['id'];
+// WALKER CUSTOM SI DEBO COLOCAR ICONOS AL LADO DEL MENU PRINCIPAL - SU ESTRUCTURA ESTA DENTRO DEL MISMO ARCHIVO
+require_once('inc/wp_walker_custom.php');
 
-        if ( isset( $args[0] ) && is_object( $args[0] ) )
-        {
-            $args[0]->has_children = ! empty( $children_elements[$element->$id_field] );
+/* --------------------------------------------------------------
+    ADD CUSTOM WORDPRESS FUNCTIONS
+-------------------------------------------------------------- */
 
-        }
+require_once('inc/wp_custom_functions.php');
 
-        return parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
-    }
+/* --------------------------------------------------------------
+    ADD CUSTOM WORDPRESS METABOX - EN DESARROLLO
+-------------------------------------------------------------- */
 
-    function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-        if ( is_object($args) && !empty($args->has_children) )
-        {
-            $link_after = $args->link_after;
-            $args->link_after = ' <b class="caret"></b>';
-        }
-
-        parent::start_el($output, $item, $depth, $args, $id);
-
-        if ( is_object($args) && !empty($args->has_children) )
-            $args->link_after = $link_after;
-    }
-
-    function start_lvl( &$output, $depth = 0, $args = array() ) {
-        $indent = '';
-        $output .= "$indent<ul class=\"dropdown-menu list-unstyled\">";
-    }
-}
-
-add_filter('nav_menu_link_attributes', 'nav_link_att', 10, 3);
-
-function nav_link_att($atts, $item, $args) {
-    if ( $args->has_children )
-    {
-        $atts['data-toggle'] = 'dropdown';
-        $atts['class'] = 'dropdown-toggle';
-    }
-    return $atts;
-}
+/*- require_once('inc/wp_custom_metabox.php'); -*/

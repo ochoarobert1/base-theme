@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: JP Blank\n"
-"POT-Creation-Date: 2015-08-06 10:37-0430\n"
-"PO-Revision-Date: 2015-08-06 10:37-0430\n"
+"Project-Id-Version: PROYECTO\n"
+"POT-Creation-Date: 2015-08-25 12:44-0430\n"
+"PO-Revision-Date: 2015-08-25 12:48-0430\n"
 "Last-Translator: \n"
-"Language-Team: \n"
+"Language-Team: Robert Ochoa <contacto@robertochoa.com.ve>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,70 +16,190 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_x:2c,1;_ex:2c,1\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../functions.php:43
+#: ../functions.php:150
+msgid ""
+"<span id=\"footer-thankyou\">Thank you for creating with <a href=\"http://"
+"wordpress.org/\" >WordPress.</a> - Theme developed By <a href=\"http://"
+"robertochoa.com.ve/\" >Robert Ochoa</a></span>"
+msgstr ""
+
+#: ../functions.php:187
 msgctxt "Post Type General Name"
 msgid "Portafolio"
 msgstr ""
 
-#: ../functions.php:44
+#: ../functions.php:188
 msgctxt "Post Type Singular Name"
 msgid "Item"
 msgstr ""
 
-#: ../functions.php:45 ../functions.php:46
+#: ../functions.php:189 ../functions.php:190
 msgid "Portafolio"
 msgstr ""
 
-#: ../functions.php:47
+#: ../functions.php:191
 msgid "Item Padre:"
 msgstr ""
 
-#: ../functions.php:48
+#: ../functions.php:192
 msgid "Todos los Items"
 msgstr ""
 
-#: ../functions.php:49
+#: ../functions.php:193
 msgid "Agregar Item"
 msgstr ""
 
-#: ../functions.php:50
+#: ../functions.php:194
 msgid "Agregar"
 msgstr ""
 
-#: ../functions.php:51
+#: ../functions.php:195
 msgid "Nuevo Item"
 msgstr ""
 
-#: ../functions.php:52
+#: ../functions.php:196
 msgid "Editar Item"
 msgstr ""
 
-#: ../functions.php:53
+#: ../functions.php:197
 msgid "Actualizar Item"
 msgstr ""
 
-#: ../functions.php:54
+#: ../functions.php:198
 msgid "Ver Item"
 msgstr ""
 
-#: ../functions.php:55
+#: ../functions.php:199
 msgid "Buscar Item"
 msgstr ""
 
-#: ../functions.php:56
+#: ../functions.php:200
 msgid "No encontrado"
 msgstr ""
 
-#: ../functions.php:57
+#: ../functions.php:201
 msgid "No encontrado en papelera"
 msgstr ""
 
-#: ../functions.php:60
+#: ../functions.php:204
 msgid "portafolio"
 msgstr ""
 
-#: ../functions.php:61
+#: ../functions.php:205
 msgid "Trabajos realizados"
+msgstr ""
+
+#: ../inc/wp_custom_functions.php:7
+msgid "año"
+msgstr ""
+
+#: ../inc/wp_custom_functions.php:7
+msgid "años"
+msgstr ""
+
+#: ../inc/wp_custom_functions.php:8
+msgid "mes"
+msgstr ""
+
+#: ../inc/wp_custom_functions.php:8
+msgid "meses"
+msgstr ""
+
+#: ../inc/wp_custom_functions.php:9
+msgid "semana"
+msgstr ""
+
+#: ../inc/wp_custom_functions.php:9
+msgid "semanas"
+msgstr ""
+
+#: ../inc/wp_custom_functions.php:10
+msgid "dia"
+msgstr ""
+
+#: ../inc/wp_custom_functions.php:10
+msgid "dias"
+msgstr ""
+
+#: ../inc/wp_custom_functions.php:11
+msgid "hora"
+msgstr ""
+
+#: ../inc/wp_custom_functions.php:11
+msgid "horas"
+msgstr ""
+
+#: ../inc/wp_custom_functions.php:12
+msgid "minuto"
+msgstr ""
+
+#: ../inc/wp_custom_functions.php:12
+msgid "minutos"
+msgstr ""
+
+#: ../inc/wp_custom_functions.php:13
+msgid "segundo"
+msgstr ""
+
+#: ../inc/wp_custom_functions.php:13 ../inc/wp_custom_functions.php:32
+msgid "segundos"
+msgstr ""
+
+#: ../inc/wp_custom_functions.php:24
+msgid " un momento"
+msgstr ""
+
+#: ../inc/wp_custom_metabox.php:7
+msgid "Etiqueta a visualizar en el home"
+msgstr ""
+
+#: ../inc/wp_custom_metabox.php:19
+msgid "Categorías"
+msgstr ""
+
+#: ../inc/wp_custom_metabox.php:23
+msgid "Economía"
+msgstr ""
+
+#: ../inc/wp_custom_metabox.php:27
+msgid "Entretenimiento"
+msgstr ""
+
+#: ../inc/wp_custom_metabox.php:31
+msgid "Multimedia"
+msgstr ""
+
+#: ../inc/wp_custom_metabox.php:35
+msgid "Mundo"
+msgstr ""
+
+#: ../inc/wp_custom_metabox.php:41
+msgid "País"
+msgstr ""
+
+#: ../inc/wp_custom_metabox.php:45
+msgid "Tecnología"
+msgstr ""
+
+#: ../inc/wp_custom_metabox.php:49
+msgid "Vida"
+msgstr ""
+
+#: ../inc/wp_custom_metabox.php:53
+msgid "Deportes"
+msgstr ""
+
+#: ../inc/wp_custom_metabox.php:101
+msgid "Antetítulo"
+msgstr ""
+
+#: ../search.php:5
+#, php-format
+msgid "%s Search Results for "
+msgstr ""
+
+#: ../single.php:21
+msgid "Tags: "
 msgstr ""
 
 #~ msgctxt "Post Type General Name"
