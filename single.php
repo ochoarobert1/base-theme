@@ -19,10 +19,10 @@
                 <div class="post-content" itemprop="articleBody">
                     <?php the_content() ?>
                     <?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
-                     <footer>
-                    <p>Categorias: <?php the_category(', '); // Separated by commas ?></p>
-                    <p>Escrito por: <?php the_author(); ?></p>
-                    <?php edit_post_link(); // Always handy to have Edit Post Links available ?>
+                    <footer>
+                        <p>Categorias: <?php the_category(', '); // Separated by commas ?></p>
+                        <p>Escrito por: <?php the_author(); ?></p>
+                        <?php edit_post_link(); // Always handy to have Edit Post Links available ?>
                     </footer>
                 </div><!-- .post-content -->
                 <meta itemprop="datePublished" content="<?php echo get_the_date('i') ?>">
