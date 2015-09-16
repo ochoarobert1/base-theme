@@ -58,7 +58,7 @@ function proyecto_load_js() {
         wp_dequeue_script('jquery');
 
         /*- JQUERY -*/
-        wp_register_script( 'jquery', '//code.jquery.com/jquery-1.11.3.min.js', false, '1.11.3', true);
+        wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', false, '1.11.3', true);
         wp_enqueue_script('jquery');
 
         /*- MODERNIZR -*/
