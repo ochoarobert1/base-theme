@@ -1,29 +1,46 @@
-# README #
+![alt tag](http://robertochoa.com.ve/wp-content/uploads/2015/10/repo-logo.jpg)
 
-Wordpress Theme Blank 
+# PROYECTO Wordpress Custom Theme #
 
-### What is this repository for? ###
+* Version: 1.0
+* Design: [Robert Ochoa](http://www.robertochoa.com.ve/)
+* Development: [Robert Ochoa](http://www.robertochoa.com.ve/)
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+Tema diseñado por [Robert Ochoa](http://www.robertochoa.com.ve/) para PROYECTO Este tema custom fue construido en su totalidad, pasando por su etapa de Wireframing, rearmado, version anterior e implementación en hosting externo.
 
-### How do I get set up? ###
+### Componentes Principales ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* Twitter Bootstrap 3.3.5
+* Font Awesome 4.4
+* jQuery Nicescroll 3.6.0
+* jQuery Engine Validation 2.6.2
 
-### Contribution guidelines ###
 
-* Writing tests
-* Code review
-* Other guidelines
+### Funciones Incluídas ###
 
-### Who do I talk to? ###
+* Custom Post Type:
+* Custom Taxonomies:
+* Wordpress Menu Structure
+* Custom Metabox:
+* Custom contact section.
 
-* Repo owner or admin
-* Other community or team contact
+### Plugins Requeridos ###
+
+* Rilwis' Metabox
+* Jetpack by Wordpress
+
+### Instrucciones de Instalación ###
+
+1. Instalar los plugins requeridos.
+
+2. Activar los plugins requeridos.
+
+3. Instalar el tema via FTP o por el instalador de themes de Wordpress via zip
+
+### Contacto ###
+
+Soporte Oficial para este tema:
+
+Repo Owner: [Robert Ochoa](http://www.robertochoa.com.ve/)
+
+Main Developer: [Robert Ochoa](http://www.robertochoa.com.ve/)
