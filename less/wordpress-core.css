@@ -31,7 +31,7 @@
   margin-right: auto;
 }
 .post-content .wp-caption {
-  background: #fff;
+  background-color: #fff;
   border: 1px solid #f0f0f0;
   max-width: 96%;
   /* Image does not overflow the content area */
