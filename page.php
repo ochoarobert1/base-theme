@@ -4,6 +4,10 @@
     <div class="row">
         <section class="col-md-12">
             <h1><?php the_title(); ?></h1>
+            <div class="the-breadcrumbs col-md-12">
+                <?php echo the_breadcrumb(); ?>
+            </div>
+
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <?php the_content(); ?>
                 <?php comments_template( '', true ); // Remove if you don't want comments ?>

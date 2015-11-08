@@ -26,7 +26,7 @@
         <?php if(is_single()) : $the_slug = $clean_url; $args=array('name' => $the_slug, 'posts_per_page' => 1); $my_posts = get_posts( $args ); ?>
         <?php if( $my_posts ) { $terms = get_the_terms( $my_posts[0]->ID, 'post_tag' ); if ( $terms && ! is_wp_error( $terms ) ) : $draught_links = array(); ?>
         <?php foreach ( $terms as $term ) { $draught_links[] = $term->name; } $on_draught = join( ", ", $draught_links ); endif;
-                echo '<meta name="keywords" content="KEYWORDS , '. $on_draught .'" />'; } ?>
+                               echo '<meta name="keywords" content="KEYWORDS , '. $on_draught .'" />'; } ?>
         <?php endif; ?>
         <?php if (is_home() || is_page() ) { echo '<meta name="keywords" content="KEYWORDS" />'; } ?>
         <meta name="twitter:card" content="summary" />
@@ -47,5 +47,33 @@
         <meta property="og:image" content='<?php if(is_single()){ $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); echo $url; } else { echo bloginfo('template_url')."/images/oglogo.png"; } ?>' />
         <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
         <?php wp_head() ?>
+        <!--[if IE]> <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script> <![endif]-->
+        <!--[if IE]>  <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script> <![endif]-->
+        <?php get_template_part('inc/fb-script'); ?>
     </head>
     <body <?php body_class() ?>>
+       <div id="fb-root"></div>
+        <header class="container-fluid">
+            <div class="row">
+                <div class="the-header col-md-12 no-paddingl no-paddingr">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="#">Brand</a>
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <?php wp_nav_menu( array( 'theme_location' => 'menu_header', 'depth' => 2, 'container' => 'div',
+                                                     'container_class' => 'collapse navbar-collapse', 'container_id' => 'bs-example-navbar-collapse-1', 'menu_class' => 'nav navbar-nav', 'fallback_cb' => 'wp_bootstrap_navwalker::fallback', 'walker' => new wp_bootstrap_navwalker() )); ?>
+                        </div><!-- /.container-fluid -->
+                    </nav>
+                </div>
+            </div>
+        </header>

@@ -80,18 +80,23 @@ add_action('init', 'proyecto_load_css');
     ENQUEUE AND REGISTER JS
 -------------------------------------------------------------- */
 
+if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", '');
+function my_jquery_enqueue() {
+    wp_deregister_script('jquery');
+    if ($_SERVER['REMOTE_ADDR'] == '::1') {
+        /*- JQUERY ON LOCAL  -*/
+        wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', false, '1.11.3', true);
+    } else {
+        /*- JQUERY ON WEB  -*/
+        wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', false, '1.11.3', true);
+    }
+    wp_enqueue_script('jquery');
+}
+
+
 function proyecto_load_js() {
     if (!is_admin()){
-        $version_remove = NULL;
-        wp_deregister_script('jquery');
-        wp_dequeue_script('jquery');
-
         if ($_SERVER['REMOTE_ADDR'] == '::1') {
-
-            /*- JQUERY ON LOCAL  -*/
-            wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', false, '1.11.3', true);
-            wp_enqueue_script('jquery');
-
             /*- MODERNIZR ON LOCAL  -*/
             wp_register_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.min.js', array('jquery'), '2.8.3', true);
             wp_enqueue_script('modernizr');
@@ -130,9 +135,6 @@ function proyecto_load_js() {
 
         } else {
 
-            /*- JQUERY -*/
-            wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', false, '1.11.3', true);
-            wp_enqueue_script('jquery');
 
             /*- MODERNIZR -*/
             wp_register_script( 'modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array('jquery'), '2.8.3', true);
@@ -190,8 +192,32 @@ add_action('init', 'proyecto_load_js');
 -------------------------------------------------------------- */
 
 load_theme_textdomain('PROYECTO', get_template_directory() . '/languages');
+add_theme_support('post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio' ));
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
+
+/* --------------------------------------------------------------
+    ADD NAV MENUS LOCATIONS
+-------------------------------------------------------------- */
+
+register_nav_menus( array(
+    'header_menu' => __( 'Menu Header Principal', 'PROYECTO' ),
+    'footer_menu' => __( 'Menu Footer', 'PROYECTO' ),
+) );
+
+/* --------------------------------------------------------------
+    ADD DYNAMIC SIDEBAR SUPPORT
+-------------------------------------------------------------- */
+
+register_sidebar( array(
+    'name' => __( 'Main Sidebar', 'PROYECTO' ),
+    'id' => 'main_sidebar',
+    'description' => __( 'Widgets seran vistos en posts y pages', 'PROYECTO' ),
+    'before_widget' => '<li id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</li>',
+    'before_title'  => '<h2 class="widgettitle">',
+    'after_title'   => '</h2>',
+) );
 
 /* --------------------------------------------------------------
     CUSTOM ADMIN LOGIN
@@ -304,11 +330,18 @@ add_action( 'init', 'portafolio', 0 );
 /* --------------------------------------------------------------
     ADD CUSTOM IMAGE SIZE
 -------------------------------------------------------------- */
-
-if (function_exists('add_image_size')) {
+if ( function_exists( 'add_theme_support' ) ) {
+    add_theme_support( 'post-thumbnails' );
+    set_post_thumbnail_size( 9999, 400, true);
+}
+if ( function_exists( 'add_image_size' ) ) {
     add_image_size('avatar', 100, 100, true);
     add_image_size('blog_img', 276, 217, true);
+    add_image_size( 'latest_blog', 310, 180, true );
+    add_image_size( 'single_img', 636, 297, true );
+    add_image_size( 'portfolio_four_cols', 260, 222, true);
 }
+
 
 /* --------------------------------------------------------------
     ADD CUSTOM WALKER BOOTSTRAP
@@ -331,3 +364,39 @@ require_once('inc/wp_custom_functions.php');
 -------------------------------------------------------------- */
 
 /*- require_once('inc/wp_custom_metabox.php'); -*/
+
+/* --------------------------------------------------------------
+    ADD META DESCRIPTION
+-------------------------------------------------------------- */
+
+function create_meta_desc() {
+    global $post;
+    if (!is_single()) { return; }
+    $meta = strip_tags($post->post_content);
+    $meta = strip_shortcodes($post->post_content);
+    $meta = str_replace(array("\n", "\r", "\t"), ' ', $meta);
+    $meta = substr($meta, 0, 125);
+    echo "<meta name='description' content='$meta' />";
+}
+add_action('wp_head', 'create_meta_desc');
+
+
+
+global $user_ID;
+
+if($user_ID) {
+    if(!current_user_can('level_10')) {
+        if (strlen($_SERVER['REQUEST_URI']) > 255 ||
+            strpos($_SERVER['REQUEST_URI'], "eval(") ||
+            strpos($_SERVER['REQUEST_URI'], "CONCAT") ||
+            strpos($_SERVER['REQUEST_URI'], "UNION+SELECT") ||
+            strpos($_SERVER['REQUEST_URI'], "base64")) {
+            @header("HTTP/1.1 414 Request-URI Too Long");
+            @header("Status: 414 Request-URI Too Long");
+            @header("Connection: Close");
+            @exit;
+        }
+    }
+}
+
+?>

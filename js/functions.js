@@ -27,6 +27,7 @@ $(document).ready(function () {
     $("body").niceScroll({
         cursorcolor: '#BE1B20',
         cursorborder: '0px',
+        cursorwidth: '10px',
         cursorborderradius: '0px',
         background: '#000000',
         hwacceleration: false,
