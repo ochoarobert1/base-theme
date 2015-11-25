@@ -121,7 +121,7 @@ function add_antetitulo_callback( $post ) {
      * from the database and use the value for the form.
      */
     $value = get_post_meta( $post->ID, 'antetitulo_value_key', true );
-    echo '<textarea style="width:100%;" id="antetitulo_text" name="antetitulo_text" >' . wp_specialchars( get_post_meta( $post->ID, 'antetitulo_value_key', true ), 1 ) . '</textarea>';
+    echo '<textarea style="width:100%;" id="antetitulo_text" name="antetitulo_text" >' . esc_html( get_post_meta( $post->ID, 'antetitulo_value_key', true ), 1 ) . '</textarea>';
     echo '<p>'. htmlspecialchars('Es un abreboca que complementa al título') . '</p> ';
 }
 

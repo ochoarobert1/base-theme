@@ -28,7 +28,7 @@ $coord = get_post_meta($contact->ID, 'coord', true);
             position: new google.maps.LatLng(<?php echo $coord ?>),
             title: 'título del marcador',
             map: map
-            //icon: "<?php bloginfo('template_url') ?>/images/marker.png"
+            //icon: "<?php echo get_template_directory_uri(); ?>/images/marker.png"
         });
 
     });

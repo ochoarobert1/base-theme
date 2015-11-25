@@ -2,7 +2,7 @@
 <main class="container" role="main">
     <div class="row">
         <section class="col-md-12">
-            <h1><?php echo sprintf( __( '%s Search Results for ', 'html5blank' ), $wp_query->found_posts ); echo get_search_query(); ?></h1>
+            <h1><?php echo sprintf( __( '%s Search Results for ', 'PROYECTO' ), $wp_query->found_posts ); echo get_search_query(); ?></h1>
             <?php if (have_posts()): while (have_posts()) : the_post(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <object class="col-md-5">
