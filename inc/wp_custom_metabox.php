@@ -4,7 +4,7 @@
  * Adds a meta box to the post editing screen
  */
 function prfx_custom_meta() {
-    add_meta_box( 'prfx_meta', __( 'Etiqueta a visualizar en el home', 'prfx-textdomain' ), 'prfx_meta_callback','post' );
+    add_meta_box( 'prfx_meta', __( 'Etiqueta a visualizar en el home', 'PROYECTO' ), 'prfx_meta_callback','post' );
 }
 add_action( 'add_meta_boxes', 'prfx_custom_meta' );
 
@@ -16,41 +16,41 @@ function prfx_meta_callback( $post ) {
     $prfx_stored_meta = get_post_meta( $post->ID );
 ?>
 
-<span class="prfx-row-title"><?php _e( 'Categorías', 'prfx-textdomain' )?></span>
+<span class="prfx-row-title"><?php _e( 'Categorías', 'PROYECTO' )?></span>
 <div class="prfx-row-content">
     <label for="meta-radio-one" style="padding-left:15px;padding-right:15px;">
         <input type="radio" name="meta-radio" id="economia" value="economia" <?php if ( isset ( $prfx_stored_meta['meta-radio'] ) ) checked( $prfx_stored_meta['meta-radio'][0], 'economia' ); ?>>
-        <?php _e( 'Economía', 'prfx-textdomain' )?>
+        <?php _e( 'Economía', 'PROYECTO' )?>
     </label>
     <label for="meta-radio-two" style="padding-left:15px;padding-right:15px;">
         <input type="radio" name="meta-radio" id="entretenimiento" value="entretenimiento" <?php if ( isset ( $prfx_stored_meta['meta-radio'] ) ) checked( $prfx_stored_meta['meta-radio'][0], 'entretenimiento' ); ?>>
-        <?php _e( 'Entretenimiento', 'prfx-textdomain' )?>
+        <?php _e( 'Entretenimiento', 'PROYECTO' )?>
     </label>
     <label for="meta-radio-two" style="padding-left:15px;padding-right:15px;">
         <input type="radio" name="meta-radio" id="multimedia" value="multimedia" <?php if ( isset ( $prfx_stored_meta['meta-radio'] ) ) checked( $prfx_stored_meta['meta-radio'][0], 'multimedia' ); ?>>
-        <?php _e( 'Multimedia', 'prfx-textdomain' )?>
+        <?php _e( 'Multimedia', 'PROYECTO' )?>
     </label>
     <label for="meta-radio-two" style="padding-left:15px;padding-right:15px;">
         <input type="radio" name="meta-radio" id="mundo" value="mundo" <?php if ( isset ( $prfx_stored_meta['meta-radio'] ) ) checked( $prfx_stored_meta['meta-radio'][0], 'mundo' ); ?>>
-        <?php _e( 'Mundo', 'prfx-textdomain' )?>
+        <?php _e( 'Mundo', 'PROYECTO' )?>
     </label>
 </div>
 <div class="prfx-row-content">
     <label for="meta-radio-two" style="padding-left:15px;padding-right:15px;">
         <input type="radio" name="meta-radio" id="pais" value="pais" <?php if ( isset ( $prfx_stored_meta['meta-radio'] ) ) checked( $prfx_stored_meta['meta-radio'][0], 'pais' ); ?>>
-        <?php _e( 'País', 'prfx-textdomain' )?>
+        <?php _e( 'País', 'PROYECTO' )?>
     </label>
     <label for="meta-radio-two" style="padding-left:15px;padding-right:15px;">
         <input type="radio" name="meta-radio" id="tecnologia" value="tecnologia" <?php if ( isset ( $prfx_stored_meta['meta-radio'] ) ) checked( $prfx_stored_meta['meta-radio'][0], 'tecnologia' ); ?>>
-        <?php _e( 'Tecnología', 'prfx-textdomain' )?>
+        <?php _e( 'Tecnología', 'PROYECTO' )?>
     </label>
     <label for="meta-radio-two" style="padding-left:15px;padding-right:15px;">
         <input type="radio" name="meta-radio" id="vida" value="vida" <?php if ( isset ( $prfx_stored_meta['meta-radio'] ) ) checked( $prfx_stored_meta['meta-radio'][0], 'vida' ); ?>>
-        <?php _e( 'Vida', 'prfx-textdomain' )?>
+        <?php _e( 'Vida', 'PROYECTO' )?>
     </label>
     <label for="meta-radio-two" style="padding-left:15px;padding-right:15px;">
         <input type="radio" name="meta-radio" id="deportes" value="deportes" <?php if ( isset ( $prfx_stored_meta['meta-radio'] ) ) checked( $prfx_stored_meta['meta-radio'][0], 'deportes' ); ?>>
-        <?php _e( 'Deportes', 'prfx-textdomain' )?>
+        <?php _e( 'Deportes', 'PROYECTO' )?>
     </label>
 </div>
 
@@ -98,7 +98,7 @@ function add_antetitulo() {
 
         add_meta_box(
             'antetitulo_sectionId',
-            __( 'Antetítulo', 'AnteTitulo' ),
+            __( 'Antetítulo', 'PROYECTO' ),
             'add_antetitulo_callback',
             $screen
         );

@@ -25,9 +25,9 @@ function nav_link_att($atts, $item, $args) {
 
 /* ESTRUCTURA PARA WORDPRESS MENU */
 /*
-wp_nav_menu(array('container_class' => 'menu-header', 'theme_location' => 'primary',
+wp_nav_menu(array('container_class' => 'menu-header', 'theme_location' => 'header_menu',
                     'items_wrap' => '<ul id="%1$s" class="%2$s nav navbar-nav">%3$s</ul>',
-                    'walker' => new BS3_Walker_Nav_Menu, 'menu' => 'Your Menu' ));
+                    'walker' => new BS3_Walker_Nav_Menu ));
 
 */
 ?>

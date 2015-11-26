@@ -18,7 +18,7 @@
                 </header>
                 <div class="post-content" itemprop="articleBody">
                     <?php the_content() ?>
-                    <?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+                    <?php the_tags( __( 'Tags: ', 'PROYECTO' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
                     <footer>
                         <p>Categorias: <?php the_category(', '); // Separated by commas ?></p>
                         <p>Escrito por: <?php the_author(); ?></p>

@@ -205,6 +205,17 @@ function proyecto_load_js() {
 
 add_action('init', 'proyecto_load_js');
 
+// Cargar en el footer los javascripts
+function footer_enqueue_scripts() {
+    remove_action('wp_head', 'wp_print_scripts');
+    remove_action('wp_head', 'wp_print_head_scripts', 9);
+    remove_action('wp_head', 'wp_enqueue_scripts', 1);
+    add_action('wp_footer', 'wp_print_scripts', 5);
+    add_action('wp_footer', 'wp_enqueue_scripts', 5);
+    add_action('wp_footer', 'wp_print_head_scripts', 5);
+}
+add_action('after_setup_theme', 'footer_enqueue_scripts');
+
 /* --------------------------------------------------------------
     ADD THEME SUPPORT
 -------------------------------------------------------------- */
@@ -219,6 +230,14 @@ add_theme_support('menus');
 /* --------------------------------------------------------------
     ADD NAV MENUS LOCATIONS
 -------------------------------------------------------------- */
+function PROYECTO_add_editor_styles() {
+    add_editor_style( get_stylesheet_directory_uri() . '/css/editor-styles.css' );
+}
+add_action( 'admin_init', 'PROYECTO_add_editor_styles' );
+
+/* --------------------------------------------------------------
+    ADD NAV MENUS LOCATIONS
+-------------------------------------------------------------- */
 
 register_nav_menus( array(
     'header_menu' => __( 'Menu Header Principal', 'PROYECTO' ),
@@ -229,15 +248,18 @@ register_nav_menus( array(
     ADD DYNAMIC SIDEBAR SUPPORT
 -------------------------------------------------------------- */
 
-register_sidebar( array(
-    'name' => __( 'Main Sidebar', 'PROYECTO' ),
-    'id' => 'main_sidebar',
-    'description' => __( 'Widgets seran vistos en posts y pages', 'PROYECTO' ),
-    'before_widget' => '<li id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</li>',
-    'before_title'  => '<h2 class="widgettitle">',
-    'after_title'   => '</h2>',
-) );
+add_action( 'widgets_init', 'PROYECTO_widgets_init' );
+function PROYECTO_widgets_init() {
+    register_sidebar( array(
+        'name' => __( 'Main Sidebar', 'PROYECTO' ),
+        'id' => 'main_sidebar',
+        'description' => __( 'Widgets seran vistos en posts y pages', 'PROYECTO' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h2 class="widgettitle">',
+        'after_title'   => '</h2>',
+    ) );
+}
 
 /* --------------------------------------------------------------
     CUSTOM ADMIN LOGIN
@@ -385,39 +407,5 @@ require_once('inc/wp_custom_functions.php');
 -------------------------------------------------------------- */
 
 /*- require_once('inc/wp_custom_metabox.php'); -*/
-
-/* --------------------------------------------------------------
-    ADD META DESCRIPTION
--------------------------------------------------------------- */
-
-function create_meta_desc() {
-    global $post;
-    if (!is_single()) { return; }
-    $meta = strip_tags($post->post_content);
-    $meta = strip_shortcodes($post->post_content);
-    $meta = str_replace(array("\n", "\r", "\t"), ' ', $meta);
-    $meta = substr($meta, 0, 125);
-    echo "<meta name='description' content='$meta' />";
-}
-add_action('wp_head', 'create_meta_desc');
-
-
-
-global $user_ID;
-
-if($user_ID) {
-    if(!current_user_can('level_10')) {
-        if (strlen($_SERVER['REQUEST_URI']) > 255 ||
-            strpos($_SERVER['REQUEST_URI'], "eval(") ||
-            strpos($_SERVER['REQUEST_URI'], "CONCAT") ||
-            strpos($_SERVER['REQUEST_URI'], "UNION+SELECT") ||
-            strpos($_SERVER['REQUEST_URI'], "base64")) {
-            @header("HTTP/1.1 414 Request-URI Too Long");
-            @header("Status: 414 Request-URI Too Long");
-            @header("Connection: Close");
-            @exit;
-        }
-    }
-}
 
 ?>
