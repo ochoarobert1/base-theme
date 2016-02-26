@@ -6,7 +6,7 @@
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
         <link rel="profile" href="http://gmpg.org/xfn/11" />
         <link href="//www.google-analytics.com" rel="dns-prefetch" />
-        <link href="<?php echo get_template_directory_uri(); ?>/favicon.ico" rel="shortcut icon" />
+        <link href="<?php echo esc_url(get_template_directory_uri()); ?>/favicon.ico" rel="shortcut icon" />
         <meta name="robot" content="NOODP, INDEX, FOLLOW" />
         <meta name="author" content="PROYECTO" />
         <meta name="language" content="VE" />
@@ -14,9 +14,9 @@
         <meta name="ICBM" content="10.333333, -67.033333" />
         <meta name="geo.region" content="VE" />
         <meta name="geo.placename" content="ubicacion" />
-        <meta name="DC.title" content="<?php wp_title('|', true, 'right'); ?>" />
-        <title><?php wp_title('|', true, 'right'); ?></title>
-        <meta name="title" content="<?php if(is_home()) { echo bloginfo("name"); echo " | "; echo bloginfo("description"); } else { echo wp_title(" | ", false, 'right'); echo bloginfo("name"); } ?>">
+        <meta name="DC.title" content="<?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') : wp_title(''); ?>" />
+        <title><?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
+        <meta name="title" content="<?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') : wp_title(''); ?>">
         <?php $current_url = $_SERVER['REQUEST_URI']; $clean_url = str_replace('/', '', $current_url); ?>
         <?php if(is_single()) : $the_slug = $clean_url; $args=array('name' => $the_slug, 'posts_per_page' => 1); $my_posts = get_posts( $args ); ?>
         <?php if( $my_posts ) { $excerpt = $my_posts[0]->post_excerpt; echo '<meta name="description" content="' . htmlentities($excerpt, ENT_QUOTES, 'UTF-8') . '" />'; } ?>
@@ -34,7 +34,7 @@
         <meta name="twitter:creator" content="@AUTHOR" />
         <meta property='fb:admins' content='100000133943608' />
         <meta property="fb:app_id" content="611067105660122" />
-        <meta property="og:title" content="<?php wp_title('|', true, 'right'); ?>" />
+        <meta property="og:title" content="<?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') : wp_title(''); ?>" />
         <meta property="og:site_name" content="PROYECTO" />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="es_ES" />
