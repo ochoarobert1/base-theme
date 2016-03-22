@@ -399,10 +399,4 @@ require_once('inc/wp_walker_custom.php');
 
 require_once('inc/wp_custom_functions.php');
 
-/* --------------------------------------------------------------
-    ADD CUSTOM WORDPRESS METABOX - EN DESARROLLO
--------------------------------------------------------------- */
-
-/*- require_once('inc/wp_custom_metabox.php'); -*/
-
 ?>
