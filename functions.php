@@ -404,13 +404,10 @@ require_once('includes/wp_bootstrap_navwalker.php');
 
 require_once('includes/wp_custom_functions.php');
 
-<<<<<<< HEAD
 /* --------------------------------------------------------------
     ADD CUSTOM WOOCOMMERCE OVERRIDES
 -------------------------------------------------------------- */
 
 //require_once('includes/wp_woocommerce_functions.php');
 
-=======
->>>>>>> 4188260c10af3ee07a2101458cd08bbf36191730
 ?>
