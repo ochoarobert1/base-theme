@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php the_post(); ?>
-<main class="container" role="main">
+<main class="container" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
     <div class="row">
         <section class="col-md-12">
             <article id="post-404">

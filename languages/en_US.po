@@ -1,0 +1,489 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PROYECTO\n"
+"POT-Creation-Date: 2016-06-25 14:32-0400\n"
+"PO-Revision-Date: 2016-06-25 14:36-0400\n"
+"Last-Translator: \n"
+"Language-Team: Robert Ochoa <contacto@robertochoa.com.ve>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x:2c,1;_ex:2c,1\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../functions.php:225
+msgid "Menu Header Principal"
+msgstr "Main Menu Header"
+
+#: ../functions.php:226
+msgid "Menu Footer"
+msgstr "Menu Footer"
+
+#: ../functions.php:236
+msgid "Main Sidebar"
+msgstr "Main Sidebar"
+
+#: ../functions.php:238
+msgid "Widgets seran vistos en posts y pages"
+msgstr "Widgets will be seen in posts and pages"
+
+#: ../functions.php:246
+msgid "Shop Sidebar"
+msgstr "Shop Sidebar"
+
+#: ../functions.php:248
+msgid "Widgets seran vistos en Tienda y Categorias de Producto"
+msgstr "Widgets will be seen in shop and product categories"
+
+#: ../functions.php:287
+msgid "Gracias por crear con "
+msgstr "Thank you for creating with"
+
+#: ../functions.php:289
+msgid "Tema desarrollado por "
+msgstr "Theme Developed By"
+
+#: ../functions.php:327
+msgctxt "Post Type General Name"
+msgid "Portafolio"
+msgstr "Portfolio"
+
+#: ../functions.php:328
+msgctxt "Post Type Singular Name"
+msgid "Item"
+msgstr "Add New Item"
+
+#: ../functions.php:329 ../functions.php:330
+msgid "Portafolio"
+msgstr "Portfolio"
+
+#: ../functions.php:331
+msgid "Item Padre:"
+msgstr "Parent item:"
+
+#: ../functions.php:332
+msgid "Todos los Items"
+msgstr "All Items"
+
+#: ../functions.php:333
+msgid "Agregar Item"
+msgstr "Add Item"
+
+#: ../functions.php:334
+msgid "Agregar"
+msgstr "Add New"
+
+#: ../functions.php:335
+msgid "Nuevo Item"
+msgstr "New Item"
+
+#: ../functions.php:336
+msgid "Editar Item"
+msgstr "Edit Item"
+
+#: ../functions.php:337
+msgid "Actualizar Item"
+msgstr "Update Item"
+
+#: ../functions.php:338
+msgid "Ver Item"
+msgstr "View Item"
+
+#: ../functions.php:339
+msgid "Buscar Item"
+msgstr "Search Item"
+
+#: ../functions.php:340
+msgid "No encontrado"
+msgstr "Not found"
+
+#: ../functions.php:341
+msgid "No encontrado en papelera"
+msgstr "Not found in Trash"
+
+#: ../functions.php:344
+msgid "portafolio"
+msgstr "portfolio"
+
+#: ../functions.php:345
+msgid "Trabajos realizados"
+msgstr "Jobs performed"
+
+#: ../includes/wp_custom_functions.php:7
+msgid "año"
+msgstr "year"
+
+#: ../includes/wp_custom_functions.php:7
+msgid "años"
+msgstr "years"
+
+#: ../includes/wp_custom_functions.php:8
+msgid "mes"
+msgstr "month"
+
+#: ../includes/wp_custom_functions.php:8
+msgid "meses"
+msgstr "months"
+
+#: ../includes/wp_custom_functions.php:9
+msgid "semana"
+msgstr "week"
+
+#: ../includes/wp_custom_functions.php:9
+msgid "semanas"
+msgstr "weeks"
+
+#: ../includes/wp_custom_functions.php:10
+#, fuzzy
+msgid "dia"
+msgstr "day"
+
+#: ../includes/wp_custom_functions.php:10
+#, fuzzy
+msgid "dias"
+msgstr "days"
+
+#: ../includes/wp_custom_functions.php:11
+msgid "hora"
+msgstr "hour"
+
+#: ../includes/wp_custom_functions.php:11
+#, fuzzy
+msgid "horas"
+msgstr "hours"
+
+#: ../includes/wp_custom_functions.php:12
+#, fuzzy
+msgid "minuto"
+msgstr "minute"
+
+#: ../includes/wp_custom_functions.php:12
+#, fuzzy
+msgid "minutos"
+msgstr "minutes"
+
+#: ../includes/wp_custom_functions.php:13
+#, fuzzy
+msgid "segundo"
+msgstr "second"
+
+#: ../includes/wp_custom_functions.php:13
+#: ../includes/wp_custom_functions.php:32
+#, fuzzy
+msgid "segundos"
+msgstr "seconds"
+
+#: ../includes/wp_custom_functions.php:24
+msgid " un momento"
+msgstr "a momento ago"
+
+#: ../includes/wp_custom_functions.php:97
+#, fuzzy
+msgid "Inicio"
+msgstr "Home"
+
+#: ../includes/wp_functions_overrides.php:45
+#, fuzzy, php-format
+msgid "Page %s"
+msgstr "Page %s"
+
+#: ../post-formats/format-aside.php:14 ../post-formats/format-audio.php:12
+#: ../post-formats/format-chat.php:12 ../post-formats/format-gallery.php:12
+#: ../post-formats/format-image.php:12 ../post-formats/format-link.php:12
+#: ../post-formats/format-quote.php:12 ../post-formats/format-status.php:12
+#: ../post-formats/format-video.php:12 ../post-formats/format.php:14
+#, fuzzy
+msgid "Tags: "
+msgstr "Tags: "
+
+#: ../post-formats/format-aside.php:19 ../post-formats/format-audio.php:17
+#: ../post-formats/format-chat.php:17 ../post-formats/format-gallery.php:17
+#: ../post-formats/format-image.php:17 ../post-formats/format-link.php:17
+#: ../post-formats/format-quote.php:17 ../post-formats/format-status.php:17
+#: ../post-formats/format-video.php:17 ../post-formats/format.php:19
+#, fuzzy
+msgid "Pages:"
+msgstr "Pages:"
+
+#: ../search.php:5
+#, fuzzy, php-format
+msgid "%s Search Results for "
+msgstr "%s Search Results for "
+
+#: ../searchform.php:3
+#, fuzzy
+msgid "Buscar por Términos:"
+msgstr "Search Terms"
+
+#: ../searchform.php:6
+#, fuzzy
+msgid "Buscar"
+msgstr "Buscar"
+
+#, fuzzy
+#~ msgid "<span id=\"footer-thankyou\">Gracias por crear con <a href=\"http://wordpress.org/\" >WordPress.</a> - Tema desarrollado por <a href=\"http://robertochoa.com.ve/\" >Robert Ochoa</a></span>"
+#~ msgstr "<span id=\"footer-thankyou\">Gracias por crear con <a href=\"http://wordpress.org/\">WordPress.</a> - Tema desarrollado por <a href=\"http://robertochoa.com.ve/\">Roberto Ochoa</a></span>"
+
+#~ msgid "Home"
+#~ msgstr "Inicio"
+
+#~ msgctxt "Post Type General Name"
+#~ msgid "Sliders"
+#~ msgstr "Sliders"
+
+#~ msgctxt "Post Type Singular Name"
+#~ msgid "Slide"
+#~ msgstr "Diapositiva"
+
+#~ msgid "Slider"
+#~ msgstr "Slider"
+
+#~ msgid "Parent Slide:"
+#~ msgstr "Diapositiva Padre:"
+
+#~ msgid "All Slides"
+#~ msgstr "Todas Las diapositivas"
+
+#~ msgid "Add New Slide"
+#~ msgstr "Añadir Nueva Diapositiva"
+
+#~ msgid "Add Slide"
+#~ msgstr "Añadir Diapositiva"
+
+#~ msgid "New Slide"
+#~ msgstr "Nueva Diapositiva"
+
+#~ msgid "Edit Slide"
+#~ msgstr "Editar Diapositiva"
+
+#~ msgid "Update Slide"
+#~ msgstr "Actualizar Diapositiva"
+
+#~ msgid "View Slide"
+#~ msgstr "Ver Diapositiva"
+
+#~ msgid "Search Slide"
+#~ msgstr "Buscar Diapositiva"
+
+#~ msgid "Slide Not found"
+#~ msgstr "Diapositiva no encontrada"
+
+#~ msgid "Not found in Trash"
+#~ msgstr "No encontrada en papelera"
+
+#~ msgid "Slide"
+#~ msgstr "Diapositiva"
+
+#~ msgid "Slider in front-page"
+#~ msgstr "Diapositivas en Slider en la pagina principal"
+
+#~ msgctxt "Post Type General Name"
+#~ msgid "Services"
+#~ msgstr "Servicios"
+
+#~ msgctxt "Post Type Singular Name"
+#~ msgid "Service"
+#~ msgstr "Servicio"
+
+#~ msgid "Services"
+#~ msgstr "Servicios"
+
+#~ msgid "Parent Service:"
+#~ msgstr "Servicio Padre:"
+
+#~ msgid "All Services"
+#~ msgstr "Todos los Servicios"
+
+#~ msgid "Add New Service"
+#~ msgstr "Añadir Nuevo Servicio"
+
+#~ msgid "Add Service"
+#~ msgstr "Añadir Servicio"
+
+#~ msgid "New Service"
+#~ msgstr "Nuevo Servicio"
+
+#~ msgid "Edit Service"
+#~ msgstr "Editar Servicio"
+
+#~ msgid "Update Service"
+#~ msgstr "Actualizar Servicio"
+
+#~ msgid "View Service"
+#~ msgstr "Ver Servicio"
+
+#~ msgid "Search Service"
+#~ msgstr "Buscar Servicio"
+
+#~ msgid "Service Not found"
+#~ msgstr "Servicio no encontrado"
+
+#~ msgid "Service"
+#~ msgstr "Servicio"
+
+#~ msgid "Services provided"
+#~ msgstr "Servicios que ofrece la empresa"
+
+#~ msgctxt "Taxonomy General Name"
+#~ msgid "Service Types"
+#~ msgstr "Tipos de Servicios"
+
+#~ msgctxt "Taxonomy Singular Name"
+#~ msgid "Service Type"
+#~ msgstr "Tipo de Servicio"
+
+#~ msgid "Service type"
+#~ msgstr "Tipo de Servicio"
+
+#~ msgid "All Service type"
+#~ msgstr "Todos los Tipo de Servicios"
+
+#~ msgid "Parent Service type"
+#~ msgstr "Tipo de Servicio Padre:"
+
+#~ msgid "Parent Service type:"
+#~ msgstr " Tipo de Servicio Padre:"
+
+#~ msgid "New Service type Name"
+#~ msgstr "Nuevo Tipo de Servicio"
+
+#~ msgid "Add New Service type"
+#~ msgstr "Añadir Tipo de Servicio"
+
+#~ msgid "Edit Service type"
+#~ msgstr "Editar Tipo de Servicio"
+
+#~ msgid "Update Service type"
+#~ msgstr "Actualizar Tipo de servicio"
+
+#~ msgid "View Service type"
+#~ msgstr "Ver Tipo de Servicio"
+
+#~ msgid "Separate Service type Service typewith commas"
+#~ msgstr "Separar tipos de servicio con comas"
+
+#~ msgid "Add or remove Service type"
+#~ msgstr "Añadir o Remover Tipos de Servicio"
+
+#~ msgid "Choose from the most used"
+#~ msgstr "Escoger de los más usados"
+
+#~ msgid "Popular Service type"
+#~ msgstr " Tipo de servicios populares"
+
+#~ msgid "Search Service type"
+#~ msgstr "Buscar Tipo de Servicio"
+
+#~ msgid "Not Found"
+#~ msgstr "No encontrado"
+
+#~ msgid "About Us"
+#~ msgstr "¿Quiénes Somos?"
+
+#~ msgid "Blog"
+#~ msgstr "Blog"
+
+#~ msgid "Legal"
+#~ msgstr "Legal"
+
+#~ msgid "Affiliates"
+#~ msgstr "Afiliados"
+
+#~ msgid "Cookie Policy"
+#~ msgstr "Política de Cookies"
+
+#~ msgid "Calling Guide"
+#~ msgstr "Guía Telefónica"
+
+#~ msgid "Pay as you Go"
+#~ msgstr "Postpago"
+
+#~ msgid "Smart Home Phone Service"
+#~ msgstr "Servicio Telefónico Inteligente"
+
+#~ msgid "GSM / Sim card"
+#~ msgstr "GSM / Sim card"
+
+#~ msgid "Android App"
+#~ msgstr "Android App"
+
+#~ msgid "Apple iOS App"
+#~ msgstr "Apple iOS App"
+
+#~ msgid "Windows Phone App"
+#~ msgstr "Windows Phone App"
+
+#~ msgid "Facebook App"
+#~ msgstr "Facebook App"
+
+#, fuzzy
+#~ msgid "Search Item"
+#~ msgstr "Buscar"
+
+#~ msgid "Phone Services"
+#~ msgstr "Servicios Telefónicos"
+
+#, fuzzy
+#~ msgid "Pay as yo Go"
+#~ msgstr "Postpago"
+
+#, fuzzy
+#~ msgid "Smart Phone Unlimited"
+#~ msgstr "Servicio Telefónico Inteligente"
+
+#, fuzzy
+#~ msgid "Smart Phone 500 Min"
+#~ msgstr "Servicio Telefónico Inteligente"
+
+#, fuzzy
+#~ msgid "Global Roaming Pay as you Go"
+#~ msgstr "Postpago"
+
+#~ msgid "Our Apps"
+#~ msgstr "Aplicaciones"
+
+#~ msgid "Sign In"
+#~ msgstr "Registrarse"
+
+#, fuzzy
+#~ msgid "Search Rates"
+#~ msgstr "Buscar"
+
+#~ msgid "Blue"
+#~ msgstr "Azul"
+
+#~ msgid "Green"
+#~ msgstr "Verde"
+
+#~ msgid "Purple"
+#~ msgstr "Púrpura"
+
+#~ msgid "Red"
+#~ msgstr "Rojo"
+
+#~ msgid "Yellow"
+#~ msgstr "Amarillo"
+
+#, fuzzy
+#~ msgid "Worlwide Service"
+#~ msgstr "Servicios Telefónicos"
+
+#~ msgid "Search"
+#~ msgstr "Buscar"
+
+#~ msgid "4 things Global Link"
+#~ msgstr "4 cosas en las que Global Link"
+
+#~ msgid "is really good at!"
+#~ msgstr "es realmente bueno!"
+
+#~ msgid "Online Support"
+#~ msgstr "Soporte En-línea"
+
+#~ msgid "about-us"
+#~ msgstr "¿Quiénes Somos?"

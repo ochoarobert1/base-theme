@@ -1,4 +1,4 @@
-<footer class="container-fluid" role="contentinfo">
+<footer class="container-fluid"  role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
     <div class="row">
         <div class="the-footer col-md-12 no-paddingl no-paddingr">
             <div class="container">
@@ -12,5 +12,6 @@
     </div>
 </footer>
 <?php wp_footer() ?>
+
 </body>
 </html>

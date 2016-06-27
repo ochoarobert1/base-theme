@@ -31,7 +31,7 @@
                 </article>
                 <?php endwhile; ?>
                 <div class="pagination col-md-12">
-                    <?php if(function_exists('wp_paginate')) { wp_paginate(); } else { posts_nav_link(); } ?>
+                    <?php if(function_exists('wp_paginate')) { wp_paginate(); } else { posts_nav_link(); wp_link_pages(); } ?>
                 </div>
             </div>
             <div class="col-md-3">

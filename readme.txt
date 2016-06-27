@@ -1,4 +1,4 @@
-![alt tag](http://robertochoa.com.ve/wp-content/uploads/2015/10/repo-logo.jpg)
+﻿![alt tag](http://robertochoa.com.ve/wp-content/uploads/2015/10/repo-logo.jpg)
 
 # PROYECTO Wordpress Custom Theme #
 
@@ -10,10 +10,9 @@ Tema diseñado por [Robert Ochoa](http://www.robertochoa.com.ve/) para PROYECTO 
 
 ### Componentes Principales ###
 
-* Twitter Bootstrap 3.3.5
-* Font Awesome 4.4
-* jQuery Nicescroll 3.6.0
-* jQuery Engine Validation 2.6.2
+* Twitter Bootstrap 3.3.6
+* Font Awesome 4.6.5
+* jQuery Nicescroll 4.1.0
 
 
 ### Funciones Incluídas ###

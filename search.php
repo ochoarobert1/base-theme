@@ -2,12 +2,12 @@
 <main class="container" role="main">
     <div class="row">
         <section class="col-md-12">
-            <h1><?php echo sprintf( __( '%s Search Results for ', 'PROYECTO' ), $wp_query->found_posts ); echo get_search_query(); ?></h1>
+            <h1><?php echo sprintf( __( '%s Search Results for ', 'PROYECTO' ), $wp_query->found_posts ); echo esc_attr(get_search_query()); ?></h1>
             <hr>
             <div class="col-md-9">
                 <?php $defaultatts = array('class' => 'img-responsive'); ?>
                 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-                <article id="post-<?php the_ID(); ?>" class="archive-item col-md-12 no-paddingl no-paddingr <?php echo join(' ', get_post_class()); ?>">
+                <article id="post-<?php the_ID(); ?>" class="archive-item col-md-12 no-paddingl no-paddingr <?php echo join(' ', get_post_class()); ?>" role="article">
                     <picture class="col-md-5">
                         <?php if ( has_post_thumbnail()) : ?>
                         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
@@ -20,9 +20,9 @@
                         <?php endif; ?>
                     </picture>
                     <div class="col-md-7">
-                        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><h2><?php the_title(); ?></h2></a>
-                        <span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-                        <span class="author">Publicado por: <?php the_author_posts_link(); ?></span>
+                        <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><h2><?php the_title(); ?></h2></a>
+                        <span class="date" datetime="<?php echo get_the_time('Y-m-d') ?>" itemprop="datePublished"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
+                        <span class="author" itemprop="author" itemscope itemptype="http://schema.org/Person">Publicado por: <?php the_author_posts_link(); ?></span>
                         <p><?php the_excerpt(); ?></p>
                         <?php edit_post_link(); ?>
                     </div>

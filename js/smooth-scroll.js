@@ -16,7 +16,7 @@
 
 	var smoothScroll = {}; // Object for public APIs
 	var supports = 'querySelector' in document && 'addEventListener' in root; // Feature test
-	var settings, eventTimeout, fixedHeader, headerHeight;
+	var settings, eventTimeout, fixedHeader, headerHeight, animationInterval;
 
 	// Default settings
 	var defaults = {
@@ -115,7 +115,7 @@
 		}
 
 		// Get closest match
-		for ( ; elem && elem !== document; elem = elem.parentNode ) {
+		for ( ; elem && elem !== document && elem.nodeType === 1; elem = elem.parentNode ) {
 
 			// If selector is a class
 			if ( firstChar === '.' ) {
@@ -163,12 +163,18 @@
 
 	/**
 	 * Escape special characters for use with querySelector
-	 * @private
+	 * @public
 	 * @param {String} id The anchor ID to escape
 	 * @author Mathias Bynens
 	 * @link https://github.com/mathiasbynens/CSS.escape
 	 */
-	var escapeCharacters = function ( id ) {
+	smoothScroll.escapeCharacters = function ( id ) {
+
+		// Remove leading hash
+		if ( id.charAt(0) === '#' ) {
+			id = id.substr(1);
+		}
+
 		var string = String(id);
 		var length = string.length;
 		var index = -1;
@@ -230,7 +236,9 @@
 			result += '\\' + string.charAt(index);
 
 		}
-		return result;
+
+		return '#' + result;
+
 	};
 
 	/**
@@ -274,9 +282,18 @@
 				anchor = anchor.offsetParent;
 			} while (anchor);
 		}
-		location = location - headerHeight - offset;
-		return location >= 0 ? location : 0;
+		location = Math.max(location - headerHeight - offset, 0);
+		return Math.min(location, getDocumentHeight() - getViewportHeight());
 	};
+	
+	/**
+	 * Determine the viewport's height
+	 * @private
+	 * @returns {Number}
+	 */
+	var getViewportHeight = function() {
+        	return Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    	};
 
 	/**
 	 * Determine the document's height
@@ -320,31 +337,33 @@
 	/**
 	 * Start/stop the scrolling animation
 	 * @public
-	 * @param {Element} toggle The element that toggled the scroll event
 	 * @param {Element} anchor The element to scroll to
+	 * @param {Element} toggle The element that toggled the scroll event
 	 * @param {Object} options
 	 */
-	smoothScroll.animateScroll = function ( toggle, anchor, options ) {
+	smoothScroll.animateScroll = function ( anchor, toggle, options ) {
 
 		// Options and overrides
 		var overrides = getDataOptions( toggle ? toggle.getAttribute('data-options') : null );
-		var settings = extend( settings || defaults, options || {}, overrides ); // Merge user options with defaults
-		anchor = '#' + escapeCharacters(anchor.substr(1)); // Escape special characters and leading numbers
+		var animateSettings = extend( settings || defaults, options || {}, overrides ); // Merge user options with defaults
 
 		// Selectors and variables
-		var anchorElem = anchor === '#' ? root.document.documentElement : root.document.querySelector(anchor);
+		var isNum = Object.prototype.toString.call( anchor ) === '[object Number]' ? true : false;
+		var anchorElem = isNum ? null : ( anchor === '#' ? root.document.documentElement : root.document.querySelector(anchor) );
+		if ( !isNum && !anchorElem ) return;
 		var startLocation = root.pageYOffset; // Current location on the page
-		if ( !fixedHeader ) { fixedHeader = root.document.querySelector( settings.selectorHeader ); }  // Get the fixed header if not already set
+		if ( !fixedHeader ) { fixedHeader = root.document.querySelector( animateSettings.selectorHeader ); }  // Get the fixed header if not already set
 		if ( !headerHeight ) { headerHeight = getHeaderHeight( fixedHeader ); } // Get the height of a fixed header if one exists and not already set
-		var endLocation = getEndLocation( anchorElem, headerHeight, parseInt(settings.offset, 10) ); // Scroll to location
-		var animationInterval; // interval timer
+		var endLocation = isNum ? anchor : getEndLocation( anchorElem, headerHeight, parseInt(animateSettings.offset, 10) ); // Location to scroll to
 		var distance = endLocation - startLocation; // distance to travel
 		var documentHeight = getDocumentHeight();
 		var timeLapsed = 0;
 		var percentage, position;
 
 		// Update URL
-		updateUrl(anchor, settings.updateURL);
+		if ( !isNum ) {
+			updateUrl(anchor, animateSettings.updateURL);
+		}
 
 		/**
 		 * Stop the scroll animation when it reaches its target (or the bottom/top of page)
@@ -357,8 +376,10 @@
 			var currentLocation = root.pageYOffset;
 			if ( position == endLocation || currentLocation == endLocation || ( (root.innerHeight + currentLocation) >= documentHeight ) ) {
 				clearInterval(animationInterval);
-				anchorElem.focus();
-				settings.callback( toggle, anchor ); // Run callbacks after animation complete
+				if ( !isNum ) {
+					anchorElem.focus();
+				}
+				animateSettings.callback( anchor, toggle ); // Run callbacks after animation complete
 			}
 		};
 
@@ -368,9 +389,9 @@
 		 */
 		var loopAnimateScroll = function () {
 			timeLapsed += 16;
-			percentage = ( timeLapsed / parseInt(settings.speed, 10) );
+			percentage = ( timeLapsed / parseInt(animateSettings.speed, 10) );
 			percentage = ( percentage > 1 ) ? 1 : percentage;
-			position = startLocation + ( distance * easingPattern(settings.easing, percentage) );
+			position = startLocation + ( distance * easingPattern(animateSettings.easing, percentage) );
 			root.scrollTo( 0, Math.floor(position) );
 			stopAnimateScroll(position, endLocation, animationInterval);
 		};
@@ -380,6 +401,7 @@
 		 * @private
 		 */
 		var startAnimateScroll = function () {
+			clearInterval(animationInterval);
 			animationInterval = setInterval(loopAnimateScroll, 16);
 		};
 
@@ -401,11 +423,18 @@
 	 * @private
 	 */
 	var eventHandler = function (event) {
+
+		// Don't run if right-click or command/control + click
+		if ( event.button !== 0 || event.metaKey || event.ctrlKey ) return;
+
+		// If a smooth scroll link, animate it
 		var toggle = getClosest( event.target, settings.selector );
 		if ( toggle && toggle.tagName.toLowerCase() === 'a' ) {
 			event.preventDefault(); // Prevent default click event
-			smoothScroll.animateScroll( toggle, toggle.hash, settings); // Animate scroll
+			var hash = smoothScroll.escapeCharacters( toggle.hash ); // Escape hash characters
+			smoothScroll.animateScroll( hash, toggle, settings); // Animate scroll
 		}
+
 	};
 
 	/**
@@ -441,6 +470,7 @@
 		eventTimeout = null;
 		fixedHeader = null;
 		headerHeight = null;
+		animationInterval = null;
 	};
 
 	/**

@@ -94,7 +94,7 @@ function the_post_thumbnail_caption() {
 function the_breadcrumb() {
     echo '<ol class="breadcrumb">';
     if (!is_home()) {
-        echo '<li><a href="' . home_url('/') . '">'. __( 'Home', 'PROYECTO' ) . '</a></li>';
+        echo '<li><a href="' . home_url('/') . '">'. __( 'Inicio', 'PROYECTO' ) . '</a></li>';
         if (is_category() || is_single()) {
             echo '<li>' . get_the_category('title_li=') . '</li>';
             if (is_single()) {
