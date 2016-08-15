@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROYECTO\n"
-"POT-Creation-Date: 2016-06-25 14:32-0400\n"
-"PO-Revision-Date: 2016-06-25 14:36-0400\n"
+"POT-Creation-Date: 2016-08-15 16:52-0300\n"
+"PO-Revision-Date: 2016-08-15 16:52-0300\n"
 "Last-Translator: \n"
 "Language-Team: Robert Ochoa <contacto@robertochoa.com.ve>\n"
 "Language: en_US\n"
@@ -40,77 +40,77 @@ msgstr "Shop Sidebar"
 msgid "Widgets seran vistos en Tienda y Categorias de Producto"
 msgstr "Widgets will be seen in shop and product categories"
 
-#: ../functions.php:287
+#: ../functions.php:295
 msgid "Gracias por crear con "
 msgstr "Thank you for creating with"
 
-#: ../functions.php:289
+#: ../functions.php:297
 msgid "Tema desarrollado por "
 msgstr "Theme Developed By"
 
-#: ../functions.php:327
+#: ../functions.php:335
 msgctxt "Post Type General Name"
 msgid "Portafolio"
 msgstr "Portfolio"
 
-#: ../functions.php:328
+#: ../functions.php:336
 msgctxt "Post Type Singular Name"
 msgid "Item"
 msgstr "Add New Item"
 
-#: ../functions.php:329 ../functions.php:330
+#: ../functions.php:337 ../functions.php:338
 msgid "Portafolio"
 msgstr "Portfolio"
 
-#: ../functions.php:331
+#: ../functions.php:339
 msgid "Item Padre:"
 msgstr "Parent item:"
 
-#: ../functions.php:332
+#: ../functions.php:340
 msgid "Todos los Items"
 msgstr "All Items"
 
-#: ../functions.php:333
+#: ../functions.php:341
 msgid "Agregar Item"
 msgstr "Add Item"
 
-#: ../functions.php:334
+#: ../functions.php:342
 msgid "Agregar"
 msgstr "Add New"
 
-#: ../functions.php:335
+#: ../functions.php:343
 msgid "Nuevo Item"
 msgstr "New Item"
 
-#: ../functions.php:336
+#: ../functions.php:344
 msgid "Editar Item"
 msgstr "Edit Item"
 
-#: ../functions.php:337
+#: ../functions.php:345
 msgid "Actualizar Item"
 msgstr "Update Item"
 
-#: ../functions.php:338
+#: ../functions.php:346
 msgid "Ver Item"
 msgstr "View Item"
 
-#: ../functions.php:339
+#: ../functions.php:347
 msgid "Buscar Item"
 msgstr "Search Item"
 
-#: ../functions.php:340
+#: ../functions.php:348
 msgid "No encontrado"
 msgstr "Not found"
 
-#: ../functions.php:341
+#: ../functions.php:349
 msgid "No encontrado en papelera"
 msgstr "Not found in Trash"
 
-#: ../functions.php:344
+#: ../functions.php:352
 msgid "portafolio"
 msgstr "portfolio"
 
-#: ../functions.php:345
+#: ../functions.php:353
 msgid "Trabajos realizados"
 msgstr "Jobs performed"
 
@@ -139,12 +139,10 @@ msgid "semanas"
 msgstr "weeks"
 
 #: ../includes/wp_custom_functions.php:10
-#, fuzzy
 msgid "dia"
 msgstr "day"
 
 #: ../includes/wp_custom_functions.php:10
-#, fuzzy
 msgid "dias"
 msgstr "days"
 
@@ -153,28 +151,23 @@ msgid "hora"
 msgstr "hour"
 
 #: ../includes/wp_custom_functions.php:11
-#, fuzzy
 msgid "horas"
 msgstr "hours"
 
 #: ../includes/wp_custom_functions.php:12
-#, fuzzy
 msgid "minuto"
 msgstr "minute"
 
 #: ../includes/wp_custom_functions.php:12
-#, fuzzy
 msgid "minutos"
 msgstr "minutes"
 
 #: ../includes/wp_custom_functions.php:13
-#, fuzzy
 msgid "segundo"
 msgstr "second"
 
 #: ../includes/wp_custom_functions.php:13
 #: ../includes/wp_custom_functions.php:32
-#, fuzzy
 msgid "segundos"
 msgstr "seconds"
 
@@ -183,12 +176,11 @@ msgid " un momento"
 msgstr "a momento ago"
 
 #: ../includes/wp_custom_functions.php:97
-#, fuzzy
 msgid "Inicio"
 msgstr "Home"
 
 #: ../includes/wp_functions_overrides.php:45
-#, fuzzy, php-format
+#, php-format
 msgid "Page %s"
 msgstr "Page %s"
 
@@ -196,8 +188,7 @@ msgstr "Page %s"
 #: ../post-formats/format-chat.php:12 ../post-formats/format-gallery.php:12
 #: ../post-formats/format-image.php:12 ../post-formats/format-link.php:12
 #: ../post-formats/format-quote.php:12 ../post-formats/format-status.php:12
-#: ../post-formats/format-video.php:12 ../post-formats/format.php:14
-#, fuzzy
+#: ../post-formats/format-video.php:12 ../post-formats/format.php:13
 msgid "Tags: "
 msgstr "Tags: "
 
@@ -205,23 +196,20 @@ msgstr "Tags: "
 #: ../post-formats/format-chat.php:17 ../post-formats/format-gallery.php:17
 #: ../post-formats/format-image.php:17 ../post-formats/format-link.php:17
 #: ../post-formats/format-quote.php:17 ../post-formats/format-status.php:17
-#: ../post-formats/format-video.php:17 ../post-formats/format.php:19
-#, fuzzy
+#: ../post-formats/format-video.php:17 ../post-formats/format.php:18
 msgid "Pages:"
 msgstr "Pages:"
 
 #: ../search.php:5
-#, fuzzy, php-format
+#, php-format
 msgid "%s Search Results for "
 msgstr "%s Search Results for "
 
 #: ../searchform.php:3
-#, fuzzy
 msgid "Buscar por Términos:"
 msgstr "Search Terms"
 
 #: ../searchform.php:6
-#, fuzzy
 msgid "Buscar"
 msgstr "Buscar"
 

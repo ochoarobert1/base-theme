@@ -12,10 +12,10 @@
         <link rel="profile" href="http://gmpg.org/xfn/11" />
         <link rel="dns-prefetch" href="//www.google-analytics.com"  />
         <?php /* FAVICONS */ ?>
-        <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon.png" />
         <?php /* THEME NAVBAR COLOR */ ?>
         <meta name="msapplication-TileColor" content="#BE1B20" />
-        <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png" />
+        <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/images/win8-tile-icon.png" />
         <meta name="theme-color" content="#BE1B20" />
         <?php /* AUTHOR INFORMATION */ ?>
         <meta name="language" content="<?php echo get_bloginfo('language'); ?>" />
