@@ -10,7 +10,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="pingback" href="<?php echo esc_url(get_bloginfo('pingback_url')); ?>" />
         <link rel="profile" href="http://gmpg.org/xfn/11" />
-        <link rel="dns-prefetch" href="//www.google-analytics.com"  />
+        <link rel="dns-prefetch" href="//connect.facebook.net" />
+        <link rel="dns-prefetch" href="//facebook.com" />
+        <link rel="dns-prefetch" href="//googleads.g.doubleclick.net" />
+        <link rel="dns-prefetch" href="//pagead2.googlesyndication.com" />
+        <link rel="dns-prefetch" href="//google-analytics.com" />
         <?php /* FAVICONS */ ?>
         <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon.png" />
         <?php /* THEME NAVBAR COLOR */ ?>

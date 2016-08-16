@@ -80,16 +80,6 @@ function my_search_query( $query ) {
 }
 add_action( 'pre_get_posts', 'my_search_query' );
 
-/** CAPTIONS PARA POST THUMBNAIL  **/
-function the_post_thumbnail_caption() {
-    global $post;
-    $thumbnail_id    = get_post_thumbnail_id($post->ID);
-    $thumbnail_image = get_posts(array('p' => $thumbnail_id, 'post_type' => 'attachment'));
-    if ($thumbnail_image && isset($thumbnail_image[0])) {
-        echo '<span class="single-img-text">Foto: '.$thumbnail_image[0]->post_excerpt.'</span>';
-    }
-}
-
 /* BREADCRUMBS */
 function the_breadcrumb() {
     echo '<ol class="breadcrumb">';
