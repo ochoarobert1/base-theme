@@ -19,8 +19,9 @@
  * ( source: http://andylangton.co.uk/blog/development/get-viewport-size-width-and-height-javascript )
 */
 function updateViewportDimensions() {
-    var w=window,d=document,e=d.documentElement,g=d.getElementsByTagName('body')[0],x=w.innerWidth||e.clientWidth||g.clientWidth,y=w.innerHeight||e.clientHeight||g.clientHeight;
-    return { width:x,height:y };
+    "use strict";
+    var w = window, d = document, e = d.documentElement, g = d.getElementsByTagName('body')[0], x = w.innerWidth || e.clientWidth || g.clientWidth, y = w.innerHeight || e.clientHeight || g.clientHeight;
+    return { width: x, height: y };
 }
 // setting the viewport width
 var viewport = updateViewportDimensions();
@@ -32,10 +33,11 @@ var viewport = updateViewportDimensions();
  * ( source: http://stackoverflow.com/questions/2854407/javascript-jquery-window-resize-how-to-fire-after-the-resize-is-completed )
 */
 var waitForFinalEvent = (function () {
+    "use strict";
     var timers = {};
     return function (callback, ms, uniqueId) {
         if (!uniqueId) { uniqueId = "Don't call this twice without a uniqueId"; }
-        if (timers[uniqueId]) { clearTimeout (timers[uniqueId]); }
+        if (timers[uniqueId]) { clearTimeout(timers[uniqueId]); }
         timers[uniqueId] = setTimeout(callback, ms);
     };
 })();
@@ -94,12 +96,13 @@ var timeToWaitForLast = 100;
  * then we can swap out those images since they are located in a data attribute.
 */
 function loadGravatars() {
+    "use strict";
     // set the viewport using the function above
     viewport = updateViewportDimensions();
     // if the viewport is tablet or larger, we load in the gravatars
     if (viewport.width >= 768) {
-        jQuery('.comment img[data-gravatar]').each(function(){
-            jQuery(this).attr('src',jQuery(this).attr('data-gravatar'));
+        jQuery('.comment img[data-gravatar]').each(function () {
+            jQuery(this).attr('src', jQuery(this).attr('data-gravatar'));
         });
     }
 } // end function
@@ -108,21 +111,36 @@ function loadGravatars() {
 /*
  * Put all your regular jQuery in here.
 */
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
     "use strict";
     jQuery("#sticker").sticky({topSpacing: 0});
     jQuery("body").niceScroll({
-        cursorcolor: '#BE1B20',
-        cursorborder: '0px',
-        cursorwidth: '10px',
-        cursorborderradius: '0px',
-        background: '#000000',
-        hwacceleration: false,
-        scrollspeed: 60,
-        mousescrollstep: 85,
-        smoothscroll: true,
-        autohidemode: false,
-        zindex: '999'
+        cursorcolor: "#BE1B20", // change cursor color in hex
+        cursoropacitymin: 0, // change opacity when cursor is inactive (scrollabar "hidden" state), range from 1 to 0
+        cursoropacitymax: 1, // change opacity when cursor is active (scrollabar "visible" state), range from 1 to 0
+        cursorwidth: "10px", // cursor width in pixel (you can also write "5px")
+        cursorborder: "0", // css definition for cursor border
+        cursorborderradius: "5px", // border radius in pixel for cursor
+        zindex: "auto", // change z-index for scrollbar div
+        scrollspeed: 60, // scrolling speed
+        mousescrollstep: 85, // scrolling speed with mouse wheel (pixel)
+        touchbehavior: false, // enable cursor-drag scrolling like touch devices in desktop computer
+        hwacceleration: false, // use hardware accelerated scroll when supported
+        boxzoom: false, // enable zoom for box content
+        dblclickzoom: true, // (only when boxzoom=true) zoom activated when double click on box
+        gesturezoom: true, // (only when boxzoom=true and with touch devices) zoom activated when pinch out/in on box
+        grabcursorenabled: true, // (only when touchbehavior=true) display "grab" icon
+        autohidemode: false, // how hide the scrollbar works, possible values:
+        background: '#000000', // change css for rail background
+        iframeautoresize: true, // autoresize iframe on load event
+        cursorminheight: 32, // set the minimum cursor height (pixel)
+        preservenativescrolling: true, // you can scroll native scrollable areas with mouse, bubbling mouse wheel event
+        railoffset: false, // you can add offset top/left for rail position
+        bouncescroll: false, // (only hw accell) enable scroll bouncing at the end of content as mobile-like
+        spacebarenabled: true, // enable page down scrolling when space bar has pressed
+        railpadding: { top: 0, right: 0, left: 0, bottom: 0 }, // set padding for rail bar
+        disableoutline: true, // for chrome browser, disable outline (orange highlight) when selecting a div with nicescroll
+        horizrailenabled: true // nicescroll can manage horizontal scroll
     });
     /*
    * Let's fire off the gravatar function

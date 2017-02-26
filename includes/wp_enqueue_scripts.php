@@ -3,6 +3,7 @@ function proyecto_load_js() {
     if (!is_admin()){
         $version_remove = NULL;
         if ($_SERVER['REMOTE_ADDR'] == '::1') {
+
             /*- MODERNIZR ON LOCAL  -*/
             wp_register_script('modernizr', get_template_directory_uri() . '/js/modernizr.min.js', array('jquery'), '2.8.3', true);
             wp_enqueue_script('modernizr');
@@ -47,8 +48,11 @@ function proyecto_load_js() {
             //wp_register_script('owl-js', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), '2.2.0', true);
             //wp_enqueue_script('owl-js');
 
-        } else {
+            /*- WOW ON LOCAL -*/
+            //wp_register_script('wow-js', get_template_directory_uri() . '/js/wow.min.js', array('jquery'), '1.1.3', true);
+            //wp_enqueue_script('wow-js');
 
+        } else {
 
             /*- MODERNIZR -*/
             wp_register_script('modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array('jquery'), '2.8.3', true);
@@ -90,9 +94,13 @@ function proyecto_load_js() {
             //wp_register_script('masonry', 'https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.1/masonry.pkgd.min.js', array('jquery'), '4.1.1', true);
             //wp_enqueue_script('masonry');
 
-            /*- OWL ON LOCAL -*/
+            /*- OWL CAROUSEL -*/
             //wp_register_script('owl-js', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js', array('jquery'), '2.2.0', true);
             //wp_enqueue_script('owl-js');
+
+            /*- WOW -*/
+            //wp_register_script('wow-js', 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js', array('jquery'), '1.1.2', true);
+            //wp_enqueue_script('wow-js');
 
         }
 
@@ -103,4 +111,5 @@ function proyecto_load_js() {
 }
 
 add_action('init', 'proyecto_load_js');
+
 ?>
