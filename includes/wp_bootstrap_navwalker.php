@@ -4,7 +4,7 @@
  * Class Name: wp_bootstrap_navwalker
  * GitHub URI: https://github.com/twittem/wp-bootstrap-navwalker
  * Description: A custom WordPress nav walker class to implement the Bootstrap 3 navigation style in a custom theme using the WordPress built in menu manager.
- * Version: 2.0.4
+ * Version: 2.0.5
  * Author: Edward McIntyre - @twittem
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -76,16 +76,16 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
             $output .= $indent . '<li' . $id . $value . $class_names .'>';
 
             $atts = array();
-            $atts['title']  = ! empty( $item->title )    ? $item->title    : '';
-            $atts['target'] = ! empty( $item->target )    ? $item->target    : '';
-            $atts['rel']    = ! empty( $item->xfn )        ? $item->xfn    : '';
+            $atts['title']  = ! empty( $item->title )	? $item->title	: '';
+            $atts['target'] = ! empty( $item->target )	? $item->target	: '';
+            $atts['rel']    = ! empty( $item->xfn )		? $item->xfn	: '';
 
             // If item has_children add atts to a.
             if ( $args->has_children && $depth === 0 ) {
-                $atts['href']           = '#';
-                $atts['data-toggle']    = 'dropdown';
-                $atts['class']            = 'dropdown-toggle';
-                $atts['aria-haspopup']    = 'true';
+                $atts['href']   		= '#';
+                $atts['data-toggle']	= 'dropdown';
+                $atts['class']			= 'dropdown-toggle';
+                $atts['aria-haspopup']	= 'true';
             } else {
                 $atts['href'] = ! empty( $item->url ) ? $item->url : '';
             }
@@ -150,7 +150,7 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 
         // Display this element.
         if ( is_object( $args[0] ) )
-            $args[0]->has_children = ! empty( $children_elements[ $element->$id_field ] );
+           $args[0]->has_children = ! empty( $children_elements[ $element->$id_field ] );
 
         parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
     }
@@ -194,7 +194,7 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
                 $fb_output .= ' class="' . $menu_class . '"';
 
             $fb_output .= '>';
-            $fb_output .= '<li><a href="' . admin_url( 'nav-menus.php' ) . '">Add a menu</a></li>';
+            $fb_output .= '<li><a href="' . admin_url( 'nav-menus.php' ) . '">'. __('Agrega un Menu', 'PROYECTO') .'</a></li>';
             $fb_output .= '</ul>';
 
             if ( $container )
@@ -205,13 +205,19 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
     }
 }
 
-
-
-/* ESTRUCTURA PARA WORDPRESS MENU */
+/* METODO DE USO */
 /*
-wp_nav_menu( array( 'theme_location' => 'header_menu', 'depth' => 2, 'container' => 'div',
-                'container_class' => 'collapse navbar-collapse', 'container_id' => 'bs-example-navbar-collapse-1',
-                'menu_class' => 'nav navbar-nav', 'fallback_cb' => 'wp_bootstrap_navwalker::fallback', 'walker' => new wp_bootstrap_navwalker())
-            );
+    wp_nav_menu( array(
+        'menu'              => 'primary',
+        'theme_location'    => 'primary',
+        'depth'             => 2,
+        'container'         => 'div',
+        'container_class'   => 'collapse navbar-collapse',
+        'container_id'      => 'bs-example-navbar-collapse-1',
+        'menu_class'        => 'nav navbar-nav',
+        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+        'walker'            => new wp_bootstrap_navwalker())
+               );
 */
+
 ?>

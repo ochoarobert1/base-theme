@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main class="container" role="main">
     <div class="row">
-        <section class="col-md-12">
+        <section class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <?php if (have_posts()): the_post(); ?>
             <h1>Archivo de <?php echo get_the_author(); ?></h1>
             <?php if ( get_the_author_meta('description')) : ?>
@@ -10,11 +10,11 @@
             <?php echo wpautop( get_the_author_meta('description') ); ?>
             <?php endif; ?>
             <hr>
-            <div class="col-md-9">
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                 <?php $defaultatts = array('class' => 'img-responsive'); ?>
                 <?php rewind_posts(); while (have_posts()) : the_post(); ?>
                 <article id="post-<?php the_ID(); ?>" class="archive-item col-md-12 no-paddingl no-paddingr <?php echo join(' ', get_post_class()); ?>">
-                    <picture class="col-md-5">
+                    <picture class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
                         <?php if ( has_post_thumbnail()) : ?>
                         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                             <?php the_post_thumbnail('blog_img', $defaultatts); ?>
@@ -25,7 +25,7 @@
                         </a>
                         <?php endif; ?>
                     </picture>
-                    <div class="col-md-7">
+                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
                         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><h2><?php the_title(); ?></h2></a>
                         <span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
                         <span class="author">Publicado por: <?php the_author_posts_link(); ?></span>
@@ -36,17 +36,17 @@
                     <hr>
                 </article>
                 <?php endwhile; ?>
-                <div class="pagination col-md-12">
+                <div class="pagination col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <?php if(function_exists('wp_paginate')) { wp_paginate(); } else { posts_nav_link(); } ?>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs">
                 <?php get_sidebar(); ?>
             </div>
             <?php else: ?>
             <article>
-                <h2>Disculpe, su busqueda no arrojo ningun resultado</h2>
-                <h3>Haga click <a href="<?php echo home_url('/'); ?>">aqui</a> para volver al inicio</h3>
+                <h2><?php _e('Disculpe, su busqueda no arrojo ningun resultado', 'PROYECTO'); ?></h2>
+                <h3><?php _e('Dirígete nuevamente al', 'PROYECTO'); ?> <a href="<?php echo home_url('/'); ?>" title="<?php _e('Volver al Inicio', 'PROYECTO'); ?>"><?php _e('inicio', 'PROYECTO'); ?></a>.</h3>
             </article>
             <?php endif; ?>
         </section>

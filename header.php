@@ -51,7 +51,7 @@
         <div id="fb-root"></div>
         <header class="container-fluid" role="banner" itemscope itemtype="http://schema.org/WPHeader">
             <div class="row">
-                <div class="the-header col-md-12 no-paddingl no-paddingr">
+                <div class="the-header col-lg-12 col-md-12 col-sm-12 col-xs-12 no-paddingl no-paddingr">
                     <nav class="navbar navbar-default" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
                         <div class="container-fluid">
                             <!-- Brand and toggle get grouped for better mobile display -->

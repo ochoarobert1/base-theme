@@ -34,18 +34,6 @@ function PROYECTO_time_ago() {
     return $output;
 }
 
-/** QUITAR ACENTOS Y CARACTERES ESPECIALES - USADO PARA SLUGS DE CATEGORIAS **/
-function normalize ($cadena){
-    $originales = 'ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞ
-ßàáâãäåæçèéêëìíîïðñòóôõöøùúûýýþÿŔŕ';
-    $modificadas = 'aaaaaaaceeeeiiiidnoooooouuuuy
-bsaaaaaaaceeeeiiiidnoooooouuuyybyRr';
-    $cadena = utf8_decode($cadena);
-    $cadena = strtr($cadena, utf8_decode($originales), $modificadas);
-    $cadena = strtolower($cadena);
-    return utf8_encode($cadena);
-}
-
 /* CUSTOM EXCERPT */
 function get_excerpt($count){
     $foto = 0;
@@ -61,24 +49,6 @@ function get_excerpt($count){
     $excerpt = $excerpt.'... <a class="plus" href="'.$permalink.'">+</a>';
     return $excerpt;
 }
-
-/** META TWITTER PARA USUARIO EN EL WORDPRESS **/
-function custom_contact_fields( $contact_meta ) {
-    if ( !isset( $contact_meta['twitter'] ) ) {
-        $contact_meta['twitter'] = 'Usuario de Twitter';
-    }
-    return $contact_meta;
-}
-add_filter( 'user_contactmethods', 'custom_contact_fields' );
-
-/** ORDENAR BUSQUEDA POR FECHA **/
-function my_search_query( $query ) {
-    // not an admin page and is the main query
-    if ( !is_admin() && $query->is_main_query() ) {
-        if ( is_search() ) { $query->set( 'orderby', 'date' ); }
-    }
-}
-add_action( 'pre_get_posts', 'my_search_query' );
 
 /* BREADCRUMBS */
 function the_breadcrumb() {
@@ -103,5 +73,9 @@ function image_tag_class($class) {
     return $class;
 }
 add_filter('get_image_tag_class', 'image_tag_class' );
+
+/* ADD CONTENT WIDTH FUNCTION */
+
+if ( ! isset( $content_width ) ) $content_width = 1170;
 
 ?>

@@ -1,14 +1,13 @@
 
 <?php /* POST FORMAT - DEFAULT */ ?>
 
-<article id="post-<?php the_ID(); ?>" class="the-single col-md-9 <?php echo join(' ', get_post_class()); ?>" itemscope itemtype="http://schema.org/Article">
+<article id="post-<?php the_ID(); ?>" class="the-single col-lg-9 col-md-9 col-sm-9 col-xs-12 <?php echo join(' ', get_post_class()); ?>" itemscope itemtype="http://schema.org/Article">
     <?php if ( has_post_thumbnail()) : ?>
     <picture>
         <?php the_post_thumbnail('single_img', $defaultargs); ?>
     </picture>
     <?php endif; ?>
     <header>
-        <a href="<?php echo get_edit_post_link(); ?> "><i class="fa fa-edit fa-2x pull-right"></i></a>
         <h1 itemprop="name"><?php the_title(); ?></h1>
         <?php the_tags( __( 'Tags: ', 'PROYECTO' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
     </header>
