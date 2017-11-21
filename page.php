@@ -10,7 +10,6 @@
             <article id="post-<?php the_ID(); ?>" class="page-content <?php echo join(' ', get_post_class()); ?>" >
                 <div class="page-article col-lg-12 col-md-12 col-sm-12 col-xs-12 no-paddingl no-paddingr" itemprop="articleBody">
                     <?php the_content(); ?>
-                    <?php comments_template( '', true ); // Remove if you don't want comments ?>
                 </div>
             </article>
         </section>

@@ -15,10 +15,10 @@ function my_jquery_enqueue() {
     wp_deregister_script('jquery');
     if ($_SERVER['REMOTE_ADDR'] == '::1') {
         /*- JQUERY ON LOCAL  -*/
-        wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', false, '3.0.0', true);
+        wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', false, '3.2.1', true);
     } else {
         /*- JQUERY ON WEB  -*/
-        wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', false, '1.12.4', true);
+        wp_register_script( 'jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js', false, '3.2.1', true);
     }
     wp_enqueue_script('jquery');
 }
@@ -42,8 +42,6 @@ require_once('includes/wp_bootstrap_navwalker.php');
 
 require_once('includes/wp_custom_functions.php');
 
-require_once('includes/wp_bootstrap_gallery.php');
-
 /* --------------------------------------------------------------
     ADD CUSTOM WOOCOMMERCE OVERRIDES
 -------------------------------------------------------------- */
@@ -63,12 +61,12 @@ add_theme_support( 'menus' );
 add_theme_support( 'html5', array( 'comment-list', 'search-form', 'comment-form' ) );
 add_theme_support( 'custom-background',
                   array(
-    'default-image' => '',    // background image default
-    'default-color' => '',    // background color default (dont add the #)
-    'wp-head-callback' => '_custom_background_cb',
-    'admin-head-callback' => '',
-    'admin-preview-callback' => ''
-)
+                      'default-image' => '',    // background image default
+                      'default-color' => '',    // background color default (dont add the #)
+                      'wp-head-callback' => '_custom_background_cb',
+                      'admin-head-callback' => '',
+                      'admin-preview-callback' => ''
+                  )
                  );
 
 /* --------------------------------------------------------------
@@ -95,24 +93,24 @@ register_nav_menus( array(
 add_action( 'widgets_init', 'PROYECTO_widgets_init' );
 function PROYECTO_widgets_init() {
     register_sidebar( array(
-        'name' => __( 'Main Sidebar', 'PROYECTO' ),
+        'name' => __( 'Sidebar Principal', 'PROYECTO' ),
         'id' => 'main_sidebar',
-        'description' => __( 'Estos widgets seran vistos en posts y pages', 'PROYECTO' ),
+        'description' => __( 'Estos widgets seran vistos en las entradas y páginas del sitio', 'PROYECTO' ),
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget'  => '</li>',
         'before_title'  => '<h2 class="widgettitle">',
         'after_title'   => '</h2>',
     ) );
 
-    register_sidebar( array(
-        'name' => __( 'Shop Sidebar', 'PROYECTO' ),
-        'id' => 'shop_sidebar',
-        'description' => __( 'Estos widgets seran vistos en Tienda y Categorias de Producto', 'PROYECTO' ),
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</li>',
-        'before_title'  => '<h2 class="widgettitle">',
-        'after_title'   => '</h2>',
-    ) );
+//    register_sidebar( array(
+//        'name' => __( 'Shop Sidebar', 'PROYECTO' ),
+//        'id' => 'shop_sidebar',
+//        'description' => __( 'Estos widgets seran vistos en Tienda y Categorias de Producto', 'PROYECTO' ),
+//        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+//        'after_widget'  => '</li>',
+//        'before_title'  => '<h2 class="widgettitle">',
+//        'after_title'   => '</h2>',
+//    ) );
 }
 
 /* --------------------------------------------------------------
@@ -130,10 +128,10 @@ add_action('login_head', 'custom_login_logo');
 if (! function_exists('dashboard_footer') ){
     function dashboard_footer() {
         echo '<span id="footer-thankyou">';
-        _e ('Gracias por crear con', 'PROYECTO' );
-        echo '<a href="http://wordpress.org/" target="_blank"> WordPress.</a> - ';
-        _e ('Tema desarrollado por', 'PROYECTO' );
-        echo '<a href="http://robertochoa.com.ve/" target="_blank"> Robert Ochoa</a></span>';
+        _e ('Gracias por crear con ', 'PROYECTO' );
+        echo '<a href="http://wordpress.org/" target="_blank">WordPress.</a> - ';
+        _e ('Tema desarrollado por ', 'PROYECTO' );
+        echo '<a href="http://robertochoa.com.ve/" target="_blank">Robert Ochoa</a></span>';
     }
 }
 add_filter('admin_footer_text', 'dashboard_footer');
@@ -149,6 +147,12 @@ require_once('includes/wp_custom_metabox.php');
 -------------------------------------------------------------- */
 
 require_once('includes/wp_custom_post_type.php');
+
+/* --------------------------------------------------------------
+    ADD CUSTOM THEME CONTROLS
+-------------------------------------------------------------- */
+
+//require_once('includes/wp_custom_theme_control.php');
 
 /* --------------------------------------------------------------
     ADD CUSTOM IMAGE SIZE

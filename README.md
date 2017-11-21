@@ -11,17 +11,17 @@ Tema diseñado por [Robert Ochoa](http://www.robertochoa.com.ve/) para PROYECTO 
 ### Componentes Principales ###
 
 * Twitter Bootstrap 3.3.7
-* Animate 3.5.1
-* Desandro's Flickity 2.0.2
-* OwlCarousel 1.3.3
-* Font Awesome 4.6.8
-* jQuery Nicescroll 3.6.8
+* Animate 3.5.2
+* Desandro's Flickity 2.0.10
+* OwlCarousel 2.2.1
+* Font Awesome 4.7.0
+* jQuery Nicescroll 3.7.6
 * modernizr 2.8.3
 * jQuery Sticky 1.0.4
 * Lettering 0.7.0
-* Smooth Scroll 10.0.0
-* Desandro's Isotope 3.0.1
-* Desandro's Masonry 4.1.0
+* Smooth Scroll 12.1.5
+* Desandro's Isotope 3.0.4
+* Desandro's Masonry 4.2.0
 
 ### Funciones Incluídas ###
 
