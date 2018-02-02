@@ -1,3 +1,7 @@
+<?php
+if (!is_admin()){
+    if (!$_SERVER['REMOTE_ADDR'] == '::1') {
+?>
 <script>
     (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
@@ -15,3 +19,7 @@
     ga('send', 'pageview');
 
 </script>
+<?php
+    }
+}
+?>

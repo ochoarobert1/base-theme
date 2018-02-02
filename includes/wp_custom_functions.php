@@ -69,7 +69,7 @@ function the_breadcrumb() {
 
 /* IMAGES RESPONSIVE ON ATTACHMENT IMAGES */
 function image_tag_class($class) {
-    $class .= ' img-responsive';
+    $class .= ' img-fluid';
     return $class;
 }
 add_filter('get_image_tag_class', 'image_tag_class' );
@@ -77,5 +77,13 @@ add_filter('get_image_tag_class', 'image_tag_class' );
 /* ADD CONTENT WIDTH FUNCTION */
 
 if ( ! isset( $content_width ) ) $content_width = 1170;
+
+function PROYECTO_menu_classes($classes, $item, $args) {
+
+    $classes[] = 'nav-item';
+
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'PROYECTO_menu_classes', 1, 3);
 
 ?>

@@ -1,3 +1,7 @@
+<?php
+if (!is_admin()){
+    if (!$_SERVER['REMOTE_ADDR'] == '::1') {
+?>
 <script>
     window.fbAsyncInit = function() {
         FB.init({
@@ -20,3 +24,7 @@
     }(document, 'script', 'facebook-jssdk'));
 
 </script>
+<?php
+    }
+}
+?>

@@ -5,7 +5,7 @@
         <section class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <article id="post-404">
                 <figure class="col-lg-5 col-lg-offset-3 col-md-5 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/404.png" alt="Error 404 Imagen" class="img-responsive" />
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/404.png" alt="Error 404 Imagen" class="img-fluid" />
                 </figure>
                 <div class="clearfix"></div>
                 <div class="col-lg-5 col-lg-offset-3 col-md-5 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">

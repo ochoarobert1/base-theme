@@ -18,7 +18,7 @@ function my_jquery_enqueue() {
         wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', false, '3.2.1', true);
     } else {
         /*- JQUERY ON WEB  -*/
-        wp_register_script( 'jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js', false, '3.2.1', true);
+        wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.2.1.slim.min.js', false, '3.2.1', true);
     }
     wp_enqueue_script('jquery');
 }
@@ -102,15 +102,15 @@ function PROYECTO_widgets_init() {
         'after_title'   => '</h2>',
     ) );
 
-//    register_sidebar( array(
-//        'name' => __( 'Shop Sidebar', 'PROYECTO' ),
-//        'id' => 'shop_sidebar',
-//        'description' => __( 'Estos widgets seran vistos en Tienda y Categorias de Producto', 'PROYECTO' ),
-//        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-//        'after_widget'  => '</li>',
-//        'before_title'  => '<h2 class="widgettitle">',
-//        'after_title'   => '</h2>',
-//    ) );
+    //    register_sidebar( array(
+    //        'name' => __( 'Shop Sidebar', 'PROYECTO' ),
+    //        'id' => 'shop_sidebar',
+    //        'description' => __( 'Estos widgets seran vistos en Tienda y Categorias de Producto', 'PROYECTO' ),
+    //        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+    //        'after_widget'  => '</li>',
+    //        'before_title'  => '<h2 class="widgettitle">',
+    //        'after_title'   => '</h2>',
+    //    ) );
 }
 
 /* --------------------------------------------------------------
@@ -118,7 +118,7 @@ function PROYECTO_widgets_init() {
 -------------------------------------------------------------- */
 
 function custom_login_logo() {
-
+    $version_remove = NULL;
     wp_register_style('wp-custom-login', get_template_directory_uri() . '/css/custom-wordpress-admin-style.css', false, $version_remove, 'all');
     wp_enqueue_style('wp-custom-login');
 

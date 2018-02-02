@@ -5,7 +5,7 @@
             <h1><?php echo sprintf( __( '%s Search Results for ', 'PROYECTO' ), $wp_query->found_posts ); echo esc_attr(get_search_query()); ?></h1>
             <hr>
             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                <?php $defaultatts = array('class' => 'img-responsive', 'itemprop' => 'image'); ?>
+                <?php $defaultatts = array('class' => 'img-fluid', 'itemprop' => 'image'); ?>
                 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
                 <article id="post-<?php the_ID(); ?>" class="archive-item col-md-12 no-paddingl no-paddingr <?php echo join(' ', get_post_class()); ?>" role="article">
                     <picture class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
@@ -15,7 +15,7 @@
                         </a>
                         <?php else : ?>
                         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                            <img itemprop="image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/no-img.jpg" alt="No img" class="img-responsive" />
+                            <img itemprop="image" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/no-img.jpg" alt="No img" class="img-fluid" />
                         </a>
                         <?php endif; ?>
                     </picture>
