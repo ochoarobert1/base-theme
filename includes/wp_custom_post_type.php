@@ -55,4 +55,4 @@ function portafolio() {
     register_post_type( 'portafolio', $args );
 
 }
-add_action( 'init', 'portafolio', 0 );?>
+add_action( 'init', 'portafolio', 0 );

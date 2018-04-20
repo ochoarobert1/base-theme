@@ -15,10 +15,10 @@ function my_jquery_enqueue() {
     wp_deregister_script('jquery');
     if ($_SERVER['REMOTE_ADDR'] == '::1') {
         /*- JQUERY ON LOCAL  -*/
-        wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', false, '3.2.1', true);
+        wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', false, '3.3.1', false);
     } else {
         /*- JQUERY ON WEB  -*/
-        wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.2.1.slim.min.js', false, '3.2.1', true);
+        wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.3.1.min.js', false, '3.3.1', false);
     }
     wp_enqueue_script('jquery');
 }
@@ -131,7 +131,7 @@ if (! function_exists('dashboard_footer') ){
         _e ('Gracias por crear con ', 'PROYECTO' );
         echo '<a href="http://wordpress.org/" target="_blank">WordPress.</a> - ';
         _e ('Tema desarrollado por ', 'PROYECTO' );
-        echo '<a href="http://robertochoa.com.ve/" target="_blank">Robert Ochoa</a></span>';
+        echo '<a href="http://robertochoa.com.ve/?utm_source=footer_admin&utm_medium=link&utm_content=PROYECTO" target="_blank">Robert Ochoa</a></span>';
     }
 }
 add_filter('admin_footer_text', 'dashboard_footer');
@@ -166,5 +166,3 @@ if ( function_exists('add_image_size') ) {
     add_image_size('blog_img', 276, 217, true);
     add_image_size('single_img', 636, 297, true );
 }
-
-?>

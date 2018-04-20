@@ -19,4 +19,3 @@ function proyecto_metabox( $meta_boxes )
 
     return $meta_boxes;
 }
-?>

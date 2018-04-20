@@ -23,5 +23,3 @@ function my_theme_wrapper_end() {
     echo '</div></div></section>';
 }
 /* WOOCOMMERCE - CUSTOM WRAPPER - END */
-
-?>

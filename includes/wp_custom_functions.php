@@ -85,5 +85,3 @@ function PROYECTO_menu_classes($classes, $item, $args) {
     return $classes;
 }
 add_filter('nav_menu_css_class', 'PROYECTO_menu_classes', 1, 3);
-
-?>
