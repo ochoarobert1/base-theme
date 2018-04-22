@@ -50,23 +50,6 @@ function get_excerpt($count){
     return $excerpt;
 }
 
-/* BREADCRUMBS */
-function the_breadcrumb() {
-    echo '<ol class="breadcrumb">';
-    if (!is_home()) {
-        echo '<li><a href="' . home_url('/') . '">'. __( 'Inicio', 'PROYECTO' ) . '</a></li>';
-        if (is_category() || is_single()) {
-            echo '<li>' . get_the_category('title_li=') . '</li>';
-            if (is_single()) {
-                echo '<li class="active">' . get_the_title() . '</li>';
-            }
-        } elseif (is_page()) {
-            echo '<li class="active">' . get_the_title() . '</li>';
-        }
-    }
-    echo '</ol>';
-}
-
 /* IMAGES RESPONSIVE ON ATTACHMENT IMAGES */
 function image_tag_class($class) {
     $class .= ' img-fluid';
@@ -78,10 +61,3 @@ add_filter('get_image_tag_class', 'image_tag_class' );
 
 if ( ! isset( $content_width ) ) $content_width = 1170;
 
-function PROYECTO_menu_classes($classes, $item, $args) {
-
-    $classes[] = 'nav-item';
-
-    return $classes;
-}
-add_filter('nav_menu_css_class', 'PROYECTO_menu_classes', 1, 3);

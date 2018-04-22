@@ -6,7 +6,7 @@
                 <?php single_term_title(); ?>
             </h1>
             <hr>
-            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+            <div class="col-xl-9 col-md-9 col-sm-9 col-12">
                 <?php $defaultatts = array('class' => 'img-fluid', 'itemprop' => 'image'); ?>
                 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
                 <article id="post-<?php the_ID(); ?>" class="archive-item col-md-12 no-paddingl no-paddingr <?php echo join(' ', get_post_class()); ?>" role="article">

@@ -6,8 +6,12 @@ VARIABLES
 /* --------------------------------------------------------------
 CUSTOM LOGIN OVERRIDE
 -------------------------------------------------------------- */
+#login {
+  width: 420px;
+  padding: 7% 0 0;
+}
 .login {
-  background-color: #000000 !important;
+  background-color: #f7f7f7 !important;
   background-image: url(../images/bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -96,13 +100,13 @@ CUSTOM LOGIN OVERRIDE
 .login #backtoblog a,
 .login #nav a {
   text-decoration: none;
-  color: #009a3a;
+  color: #0154b6;
   font-weight: 400;
   font-size: 16px;
   line-height: 10px;
 }
 .wp-admin .postbox .hndle {
-  background-color: #009a3a;
+  background-color: #0154b6;
   color: #ffffff;
 }
 .wp-admin .postbox .toggle-indicator {
@@ -116,7 +120,7 @@ CUSTOM LOGIN OVERRIDE
   color: #ffffff;
 }
 .wp-admin #footer-thankyou a {
-  color: #009a3a;
+  color: #0154b6;
   font-weight: 500;
   text-decoration: none;
 }

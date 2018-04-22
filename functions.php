@@ -31,7 +31,7 @@ require_once('includes/wp_enqueue_scripts.php');
 -------------------------------------------------------------- */
 
 // WALKER COMPLETO TOMADO DESDE EL NAVBAR COLLAPSE
-require_once('includes/wp_bootstrap_navwalker.php');
+require_once('includes/class-wp-bootstrap-navwalker.php');
 
 // WALKER CUSTOM SI DEBO COLOCAR ICONOS AL LADO DEL MENU PRINCIPAL - SU ESTRUCTURA ESTA DENTRO DEL MISMO ARCHIVO
 //require_once('includes/wp_walker_custom.php');
@@ -41,6 +41,14 @@ require_once('includes/wp_bootstrap_navwalker.php');
 -------------------------------------------------------------- */
 
 require_once('includes/wp_custom_functions.php');
+
+/* --------------------------------------------------------------
+    ADD REQUIRED WORDPRESS PLUGINS
+-------------------------------------------------------------- */
+
+require_once('includes/class-tgm-plugin-activation.php');
+require_once('includes/class-required-plugins.php');
+
 
 /* --------------------------------------------------------------
     ADD CUSTOM WOOCOMMERCE OVERRIDES
