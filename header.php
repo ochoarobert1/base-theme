@@ -18,9 +18,9 @@
         <?php /* FAVICONS */ ?>
         <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon.png" />
         <?php /* THEME NAVBAR COLOR */ ?>
-        <meta name="msapplication-TileColor" content="#BE1B20" />
+        <meta name="msapplication-TileColor" content="#454545" />
         <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/images/win8-tile-icon.png" />
-        <meta name="theme-color" content="#BE1B20" />
+        <meta name="theme-color" content="#454545" />
         <?php /* AUTHOR INFORMATION */ ?>
         <meta name="language" content="<?php echo get_bloginfo('language'); ?>" />
         <meta name="author" content="ADMIN_SITIO" />
@@ -34,7 +34,6 @@
         <?php wp_title('|', false, 'right'); ?>
         <?php wp_head() ?>
         <?php /* OPEN GRAPHS INFO - COMMENTS SCRIPTS */ ?>
-        <?php get_template_part('includes/header-oginfo'); ?>
         <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
         <?php /* IE COMPATIBILITIES */ ?>
         <!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7" /><![endif]-->
@@ -61,13 +60,13 @@
                         <?php
                         wp_nav_menu( array(
                             'theme_location'    => 'header_menu',
-                            'depth'             => 2, // 1 = no dropdowns, 2 = with dropdowns.
+                            'depth'             => 1, // 1 = with dropdowns, 0 = no dropdowns.
                             'container'         => 'div',
                             'container_class'   => 'collapse navbar-collapse',
                             'container_id'      => 'bs-example-navbar-collapse-1',
-                            'menu_class'        => 'nav navbar-nav ml-auto',
+                            'menu_class'        => 'navbar-nav mr-auto',
                             'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-                            'walker'            => new WP_Bootstrap_Navwalker(),
+                            'walker'            => new WP_Bootstrap_Navwalker()
                         ) );
                         ?>
 

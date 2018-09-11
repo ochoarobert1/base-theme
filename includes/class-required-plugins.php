@@ -25,13 +25,10 @@ function PROYECTO__register_required_plugins() {
      */
     $plugins = array(
 
-        // This is an example of how to include a plugin bundled with a theme.
         array(
-            'name'               => 'Metabox Include-Exclude', // The plugin name.
-            'slug'               => 'meta-box-include-exclude', // The plugin slug (typically the folder name).
-            'source'             => get_template_directory() . '/plugins/meta-box-include-exclude.zip', // The plugin source.
-            'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-            'version'            => '1.0.5'
+            'name'      => 'CMB2',
+            'slug'      => 'cmb2',
+            'required'  => true,
         ),
 
         array(
@@ -51,8 +48,6 @@ function PROYECTO__register_required_plugins() {
             'slug'      => 'jetpack',
             'required'  => true,
         )
-
-
     );
 
     /*

@@ -17,8 +17,8 @@ function proyecto_load_js() {
             wp_enqueue_script('bootstrap');
 
             /*- JQUERY STICKY ON LOCAL  -*/
-            wp_register_script('sticky', get_template_directory_uri() . '/js/jquery.sticky.js', array('jquery'), '1.0.4', true);
-            wp_enqueue_script('sticky');
+            //wp_register_script('sticky', get_template_directory_uri() . '/js/jquery.sticky.js', array('jquery'), '1.0.4', true);
+            //wp_enqueue_script('sticky');
 
             /*- JQUERY NICESCROLL ON LOCAL  -*/
             wp_register_script('nicescroll', get_template_directory_uri() . '/js/jquery.nicescroll.min.js', array('jquery'), '3.7.6', true);
@@ -56,6 +56,10 @@ function proyecto_load_js() {
             //wp_register_script('wow-js', get_template_directory_uri() . '/js/wow.min.js', array('jquery'), '1.1.3', true);
             //wp_enqueue_script('wow-js');
 
+            /*- AOS ON LOCAL -*/
+            wp_register_script('aos-js', get_template_directory_uri() . '/js/aos.js', array('jquery'), '3.0.0', true);
+            wp_enqueue_script('aos-js');
+
         } else {
 
             /*- MODERNIZR -*/
@@ -71,8 +75,8 @@ function proyecto_load_js() {
             wp_enqueue_script('bootstrap');
 
             /*- JQUERY STICKY -*/
-            wp_register_script('sticky', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js', array('jquery'), '1.0.4', true);
-            wp_enqueue_script('sticky');
+            //wp_register_script('sticky', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js', array('jquery'), '1.0.4', true);
+            //wp_enqueue_script('sticky');
 
             /*- JQUERY NICESCROLL -*/
             wp_register_script('nicescroll', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js', array('jquery'), '3.7.6', true);
@@ -110,6 +114,10 @@ function proyecto_load_js() {
             //wp_register_script('wow-js', 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js', array('jquery'), '1.1.2', true);
             //wp_enqueue_script('wow-js');
 
+            /*- AOS -*/
+            wp_register_script('aos-js', 'https://unpkg.com/aos@next/dist/aos.js', array('jquery'), '3.0.0', true);
+            wp_enqueue_script('aos-js');
+
         }
 
         /*- MAIN FUNCTIONS -*/
@@ -118,4 +126,4 @@ function proyecto_load_js() {
     }
 }
 
-add_action('init', 'proyecto_load_js');
+add_action('wp_enqueue_scripts', 'proyecto_load_js');

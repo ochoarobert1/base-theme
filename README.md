@@ -1,8 +1,8 @@
-![alt tag](http://robertochoa.com.ve/wp-content/uploads/2015/10/repo-logo.jpg)
+![alt tag](images/repo-logo.jpg)
 
 # PROYECTO Wordpress Custom Theme #
 
-* Version: 1.0
+* Version: 1.0.0
 * Design: [Robert Ochoa](http://www.robertochoa.com.ve/)
 * Development: [Robert Ochoa](http://www.robertochoa.com.ve/)
 
@@ -10,30 +10,22 @@ Tema diseñado por [Robert Ochoa](http://www.robertochoa.com.ve/) para PROYECTO 
 
 ### Componentes Principales ###
 
-* Twitter Bootstrap 3.3.7
+* Twitter Bootstrap 4.1.0
 * Animate 3.5.2
-* Desandro's Flickity 2.0.10
-* OwlCarousel 2.2.1
 * Font Awesome 4.7.0
 * jQuery Nicescroll 3.7.6
 * modernizr 2.8.3
-* jQuery Sticky 1.0.4
-* Lettering 0.7.0
-* Smooth Scroll 12.1.5
-* Desandro's Isotope 3.0.4
-* Desandro's Masonry 4.2.0
 
 ### Funciones Incluídas ###
 
-* Custom Post Type:
-* Custom Taxonomies:
-* Wordpress Menu Structure
-* Custom Metabox:
-* Custom contact section.
+* Custom Post Type.
+* Custom Taxonomies.
+* Bootstrap Ready: Wordpress Menu Structure.
+* Custom Metabox.
 
 ### Plugins Requeridos ###
 
-* Rilwis' Metabox
+* CMB2
 * Jetpack by Wordpress
 
 ### Instrucciones de Instalación ###

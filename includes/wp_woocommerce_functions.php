@@ -16,7 +16,7 @@ add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
 
 function my_theme_wrapper_start() {
-    echo '<section id="main" class="container-fluid"><div class="row"><div class="woocustom-main-container col-md-12 no-paddingl no-paddingr">';
+    echo '<section id="main" class="container-fluid"><div class="row"><div class="woocustom-main-container col-12">';
 }
 
 function my_theme_wrapper_end() {

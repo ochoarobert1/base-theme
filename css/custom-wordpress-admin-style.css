@@ -7,7 +7,6 @@ VARIABLES
 CUSTOM LOGIN OVERRIDE
 -------------------------------------------------------------- */
 #login {
-  width: 420px;
   padding: 7% 0 0;
 }
 .login {
