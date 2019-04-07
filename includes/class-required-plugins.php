@@ -26,6 +26,12 @@ function PROYECTO__register_required_plugins() {
     $plugins = array(
 
         array(
+            'name'      => 'Classic Editor',
+            'slug'      => 'classic-editor',
+            'required'  => true,
+        ),
+
+        array(
             'name'      => 'CMB2',
             'slug'      => 'cmb2',
             'required'  => true,
@@ -46,7 +52,7 @@ function PROYECTO__register_required_plugins() {
         array(
             'name'      => 'Jetpack for WordPress',
             'slug'      => 'jetpack',
-            'required'  => true,
+            'required'  => false,
         )
     );
 

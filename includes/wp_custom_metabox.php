@@ -1,6 +1,6 @@
 <?php
-add_action( 'cmb2_admin_init', 'PROYECTO_register_demo_metabox' );
-function yourprefix_register_demo_metabox() {
+add_action( 'cmb2_admin_init', 'PROYECTO_register_custom_metabox' );
+function PROYECTO_register_custom_metabox() {
     $prefix = 'PROYECTO_';
 
     $cmb_metabox = new_cmb2_box( array(

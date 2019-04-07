@@ -23,7 +23,7 @@ function my_jquery_enqueue() {
         /*- JQUERY ON WEB  -*/
         wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.3.1.min.js', false, '3.3.1', false);
         /*- JQUERY MIGRATE ON WEB  -*/
-        wp_register_script( 'jquery-migrate', 'http://code.jquery.com/jquery-migrate-3.0.1.min.js', array('jquery'), '3.0.1', true);
+        wp_register_script( 'jquery-migrate', 'https://code.jquery.com/jquery-migrate-3.0.1.min.js', array('jquery'), '3.0.1', true);
     }
     wp_enqueue_script('jquery');
     wp_enqueue_script('jquery-migrate');
@@ -55,8 +55,16 @@ require_once('includes/class-required-plugins.php');
 /* --------------------------------------------------------------
     ADD CUSTOM WOOCOMMERCE OVERRIDES
 -------------------------------------------------------------- */
+if ( class_exists( 'WooCommerce' ) ) {
+    require_once('includes/wp_woocommerce_functions.php');
+}
 
-//require_once('includes/wp_woocommerce_functions.php');
+/* --------------------------------------------------------------
+    ADD JETPACK COMPATIBILITY
+-------------------------------------------------------------- */
+if ( defined( 'JETPACK__VERSION' ) ) {
+    require_once('includes/wp_jetpack_functions.php');
+}
 
 /* --------------------------------------------------------------
     ADD THEME SUPPORT
@@ -68,16 +76,31 @@ add_theme_support( 'post-thumbnails' );
 add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'title-tag' );
 add_theme_support( 'menus' );
-add_theme_support( 'html5', array( 'comment-list', 'search-form', 'comment-form' ) );
+add_theme_support( 'customize-selective-refresh-widgets' );
 add_theme_support( 'custom-background',
                   array(
                       'default-image' => '',    // background image default
-                      'default-color' => '',    // background color default (dont add the #)
+                      'default-color' => 'ffffff',    // background color default (dont add the #)
                       'wp-head-callback' => '_custom_background_cb',
                       'admin-head-callback' => '',
                       'admin-preview-callback' => ''
                   )
                  );
+add_theme_support( 'custom-logo', array(
+    'height'      => 250,
+    'width'       => 250,
+    'flex-width'  => true,
+    'flex-height' => true,
+) );
+
+
+add_theme_support( 'html5', array(
+    'search-form',
+    'comment-form',
+    'comment-list',
+    'gallery',
+    'caption',
+) );
 
 /* --------------------------------------------------------------
     ADD NAV MENUS LOCATIONS
