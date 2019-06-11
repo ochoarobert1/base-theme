@@ -5,11 +5,11 @@ function proyecto_load_css() {
         if ($_SERVER['REMOTE_ADDR'] == '::1') {
 
             /*- BOOTSTRAP CORE ON LOCAL -*/
-            wp_register_style('bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', false, '4.1.0', 'all');
+            wp_register_style('bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', false, '4.3.1', 'all');
             wp_enqueue_style('bootstrap-css');
 
             /*- ANIMATE CSS ON LOCAL -*/
-            wp_register_style('animate-css', get_template_directory_uri() . '/css/animate.css', false, '3.5.2', 'all');
+            wp_register_style('animate-css', get_template_directory_uri() . '/css/animate.css', false, '3.7.2', 'all');
             wp_enqueue_style('animate-css');
 
             /*- FONT AWESOME ON LOCAL -*/
@@ -17,7 +17,7 @@ function proyecto_load_css() {
             wp_enqueue_style('fontawesome-css');
 
             /*- FLICKITY ON LOCAL -*/
-            //wp_register_style('flickity-css', get_template_directory_uri() . '/css/flickity.min.css', false, '2.1.1', 'all');
+            //wp_register_style('flickity-css', get_template_directory_uri() . '/css/flickity.min.css', false, '2.2.0', 'all');
             //wp_enqueue_style('flickity-css');
 
             /*- OWL ON LOCAL -*/
@@ -36,11 +36,11 @@ function proyecto_load_css() {
         } else {
 
             /*- BOOTSTRAP CORE -*/
-            wp_register_style('bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css', false, '4.1.0', 'all');
+            wp_register_style('bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', false, '4.3.1', 'all');
             wp_enqueue_style('bootstrap-css');
 
             /*- ANIMATE CSS -*/
-            wp_register_style('animate-css', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css', false, '3.5.2', 'all');
+            wp_register_style('animate-css', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css', false, '3.7.2', 'all');
             wp_enqueue_style('animate-css');
 
             /*- FONT AWESOME -*/
@@ -48,7 +48,7 @@ function proyecto_load_css() {
             wp_enqueue_style('fontawesome-css');
 
             /*- FLICKITY -*/
-            //wp_register_style('flickity-css', 'https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.1/flickity.min.css', false, '2.1.1', 'all');
+            //wp_register_style('flickity-css', 'https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.0/flickity.min.css', false, '2.2.0', 'all');
             //wp_enqueue_style('flickity-css');
 
             /*- OWL -*/
@@ -65,7 +65,7 @@ function proyecto_load_css() {
         }
 
         /*- GOOGLE FONTS -*/
-        wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i', false, $version_remove, 'all');
+        wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans', false, $version_remove, 'all');
         wp_enqueue_style('google-fonts');
 
         /*- MAIN STYLE -*/
