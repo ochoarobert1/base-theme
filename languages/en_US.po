@@ -1,606 +1,795 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROYECTO\n"
-"POT-Creation-Date: 2017-02-25 22:26-0400\n"
-"PO-Revision-Date: 2017-02-25 22:29-0400\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2020-03-29 18:53-0400\n"
+"PO-Revision-Date: 2020-03-29 18:58-0400\n"
+"Last-Translator: Robert Ochoa <ochoa.robert1@gmail.com>\n"
 "Language-Team: Robert Ochoa <contacto@robertochoa.com.ve>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.11\n"
-"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_x:2c,1;_ex:2c,1\n"
-"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: __;_e;_x:2c,1;_ex:2c,1;esc_html_e;esc_attr_e;"
+"esc_html__\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: js\n"
 
-#: ../404.php:12
+#: 404.php:12
 msgid "Error 404"
 msgstr "Error 404"
 
-#: ../404.php:14
+#: 404.php:14
 msgid "No podemos encontrar la página que buscas. Dirígete nuevamente al"
-msgstr "Sorry, but we can't seem to find the page you are looking for. Go back to"
+msgstr ""
+"Sorry, but we can't seem to find the page you are looking for. Go back to"
 
-#: ../404.php:14 ../archive.php:43 ../author.php:49 ../category.php:43
-#: ../index.php:43 ../search.php:43 ../tag.php:43
+#: 404.php:14 archive.php:53 author.php:59 category.php:53 index.php:53
+#: search.php:53 tag.php:53
 msgid "Volver al Inicio"
 msgstr "Back to Home"
 
-#: ../404.php:14 ../archive.php:43 ../author.php:49 ../category.php:43
-#: ../index.php:43 ../search.php:43 ../tag.php:43
+#: 404.php:14 archive.php:53 author.php:59 category.php:53 index.php:53
+#: search.php:53 tag.php:53
 msgid "inicio"
 msgstr "home"
 
-#: ../archive.php:42 ../author.php:48 ../category.php:42 ../index.php:42
-#: ../search.php:42 ../tag.php:42
+#: archive.php:34 author.php:40 category.php:34 index.php:34 search.php:34
+#: tag.php:34
+msgid "Publicado por:"
+msgstr "Published by:"
+
+#: archive.php:37 author.php:43 category.php:37 index.php:37 search.php:37
+#: tag.php:37
+msgid "Leer Más"
+msgstr "Read More"
+
+#: archive.php:52 author.php:58 category.php:52 index.php:52 search.php:52
+#: tag.php:52
 msgid "Disculpe, su busqueda no arrojo ningun resultado"
 msgstr "Sorry, your search doesn't threw any result"
 
-#: ../archive.php:43 ../author.php:49 ../category.php:43 ../index.php:43
-#: ../search.php:43 ../tag.php:43
+#: archive.php:53 author.php:59 category.php:53 index.php:53 search.php:53
+#: tag.php:53
 msgid "Dirígete nuevamente al"
 msgstr "Go back to"
 
-#: ../functions.php:87
+#: author.php:9
+msgid "Archivo de"
+msgstr "Archive from"
+
+#: author.php:12
+msgid "Acerca de"
+msgstr "About"
+
+#: functions.php:113
 msgid "Menu Header - Principal"
 msgstr "Menu Header - Main"
 
-#: ../functions.php:88
+#: functions.php:114
 msgid "Menu Footer - Principal"
 msgstr "Menu Footer - Main"
 
-#: ../functions.php:98
-msgid "Main Sidebar"
+#: functions.php:124
+msgid "Sidebar Principal"
 msgstr "Main Sidebar"
 
-#: ../functions.php:100
-msgid "Estos widgets seran vistos en posts y pages"
-msgstr "These widgets will be seen in posts and pages"
+#: functions.php:126
+msgid "Estos widgets seran vistos en las entradas y páginas del sitio"
+msgstr "These widgets will be seen on posts and pages on site"
 
-#: ../functions.php:108
-msgid "Shop Sidebar"
-msgstr "Shop Sidebar"
+#: functions.php:134
+#, php-format
+msgid "Footer Section %d"
+msgstr "Footer Section %d"
 
-#: ../functions.php:110
-msgid "Estos widgets seran vistos en Tienda y Categorias de Producto"
-msgstr "These widgets will be seen in shop and product categories"
+#: functions.php:136
+msgid "Footer Section"
+msgstr "Footer Section"
 
-#: ../functions.php:133
-msgid "Gracias por crear con"
-msgstr "Thank you for using"
+#: functions.php:169
+msgid "Gracias por crear con "
+msgstr "Thank you for creating with"
 
-#: ../functions.php:135
-msgid "Tema desarrollado por"
+#: functions.php:171
+msgid "Tema desarrollado por "
 msgstr "Theme Developed By"
 
-#: ../includes/wp_bootstrap_navwalker.php:197
-msgid "Agrega un Menu"
-msgstr "Add a Menu"
+#: includes/class-required-plugins.php:76
+#: includes/class-tgm-plugin-activation.php:334
+msgid "Instalar Plugins Requeridos"
+msgstr "Install Required Plugins"
 
-#: ../includes/wp_custom_functions.php:7
-msgid "año"
-msgstr "year"
+#: includes/class-required-plugins.php:77
+#: includes/class-tgm-plugin-activation.php:335
+msgid "Instalar Plugins"
+msgstr "Install Plugins"
 
-#: ../includes/wp_custom_functions.php:7
-msgid "años"
-msgstr "years"
+#: includes/class-required-plugins.php:78
+#: includes/class-tgm-plugin-activation.php:336
+#, php-format
+msgid "Instalando Plugin: %s"
+msgstr "Installing Plugin: %s"
 
-#: ../includes/wp_custom_functions.php:8
-msgid "mes"
-msgstr "month"
+#: includes/class-required-plugins.php:79
+#: includes/class-tgm-plugin-activation.php:337
+#, php-format
+msgid "Actualizando Plugin: %s"
+msgstr "Updating Plugin: %s"
 
-#: ../includes/wp_custom_functions.php:8
-msgid "meses"
-msgstr "months"
+#: includes/class-required-plugins.php:80
+#: includes/class-tgm-plugin-activation.php:338
+msgid "Ocurrió un error con el API del plugin."
+msgstr "There's an error with de plugin API."
 
-#: ../includes/wp_custom_functions.php:9
-msgid "semana"
-msgstr "week"
+#: includes/class-required-plugins.php:126
+#: includes/class-tgm-plugin-activation.php:384
+#, fuzzy
+msgid "Volver al Instalador de plugins requeridos"
+msgstr "Volver al Instalador de plugins requeridos"
 
-#: ../includes/wp_custom_functions.php:9
-msgid "semanas"
-msgstr "weeks"
+#: includes/class-required-plugins.php:127
+#: includes/class-tgm-plugin-activation.php:385
+#, fuzzy
+msgid "Plugin activado con éxito."
+msgstr "Plugin activado con éxito."
 
-#: ../includes/wp_custom_functions.php:10
-msgid "dia"
-msgstr "day"
+#: includes/class-required-plugins.php:128
+#: includes/class-tgm-plugin-activation.php:386
+#, fuzzy
+msgid "El siguiente plugin ha sido activado exitosamente:"
+msgstr "El siguiente plugin ha sido activado exitosamente:"
 
-#: ../includes/wp_custom_functions.php:10
-msgid "dias"
-msgstr "days"
+#: includes/class-required-plugins.php:129
+#: includes/class-tgm-plugin-activation.php:387
+#, fuzzy, php-format
+msgid "No se tomón ninguna acción. El plugin %1$s ya estaba activado."
+msgstr "No se tomón ninguna acción. El plugin %1$s ya estaba activado."
 
-#: ../includes/wp_custom_functions.php:11
-msgid "hora"
-msgstr "hour"
+#: includes/class-required-plugins.php:130
+#: includes/class-tgm-plugin-activation.php:388
+#, fuzzy, php-format
+msgid ""
+"Plugin no activo. Una versión mas alta de %s es necesaria para este tema. "
+"Por favor, actualiza el plugin."
+msgstr ""
+"Plugin no activo. Una versión mas alta de %s es necesaria para este tema. "
+"Por favor, actualiza el plugin."
 
-#: ../includes/wp_custom_functions.php:11
-msgid "horas"
-msgstr "hours"
+#: includes/class-required-plugins.php:131
+#: includes/class-tgm-plugin-activation.php:389
+#, fuzzy, php-format
+msgid "Todos los plugins han sido instalados y activados exitosamente. %1$s"
+msgstr "Todos los plugins han sido instalados y activados exitosamente. %1$s"
 
-#: ../includes/wp_custom_functions.php:12
-msgid "minuto"
-msgstr "minute"
+#: includes/class-required-plugins.php:132
+#: includes/class-tgm-plugin-activation.php:390
+#, fuzzy
+msgid "Ocultar este aviso"
+msgstr "Ocultar este aviso"
 
-#: ../includes/wp_custom_functions.php:12
-msgid "minutos"
-msgstr "minutes"
+#: includes/class-required-plugins.php:133
+#: includes/class-tgm-plugin-activation.php:391
+#, fuzzy
+msgid ""
+"Hay uno o más plugins necesarios o recomendados para instalar, actualizar o "
+"activar."
+msgstr ""
+"Hay uno o más plugins necesarios o recomendados para instalar, actualizar o "
+"activar."
 
-#: ../includes/wp_custom_functions.php:13
-msgid "segundo"
-msgstr "second"
+#: includes/class-required-plugins.php:134
+#: includes/class-tgm-plugin-activation.php:392
+#, fuzzy
+msgid "Por favor, contacte con el administrador de este sitio para mas ayuda."
+msgstr "Por favor, contacte con el administrador de este sitio para mas ayuda."
 
-#: ../includes/wp_custom_functions.php:13
-#: ../includes/wp_custom_functions.php:32
-msgid "segundos"
-msgstr "seconds"
+#: includes/class-tgm-plugin-activation.php:596
+#, fuzzy
+msgid "Actualización Requerida"
+msgstr "Actualización Requerida"
 
-#: ../includes/wp_custom_functions.php:24
-msgid " un momento"
-msgstr "a momento ago"
+#: includes/class-tgm-plugin-activation.php:713
+#, fuzzy
+msgid "Set the parent_slug config variable instead."
+msgstr "Set the parent_slug config variable instead."
 
-#: ../includes/wp_custom_functions.php:57
-msgid "Inicio"
-msgstr "Home"
+#: includes/class-tgm-plugin-activation.php:908
+msgid "Volver al Escritorio"
+msgstr "Back to Dashboard"
 
-#: ../includes/wp_custom_post_type.php:6
+#: includes/class-tgm-plugin-activation.php:1015
+#, fuzzy
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+
+#: includes/class-tgm-plugin-activation.php:1015
+#: includes/class-tgm-plugin-activation.php:1018
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+
+#: includes/class-tgm-plugin-activation.php:1018
+#, fuzzy
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+
+#: includes/class-tgm-plugin-activation.php:2063
+#, fuzzy, php-format
+msgid "TGMPA v%s"
+msgstr "TGMPA v%s"
+
+#: includes/class-tgm-plugin-activation.php:2354
+#, fuzzy
+msgid "Required"
+msgstr "Required"
+
+#: includes/class-tgm-plugin-activation.php:2357
+#, fuzzy
+msgid "Recommended"
+msgstr "Recommended"
+
+#: includes/class-tgm-plugin-activation.php:2373
+#, fuzzy
+msgid "WordPress Repository"
+msgstr "WordPress Repository"
+
+#: includes/class-tgm-plugin-activation.php:2376
+#, fuzzy
+msgid "External Source"
+msgstr "External Source"
+
+#: includes/class-tgm-plugin-activation.php:2379
+#, fuzzy
+msgid "Pre-Packaged"
+msgstr "Pre-Packaged"
+
+#: includes/class-tgm-plugin-activation.php:2396
+#, fuzzy
+msgid "Not Installed"
+msgstr "Not Installed"
+
+#: includes/class-tgm-plugin-activation.php:2400
+#, fuzzy
+msgid "Installed But Not Activated"
+msgstr "Installed But Not Activated"
+
+#: includes/class-tgm-plugin-activation.php:2402
+#, fuzzy
+msgid "Active"
+msgstr "Active"
+
+#: includes/class-tgm-plugin-activation.php:2408
+#, fuzzy
+msgid "Required Update not Available"
+msgstr "Required Update not Available"
+
+#: includes/class-tgm-plugin-activation.php:2411
+#, fuzzy
+msgid "Requires Update"
+msgstr "Requires Update"
+
+#: includes/class-tgm-plugin-activation.php:2414
+#, fuzzy
+#| msgid "Update Service"
+msgid "Update recommended"
+msgstr "Update recommended"
+
+#: includes/class-tgm-plugin-activation.php:2423
+#, fuzzy, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+#: includes/class-tgm-plugin-activation.php:2563
+#, fuzzy
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr "unknown"
+
+#: includes/class-tgm-plugin-activation.php:2571
+#, fuzzy
+msgid "Installed version:"
+msgstr "Installed version:"
+
+#: includes/class-tgm-plugin-activation.php:2579
+#, fuzzy
+msgid "Minimum required version:"
+msgstr "Minimum required version:"
+
+#: includes/class-tgm-plugin-activation.php:2591
+#, fuzzy
+msgid "Available version:"
+msgstr "Available version:"
+
+#: includes/class-tgm-plugin-activation.php:2614
+#, fuzzy
+msgid "No plugins to install, update or activate."
+msgstr "No plugins to install, update or activate."
+
+#: includes/class-tgm-plugin-activation.php:2614
+#: includes/class-tgm-plugin-activation.php:3661
+#, fuzzy
+msgid "Return to the Dashboard"
+msgstr "Return to the Dashboard"
+
+#: includes/class-tgm-plugin-activation.php:2628
+#, fuzzy
+msgid "Plugin"
+msgstr "Plugin"
+
+#: includes/class-tgm-plugin-activation.php:2629
+#, fuzzy
+msgid "Source"
+msgstr "Source"
+
+#: includes/class-tgm-plugin-activation.php:2630
+#, fuzzy
+msgid "Type"
+msgstr "Type"
+
+#: includes/class-tgm-plugin-activation.php:2634
+#, fuzzy
+msgid "Version"
+msgstr "Version"
+
+#: includes/class-tgm-plugin-activation.php:2635
+#, fuzzy
+msgid "Status"
+msgstr "Status"
+
+#: includes/class-tgm-plugin-activation.php:2684
+#, fuzzy, php-format
+msgid "Instalar %2$s"
+msgstr "Instalar %2$s"
+
+#: includes/class-tgm-plugin-activation.php:2689
+#, fuzzy, php-format
+#| msgid "Actualizar Item"
+msgid "Actualizar %2$s"
+msgstr "Actualizar %2$s"
+
+#: includes/class-tgm-plugin-activation.php:2695
+#, fuzzy, php-format
+msgid "Activar %2$s"
+msgstr "Activar %2$s"
+
+#: includes/class-tgm-plugin-activation.php:2765
+#, fuzzy
+msgid "Upgrade message from the plugin author:"
+msgstr "Upgrade message from the plugin author:"
+
+#: includes/class-tgm-plugin-activation.php:2798
+#, fuzzy
+msgid "Install"
+msgstr "Install"
+
+#: includes/class-tgm-plugin-activation.php:2804
+#, fuzzy
+#| msgid "Update Slide"
+msgid "Update"
+msgstr "Update"
+
+#: includes/class-tgm-plugin-activation.php:2807
+#, fuzzy
+msgid "Activate"
+msgstr "Activate"
+
+#: includes/class-tgm-plugin-activation.php:2838
+#, fuzzy
+msgid "No plugins were selected to be installed. No action taken."
+msgstr "No plugins were selected to be installed. No action taken."
+
+#: includes/class-tgm-plugin-activation.php:2840
+#, fuzzy
+msgid "No plugins were selected to be updated. No action taken."
+msgstr "No plugins were selected to be updated. No action taken."
+
+#: includes/class-tgm-plugin-activation.php:2881
+#, fuzzy
+msgid "No hay plugins disponibles para ser instalados ahora mismo."
+msgstr "No hay plugins disponibles para ser instalados ahora mismo."
+
+#: includes/class-tgm-plugin-activation.php:2883
+#, fuzzy
+msgid "No hay plugins disponibles para ser actualizados ahora mismo."
+msgstr "No hay plugins disponibles para ser actualizados ahora mismo."
+
+#: includes/class-tgm-plugin-activation.php:2989
+#, fuzzy
+msgid "No plugins were selected to be activated. No action taken."
+msgstr "No plugins were selected to be activated. No action taken."
+
+#: includes/class-tgm-plugin-activation.php:3015
+#, fuzzy
+msgid "No plugins are available to be activated at this time."
+msgstr "No plugins are available to be activated at this time."
+
+#: includes/class-tgm-plugin-activation.php:3239
+#, fuzzy
+msgid "Plugin activation failed."
+msgstr "Plugin activation failed."
+
+#: includes/class-tgm-plugin-activation.php:3240
+#, fuzzy
+msgid "Plugin activated successfully."
+msgstr "Plugin activated successfully."
+
+#: includes/class-tgm-plugin-activation.php:3579
+#, fuzzy, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "Updating Plugin %1$s (%2$d/%3$d)"
+
+#: includes/class-tgm-plugin-activation.php:3582
+#, fuzzy, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "An error occurred while installing %1$s: <strong>%2$s</strong>."
+
+#: includes/class-tgm-plugin-activation.php:3584
+#, fuzzy, php-format
+msgid "The installation of %1$s failed."
+msgstr "The installation of %1$s failed."
+
+#: includes/class-tgm-plugin-activation.php:3588
+#, fuzzy
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+
+#: includes/class-tgm-plugin-activation.php:3590
+#, fuzzy, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s installed and activated successfully."
+
+#: includes/class-tgm-plugin-activation.php:3590
+#: includes/class-tgm-plugin-activation.php:3598
+#, fuzzy
+msgid "Show Details"
+msgstr "Show Details"
+
+#: includes/class-tgm-plugin-activation.php:3590
+#: includes/class-tgm-plugin-activation.php:3598
+#, fuzzy
+msgid "Hide Details"
+msgstr "Hide Details"
+
+#: includes/class-tgm-plugin-activation.php:3591
+#, fuzzy
+msgid "All installations and activations have been completed."
+msgstr "All installations and activations have been completed."
+
+#: includes/class-tgm-plugin-activation.php:3593
+#, fuzzy, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+
+#: includes/class-tgm-plugin-activation.php:3596
+#, fuzzy
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+
+#: includes/class-tgm-plugin-activation.php:3598
+#, fuzzy, php-format
+msgid "%1$s installed successfully."
+msgstr "%1$s installed successfully."
+
+#: includes/class-tgm-plugin-activation.php:3599
+#, fuzzy
+msgid "All installations have been completed."
+msgstr "All installations have been completed."
+
+#: includes/class-tgm-plugin-activation.php:3601
+#, fuzzy, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Installing Plugin %1$s (%2$d/%3$d)"
+
+#: includes/class-wp-bootstrap-navwalker.php:365
+#, fuzzy
+msgid "Add a menu"
+msgstr "Add a menu"
+
+#: includes/wp_custom_metabox.php:67
+#, fuzzy
+msgid "Test Metabox"
+msgstr "Test Metabox"
+
+#: includes/wp_custom_metabox.php:80
+#, fuzzy
+msgid "Test Text"
+msgstr "Test Text"
+
+#: includes/wp_custom_metabox.php:81
+#, fuzzy
+msgid "field description (optional)"
+msgstr "field description (optional)"
+
+#: includes/wp_custom_post_type.php:6
+#, fuzzy
 msgctxt "Post Type General Name"
-msgid "Portafolios"
-msgstr "Portfolios"
+msgid "Clientes"
+msgstr "Clientes"
 
-#: ../includes/wp_custom_post_type.php:7
+#: includes/wp_custom_post_type.php:7
+#, fuzzy
 msgctxt "Post Type Singular Name"
-msgid "Portafolio"
-msgstr "Portfolio"
+msgid "Cliente"
+msgstr "Cliente"
 
-#: ../includes/wp_custom_post_type.php:8 ../includes/wp_custom_post_type.php:9
-#: ../includes/wp_custom_post_type.php:35
-msgid "Portafolio"
-msgstr "Portfolio"
+#: includes/wp_custom_post_type.php:8 includes/wp_custom_post_type.php:9
+#, fuzzy
+msgid "Clientes"
+msgstr "Clientes"
 
-#: ../includes/wp_custom_post_type.php:10
-msgid "Archivo de Portafolio"
-msgstr "Portfolio Archive"
+#: includes/wp_custom_post_type.php:10
+#, fuzzy
+#| msgid "Archivo de Portafolio"
+msgid "Archivo de Clientes"
+msgstr "Archivo de Clientes"
 
-#: ../includes/wp_custom_post_type.php:11
-msgid "Atributos de Portafolio"
-msgstr "Portfolio Attributes"
+#: includes/wp_custom_post_type.php:11
+#, fuzzy
+#| msgid "Atributos de Portafolio"
+msgid "Atributos de Cliente"
+msgstr "Atributos de Cliente"
 
-#: ../includes/wp_custom_post_type.php:12
-msgid "Portafolio Padre:"
-msgstr "Parent Portfolio:"
+#: includes/wp_custom_post_type.php:12
+#, fuzzy
+#| msgid "Item Padre:"
+msgid "Cliente Padre:"
+msgstr "Cliente Padre:"
 
-#: ../includes/wp_custom_post_type.php:13
-msgid "Todos los Items"
-msgstr "All Items"
+#: includes/wp_custom_post_type.php:13
+#, fuzzy
+#| msgid "Todos los Items"
+msgid "Todos los Clientes"
+msgstr "Todos los Clientes"
 
-#: ../includes/wp_custom_post_type.php:14
-msgid "Agregar Nuevo Item"
-msgstr "Add New Item"
+#: includes/wp_custom_post_type.php:14
+#, fuzzy
+#| msgid "Agregar Nuevo Item"
+msgid "Agregar Nuevo Cliente"
+msgstr "Agregar Nuevo Cliente"
 
-#: ../includes/wp_custom_post_type.php:15
+#: includes/wp_custom_post_type.php:15
 msgid "Agregar Nuevo"
 msgstr "Add New"
 
-#: ../includes/wp_custom_post_type.php:16
-msgid "Nuevo Item"
-msgstr "New Item"
+#: includes/wp_custom_post_type.php:16
+#, fuzzy
+#| msgid "Nuevo Item"
+msgid "Nuevo Cliente"
+msgstr "Nuevo Cliente"
 
-#: ../includes/wp_custom_post_type.php:17
-msgid "Editar Item"
-msgstr "Edit Item"
+#: includes/wp_custom_post_type.php:17
+#, fuzzy
+#| msgid "Editar Item"
+msgid "Editar Cliente"
+msgstr "Editar Cliente"
 
-#: ../includes/wp_custom_post_type.php:18
-msgid "Actualizar Item"
-msgstr "Update Item"
+#: includes/wp_custom_post_type.php:18
+#, fuzzy
+#| msgid "Actualizar Item"
+msgid "Actualizar Cliente"
+msgstr "Actualizar Cliente"
 
-#: ../includes/wp_custom_post_type.php:19
-msgid "Ver Item"
-msgstr "View Item"
+#: includes/wp_custom_post_type.php:19
+#, fuzzy
+#| msgid "Ver Item"
+msgid "Ver Cliente"
+msgstr "Ver Cliente"
 
-#: ../includes/wp_custom_post_type.php:20
-msgid "Ver Portafolio"
-msgstr "View Portfolio"
+#: includes/wp_custom_post_type.php:20
+#, fuzzy
+#| msgid "Ver Item"
+msgid "Ver Clientes"
+msgstr "Ver Clientes"
 
-#: ../includes/wp_custom_post_type.php:21
-msgid "Buscar en Portafolio"
-msgstr "Search in Portfolio"
+#: includes/wp_custom_post_type.php:21
+#, fuzzy
+#| msgid "Buscar Item"
+msgid "Buscar Cliente"
+msgstr "Buscar Cliente"
 
-#: ../includes/wp_custom_post_type.php:22
-msgid "No hay Resultados"
-msgstr "No Items"
+#: includes/wp_custom_post_type.php:22
+#, fuzzy
+#| msgid "No hay Resultados"
+msgid "No hay resultados"
+msgstr "No hay resultados"
 
-#: ../includes/wp_custom_post_type.php:23
-msgid "No hay Resultados en la Papelera"
-msgstr "No Items in Trash"
+#: includes/wp_custom_post_type.php:23
+#, fuzzy
+#| msgid "No hay Resultados en la Papelera"
+msgid "No hay resultados en Papelera"
+msgstr "No hay resultados en Papelera"
 
-#: ../includes/wp_custom_post_type.php:24
-msgid "Imagen Destacada"
-msgstr "Featured Image"
+#: includes/wp_custom_post_type.php:24
+#, fuzzy
+msgid "Imagen del Cliente"
+msgstr "Imagen del Cliente"
 
-#: ../includes/wp_custom_post_type.php:25
-msgid "Colocar Imagen Destacada"
-msgstr "Set Featured Image"
+#: includes/wp_custom_post_type.php:25
+#, fuzzy
+#| msgid "Colocar Imagen Destacada"
+msgid "Colocar Imagen del Cliente"
+msgstr "Colocar Imagen del Cliente"
 
-#: ../includes/wp_custom_post_type.php:26
-msgid "Remover Imagen Destacada"
-msgstr "Remove Featured Image"
+#: includes/wp_custom_post_type.php:26
+#, fuzzy
+#| msgid "Remover Imagen Destacada"
+msgid "Remover Imagen del Cliente"
+msgstr "Remover Imagen del Cliente"
 
-#: ../includes/wp_custom_post_type.php:27
-msgid "Usar como Imagen Destacada"
-msgstr "Use as Featured Image"
+#: includes/wp_custom_post_type.php:27
+#, fuzzy
+#| msgid "Usar como Imagen Destacada"
+msgid "Usar como Imagen del Cliente"
+msgstr "Usar como Imagen del Cliente"
 
-#: ../includes/wp_custom_post_type.php:28
-msgid "Insertar dentro de Item"
-msgstr "Insert Into Item"
+#: includes/wp_custom_post_type.php:28
+#, fuzzy
+#| msgid "Insertar dentro de Item"
+msgid "Insertar en Cliente"
+msgstr "Insertar en Cliente"
 
-#: ../includes/wp_custom_post_type.php:29
-msgid "Cargado a este item"
-msgstr "Uploaded to this Item"
+#: includes/wp_custom_post_type.php:29
+#, fuzzy
+#| msgid "Cargado a este item"
+msgid "Cargado a este Cliente"
+msgstr "Cargado a este Cliente"
 
-#: ../includes/wp_custom_post_type.php:30
-msgid "Listado del Portafolio"
-msgstr "Portfolio Lists"
+#: includes/wp_custom_post_type.php:30
+#, fuzzy
+#| msgid "Listado del Portafolio"
+msgid "Listado de Clientes"
+msgstr "Listado de Clientes"
 
-#: ../includes/wp_custom_post_type.php:31
-msgid "Navegación de Listado del Portafolio"
-msgstr "Portfolio Lists Navigation"
+#: includes/wp_custom_post_type.php:31
+#, fuzzy
+#| msgid "Navegación de Listado del Portafolio"
+msgid "Navegación del Listado de Cliente"
+msgstr "Navegación del Listado de Cliente"
 
-#: ../includes/wp_custom_post_type.php:32
-msgid "Filtro de Listado del Portafolio"
-msgstr "Filter Portfolio Lists"
+#: includes/wp_custom_post_type.php:32
+#, fuzzy
+#| msgid "Filtro de Listado del Portafolio"
+msgid "Filtro del Listado de Clientes"
+msgstr "Filtro del Listado de Clientes"
 
-#: ../includes/wp_custom_post_type.php:36
-msgid "Portafolio de Desarrollos"
-msgstr "Development Portfolios"
+#: includes/wp_custom_post_type.php:35
+#, fuzzy
+msgid "Cliente"
+msgstr "Cliente"
 
-#: ../index.php:5
-msgid "Ultimas Entradas"
-msgstr "Last Entries"
+#: includes/wp_custom_post_type.php:36
+#, fuzzy
+#| msgid "Portafolio de Desarrollos"
+msgid "Portafolio de Clientes"
+msgstr "Portafolio de Clientes"
 
-#: ../post-formats/format-aside.php:12 ../post-formats/format-audio.php:11
-#: ../post-formats/format-chat.php:12 ../post-formats/format-gallery.php:11
-#: ../post-formats/format-image.php:11 ../post-formats/format-link.php:11
-#: ../post-formats/format-quote.php:11 ../post-formats/format-status.php:11
-#: ../post-formats/format-video.php:11 ../post-formats/format.php:12
+#: includes/wp_custom_theme_control.php:12
+#, fuzzy
+msgid "Redes Sociales"
+msgstr "Redes Sociales"
+
+#: includes/wp_custom_theme_control.php:13
+#, fuzzy
+msgid "Agregue aqui las redes sociales de la página, serán usadas globalmente"
+msgstr "Agregue aqui las redes sociales de la página, serán usadas globalmente"
+
+#: includes/wp_custom_theme_control.php:29
+#, fuzzy
+#| msgid "Facebook App"
+msgid "Facebook"
+msgstr "Facebook"
+
+#: includes/wp_custom_theme_control.php:44
+#, fuzzy
+msgid "Twitter"
+msgstr "Twitter"
+
+#: includes/wp_custom_theme_control.php:59
+#, fuzzy
+msgid "Instagram"
+msgstr "Instagram"
+
+#: includes/wp_custom_theme_control.php:74
+#, fuzzy
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: includes/wp_custom_theme_control.php:89
+#, fuzzy
+msgid "YouTube"
+msgstr "YouTube"
+
+#: includes/wp_custom_theme_control.php:104
+#, fuzzy
+msgid "Yelp"
+msgstr "Yelp"
+
+#: includes/wp_custom_theme_control.php:109
+#, fuzzy
+#| msgid "Cookie Policy"
+msgid "Cookies"
+msgstr "Cookies"
+
+#: includes/wp_custom_theme_control.php:110
+#, fuzzy
+msgid "Opciones de Cookies"
+msgstr "Opciones de Cookies"
+
+#: includes/wp_custom_theme_control.php:124
+#, fuzzy
+msgid "Cookie consent"
+msgstr "Cookie consent"
+
+#: includes/wp_custom_theme_control.php:125
+#, fuzzy
+msgid "Texto del Cookie consent."
+msgstr "Texto del Cookie consent."
+
+#: includes/wp_custom_theme_control.php:142
+#, fuzzy
+msgid "Link de Cookies"
+msgstr "Link de Cookies"
+
+#: includes/wp_custom_theme_control.php:165
+#: includes/wp_custom_theme_control.php:166
+#, fuzzy
+msgid "Panel de Control"
+msgstr "Panel de Control"
+
+#: includes/wp_custom_theme_control.php:189
+#, fuzzy
+msgid "Monday"
+msgstr "Monday"
+
+#: index.php:8
+msgid "Blog"
+msgstr "Blog"
+
+#: post-formats/format-aside.php:11 post-formats/format-audio.php:11
+#: post-formats/format-chat.php:11 post-formats/format-gallery.php:11
+#: post-formats/format-image.php:11 post-formats/format-link.php:11
+#: post-formats/format-quote.php:11 post-formats/format-status.php:11
+#: post-formats/format-video.php:11 post-formats/format.php:11
 msgid "Tags: "
 msgstr "Tags: "
 
-#: ../post-formats/format-aside.php:17 ../post-formats/format-audio.php:16
-#: ../post-formats/format-chat.php:17 ../post-formats/format-gallery.php:16
-#: ../post-formats/format-image.php:16 ../post-formats/format-link.php:16
-#: ../post-formats/format-quote.php:16 ../post-formats/format-status.php:16
-#: ../post-formats/format-video.php:16 ../post-formats/format.php:17
+#: post-formats/format-aside.php:16 post-formats/format-audio.php:16
+#: post-formats/format-chat.php:16 post-formats/format-gallery.php:16
+#: post-formats/format-image.php:16 post-formats/format-link.php:16
+#: post-formats/format-quote.php:16 post-formats/format-status.php:16
+#: post-formats/format-video.php:16 post-formats/format.php:16
 msgid "Pages:"
 msgstr "Pages:"
 
-#: ../search.php:5
+#: search.php:8
 #, php-format
 msgid "%s Search Results for "
 msgstr "%s Search Results for "
 
-#: ../searchform.php:3
+#: searchform.php:3
 msgid "Buscar por Términos:"
 msgstr "Search Terms"
-
-#: ../searchform.php:6
-msgid "Buscar"
-msgstr "Buscar"
-
-#~ msgctxt "Post Type General Name"
-#~ msgid "Portafolio"
-#~ msgstr "Portfolio"
-
-#~ msgctxt "Post Type Singular Name"
-#~ msgid "Item"
-#~ msgstr "Add New Item"
-
-#~ msgid "Item Padre:"
-#~ msgstr "Parent item:"
-
-#~ msgid "Agregar Item"
-#~ msgstr "Add Item"
-
-#~ msgid "Agregar"
-#~ msgstr "Add New"
-
-#~ msgid "Buscar Item"
-#~ msgstr "Search Item"
-
-#~ msgid "No encontrado"
-#~ msgstr "Not found"
-
-#~ msgid "No encontrado en papelera"
-#~ msgstr "Not found in Trash"
-
-#~ msgid "portafolio"
-#~ msgstr "portfolio"
-
-#~ msgid "Trabajos realizados"
-#~ msgstr "Jobs performed"
-
-#~ msgid "Menu Header Principal"
-#~ msgstr "Main Menu Header"
-
-#~ msgid "Menu Footer"
-#~ msgstr "Menu Footer"
-
-#~ msgid "Widgets seran vistos en posts y pages"
-#~ msgstr "Widgets will be seen in posts and pages"
-
-#~ msgid "Widgets seran vistos en Tienda y Categorias de Producto"
-#~ msgstr "Widgets will be seen in shop and product categories"
-
-#~ msgid "Gracias por crear con "
-#~ msgstr "Thank you for creating with"
-
-#~ msgid "Tema desarrollado por "
-#~ msgstr "Theme Developed By"
-
-#~ msgid "Page %s"
-#~ msgstr "Page %s"
-
-#, fuzzy
-#~ msgid "<span id=\"footer-thankyou\">Gracias por crear con <a href=\"http://wordpress.org/\" >WordPress.</a> - Tema desarrollado por <a href=\"http://robertochoa.com.ve/\" >Robert Ochoa</a></span>"
-#~ msgstr "<span id=\"footer-thankyou\">Gracias por crear con <a href=\"http://wordpress.org/\">WordPress.</a> - Tema desarrollado por <a href=\"http://robertochoa.com.ve/\">Roberto Ochoa</a></span>"
-
-#~ msgid "Home"
-#~ msgstr "Inicio"
-
-#~ msgctxt "Post Type General Name"
-#~ msgid "Sliders"
-#~ msgstr "Sliders"
-
-#~ msgctxt "Post Type Singular Name"
-#~ msgid "Slide"
-#~ msgstr "Diapositiva"
-
-#~ msgid "Slider"
-#~ msgstr "Slider"
-
-#~ msgid "Parent Slide:"
-#~ msgstr "Diapositiva Padre:"
-
-#~ msgid "All Slides"
-#~ msgstr "Todas Las diapositivas"
-
-#~ msgid "Add New Slide"
-#~ msgstr "Añadir Nueva Diapositiva"
-
-#~ msgid "Add Slide"
-#~ msgstr "Añadir Diapositiva"
-
-#~ msgid "New Slide"
-#~ msgstr "Nueva Diapositiva"
-
-#~ msgid "Edit Slide"
-#~ msgstr "Editar Diapositiva"
-
-#~ msgid "Update Slide"
-#~ msgstr "Actualizar Diapositiva"
-
-#~ msgid "View Slide"
-#~ msgstr "Ver Diapositiva"
-
-#~ msgid "Search Slide"
-#~ msgstr "Buscar Diapositiva"
-
-#~ msgid "Slide Not found"
-#~ msgstr "Diapositiva no encontrada"
-
-#~ msgid "Not found in Trash"
-#~ msgstr "No encontrada en papelera"
-
-#~ msgid "Slide"
-#~ msgstr "Diapositiva"
-
-#~ msgid "Slider in front-page"
-#~ msgstr "Diapositivas en Slider en la pagina principal"
-
-#~ msgctxt "Post Type General Name"
-#~ msgid "Services"
-#~ msgstr "Servicios"
-
-#~ msgctxt "Post Type Singular Name"
-#~ msgid "Service"
-#~ msgstr "Servicio"
-
-#~ msgid "Services"
-#~ msgstr "Servicios"
-
-#~ msgid "Parent Service:"
-#~ msgstr "Servicio Padre:"
-
-#~ msgid "All Services"
-#~ msgstr "Todos los Servicios"
-
-#~ msgid "Add New Service"
-#~ msgstr "Añadir Nuevo Servicio"
-
-#~ msgid "Add Service"
-#~ msgstr "Añadir Servicio"
-
-#~ msgid "New Service"
-#~ msgstr "Nuevo Servicio"
-
-#~ msgid "Edit Service"
-#~ msgstr "Editar Servicio"
-
-#~ msgid "Update Service"
-#~ msgstr "Actualizar Servicio"
-
-#~ msgid "View Service"
-#~ msgstr "Ver Servicio"
-
-#~ msgid "Search Service"
-#~ msgstr "Buscar Servicio"
-
-#~ msgid "Service Not found"
-#~ msgstr "Servicio no encontrado"
-
-#~ msgid "Service"
-#~ msgstr "Servicio"
-
-#~ msgid "Services provided"
-#~ msgstr "Servicios que ofrece la empresa"
-
-#~ msgctxt "Taxonomy General Name"
-#~ msgid "Service Types"
-#~ msgstr "Tipos de Servicios"
-
-#~ msgctxt "Taxonomy Singular Name"
-#~ msgid "Service Type"
-#~ msgstr "Tipo de Servicio"
-
-#~ msgid "Service type"
-#~ msgstr "Tipo de Servicio"
-
-#~ msgid "All Service type"
-#~ msgstr "Todos los Tipo de Servicios"
-
-#~ msgid "Parent Service type"
-#~ msgstr "Tipo de Servicio Padre:"
-
-#~ msgid "Parent Service type:"
-#~ msgstr " Tipo de Servicio Padre:"
-
-#~ msgid "New Service type Name"
-#~ msgstr "Nuevo Tipo de Servicio"
-
-#~ msgid "Add New Service type"
-#~ msgstr "Añadir Tipo de Servicio"
-
-#~ msgid "Edit Service type"
-#~ msgstr "Editar Tipo de Servicio"
-
-#~ msgid "Update Service type"
-#~ msgstr "Actualizar Tipo de servicio"
-
-#~ msgid "View Service type"
-#~ msgstr "Ver Tipo de Servicio"
-
-#~ msgid "Separate Service type Service typewith commas"
-#~ msgstr "Separar tipos de servicio con comas"
-
-#~ msgid "Add or remove Service type"
-#~ msgstr "Añadir o Remover Tipos de Servicio"
-
-#~ msgid "Choose from the most used"
-#~ msgstr "Escoger de los más usados"
-
-#~ msgid "Popular Service type"
-#~ msgstr " Tipo de servicios populares"
-
-#~ msgid "Search Service type"
-#~ msgstr "Buscar Tipo de Servicio"
-
-#~ msgid "Not Found"
-#~ msgstr "No encontrado"
-
-#~ msgid "About Us"
-#~ msgstr "¿Quiénes Somos?"
-
-#~ msgid "Blog"
-#~ msgstr "Blog"
-
-#~ msgid "Legal"
-#~ msgstr "Legal"
-
-#~ msgid "Affiliates"
-#~ msgstr "Afiliados"
-
-#~ msgid "Cookie Policy"
-#~ msgstr "Política de Cookies"
-
-#~ msgid "Calling Guide"
-#~ msgstr "Guía Telefónica"
-
-#~ msgid "Pay as you Go"
-#~ msgstr "Postpago"
-
-#~ msgid "Smart Home Phone Service"
-#~ msgstr "Servicio Telefónico Inteligente"
-
-#~ msgid "GSM / Sim card"
-#~ msgstr "GSM / Sim card"
-
-#~ msgid "Android App"
-#~ msgstr "Android App"
-
-#~ msgid "Apple iOS App"
-#~ msgstr "Apple iOS App"
-
-#~ msgid "Windows Phone App"
-#~ msgstr "Windows Phone App"
-
-#~ msgid "Facebook App"
-#~ msgstr "Facebook App"
-
-#, fuzzy
-#~ msgid "Search Item"
-#~ msgstr "Buscar"
-
-#~ msgid "Phone Services"
-#~ msgstr "Servicios Telefónicos"
-
-#, fuzzy
-#~ msgid "Pay as yo Go"
-#~ msgstr "Postpago"
-
-#, fuzzy
-#~ msgid "Smart Phone Unlimited"
-#~ msgstr "Servicio Telefónico Inteligente"
-
-#, fuzzy
-#~ msgid "Smart Phone 500 Min"
-#~ msgstr "Servicio Telefónico Inteligente"
-
-#, fuzzy
-#~ msgid "Global Roaming Pay as you Go"
-#~ msgstr "Postpago"
-
-#~ msgid "Our Apps"
-#~ msgstr "Aplicaciones"
-
-#~ msgid "Sign In"
-#~ msgstr "Registrarse"
-
-#, fuzzy
-#~ msgid "Search Rates"
-#~ msgstr "Buscar"
-
-#~ msgid "Blue"
-#~ msgstr "Azul"
-
-#~ msgid "Green"
-#~ msgstr "Verde"
-
-#~ msgid "Purple"
-#~ msgstr "Púrpura"
-
-#~ msgid "Red"
-#~ msgstr "Rojo"
-
-#~ msgid "Yellow"
-#~ msgstr "Amarillo"
-
-#, fuzzy
-#~ msgid "Worlwide Service"
-#~ msgstr "Servicios Telefónicos"
-
-#~ msgid "Search"
-#~ msgstr "Buscar"
-
-#~ msgid "4 things Global Link"
-#~ msgstr "4 cosas en las que Global Link"
-
-#~ msgid "is really good at!"
-#~ msgstr "es realmente bueno!"
-
-#~ msgid "Online Support"
-#~ msgstr "Soporte En-línea"
-
-#~ msgid "about-us"
-#~ msgstr "¿Quiénes Somos?"

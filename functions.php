@@ -10,34 +10,37 @@ require_once('includes/wp_enqueue_styles.php');
     ENQUEUE AND REGISTER JS
 -------------------------------------------------------------- */
 
-if (!is_admin()) add_action('wp_enqueue_scripts', 'my_jquery_enqueue');
-function my_jquery_enqueue() {
+if (!is_admin()) add_action('wp_enqueue_scripts', 'PROYECTO_jquery_enqueue');
+function PROYECTO_jquery_enqueue() {
     wp_deregister_script('jquery');
     wp_deregister_script('jquery-migrate');
     if ($_SERVER['REMOTE_ADDR'] == '::1') {
         /*- JQUERY ON LOCAL  -*/
         wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', false, '3.4.1', false);
         /*- JQUERY MIGRATE ON LOCAL  -*/
-        wp_register_script( 'jquery-migrate', get_template_directory_uri() . '/js/jquery-migrate.min.js',  array('jquery'), '3.0.1', false);
+        wp_register_script( 'jquery-migrate', get_template_directory_uri() . '/js/jquery-migrate.min.js',  array('jquery'), '3.1.0', false);
     } else {
         /*- JQUERY ON WEB  -*/
         wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.4.1.min.js', false, '3.4.1', false);
         /*- JQUERY MIGRATE ON WEB  -*/
-        wp_register_script( 'jquery-migrate', 'https://code.jquery.com/jquery-migrate-3.0.1.min.js', array('jquery'), '3.0.1', true);
+        wp_register_script( 'jquery-migrate', 'https://code.jquery.com/jquery-migrate-3.1.0.min.js', array('jquery'), '3.1.0', true);
     }
     wp_enqueue_script('jquery');
     wp_enqueue_script('jquery-migrate');
 }
 
 /* NOW ALL THE JS FILES */
+
 require_once('includes/wp_enqueue_scripts.php');
 
 /* --------------------------------------------------------------
     ADD CUSTOM WALKER BOOTSTRAP
 -------------------------------------------------------------- */
 
-// WALKER COMPLETO TOMADO DESDE EL NAVBAR COLLAPSE
-require_once('includes/class-wp-bootstrap-navwalker.php');
+add_action( 'after_setup_theme', 'PROYECTO_register_navwalker' );
+function PROYECTO_register_navwalker(){
+    require_once('includes/class-wp-bootstrap-navwalker.php');
+}
 
 /* --------------------------------------------------------------
     ADD CUSTOM WORDPRESS FUNCTIONS
@@ -127,6 +130,16 @@ function PROYECTO_widgets_init() {
         'after_title'   => '</h2>',
     ) );
 
+    register_sidebars( 4, array(
+        'name'          => __('Footer Section %d', 'PROYECTO'),
+        'id'            => 'sidebar_footer',
+        'description'   => __('Footer Section', 'PROYECTO'),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h2 class="widgettitle">',
+        'after_title'   => '</h2>'
+    ) );
+
     //    register_sidebar( array(
     //        'name' => __( 'Shop Sidebar', 'PROYECTO' ),
     //        'id' => 'shop_sidebar',
@@ -176,7 +189,7 @@ require_once('includes/wp_custom_post_type.php');
     ADD CUSTOM THEME CONTROLS
 -------------------------------------------------------------- */
 
-//require_once('includes/wp_custom_theme_control.php');
+require_once('includes/wp_custom_theme_control.php');
 
 /* --------------------------------------------------------------
     ADD CUSTOM IMAGE SIZE

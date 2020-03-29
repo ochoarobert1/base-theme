@@ -1,20 +1,20 @@
 <?php get_header(); ?>
 <main class="container" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
     <div class="row">
-        <div class="page-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="page-container col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="container p-0">
                 <div class="row">
-                    <div class="title-container col-12">
+                    <div class="title-container col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <h1><?php single_term_title(); ?></h1>
                     </div>
                     <?php if (have_posts()) : ?>
-                    <section class="col-9">
+                    <section class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12">
                         <?php $defaultatts = array('class' => 'img-fluid', 'itemprop' => 'image'); ?>
                         <?php while (have_posts()) : the_post(); ?>
-                        <article id="post-<?php the_ID(); ?>" class="archive-item col-12 <?php echo join(' ', get_post_class()); ?>" role="article">
+                        <article id="post-<?php the_ID(); ?>" class="archive-item col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 <?php echo join(' ', get_post_class()); ?>" role="article">
                             <div class="container p-0">
                                 <div class="row">
-                                    <picture class="col-5">
+                                    <picture class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-12">
                                         <?php if ( has_post_thumbnail()) : ?>
                                         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                                             <?php the_post_thumbnail('blog_img', $defaultatts); ?>
@@ -25,7 +25,7 @@
                                         </a>
                                         <?php endif; ?>
                                     </picture>
-                                    <div class="col-7">
+                                    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-12">
                                         <header>
                                             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                                                 <h2 rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></h2>
@@ -40,15 +40,15 @@
                             </div>
                         </article>
                         <?php endwhile; ?>
-                        <div class="pagination col-12">
+                        <div class="pagination col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <?php if(function_exists('wp_paginate')) { wp_paginate(); } else { posts_nav_link(); wp_link_pages(); } ?>
                         </div>
                     </section>
-                    <aside class="col-3 hidden-xs">
+                    <aside class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 d-xl-block d-lg-block d-md-block d-sm-none d-none">
                         <?php get_sidebar(); ?>
                     </aside>
                     <?php else: ?>
-                    <section>
+                    <section class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <h2><?php _e('Disculpe, su busqueda no arrojo ningun resultado', 'PROYECTO'); ?></h2>
                         <h3><?php _e('Dirígete nuevamente al', 'PROYECTO'); ?> <a href="<?php echo home_url('/'); ?>" title="<?php _e('Volver al Inicio', 'PROYECTO'); ?>"><?php _e('inicio', 'PROYECTO'); ?></a>.</h3>
                     </section>

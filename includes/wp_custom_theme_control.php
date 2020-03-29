@@ -1,123 +1,205 @@
 <?php
 /* --------------------------------------------------------------
-CUSTOM AREA FOR OPTIONS DATA - PROYECTO
+WP CUSTOMIZE SECTION - CUSTOM SETTINGS
 -------------------------------------------------------------- */
 
-/* CUSTOM MENU PAGE AND FUNCTIONS IN ADMIN */
-function register_PROYECTO_settings() {
-    //register our settings
-    register_setting( 'PROYECTO-settings-group', 'PROYECTO_dir' );
-    register_setting( 'PROYECTO-settings-group', 'PROYECTO_email' );
-    register_setting( 'PROYECTO-settings-group', 'PROYECTO_telf' );
-    register_setting( 'PROYECTO-settings-group', 'PROYECTO_mob' );
-    register_setting( 'PROYECTO-settings-group', 'PROYECTO_fb' );
-    register_setting( 'PROYECTO-settings-group', 'PROYECTO_tw' );
-    register_setting( 'PROYECTO-settings-group', 'PROYECTO_ig' );
-    register_setting( 'PROYECTO-settings-group', 'PROYECTO_yt' );
+add_action( 'customize_register', 'PROYECTO_customize_register' );
+
+function PROYECTO_customize_register( $wp_customize ) {
+
+    /* SOCIAL */
+    $wp_customize->add_section('PREFIJO_social_settings', array(
+        'title'    => __('Redes Sociales', 'PROYECTO'),
+        'description' => __('Agregue aqui las redes sociales de la página, serán usadas globalmente', 'PROYECTO'),
+        'priority' => 175,
+    ));
+
+    $wp_customize->add_setting('PREFIJO_social_settings[facebook]', array(
+        'default'           => '',
+        'sanitize_callback' => 'PROYECTO_sanitize_url',
+        'capability'        => 'edit_theme_options',
+        'type'           => 'option',
+
+    ));
+
+    $wp_customize->add_control( 'facebook', array(
+        'type' => 'url',
+        'section' => 'PREFIJO_social_settings',
+        'settings' => 'PREFIJO_social_settings[facebook]',
+        'label' => __( 'Facebook', 'PROYECTO' ),
+    ) );
+
+    $wp_customize->add_setting('PREFIJO_social_settings[twitter]', array(
+        'default'           => '',
+        'sanitize_callback' => 'PROYECTO_sanitize_url',
+        'capability'        => 'edit_theme_options',
+        'type'           => 'option',
+
+    ));
+
+    $wp_customize->add_control( 'twitter', array(
+        'type' => 'url',
+        'section' => 'PREFIJO_social_settings',
+        'settings' => 'PREFIJO_social_settings[twitter]',
+        'label' => __( 'Twitter', 'PROYECTO' ),
+    ) );
+
+    $wp_customize->add_setting('PREFIJO_social_settings[instagram]', array(
+        'default'           => '',
+        'sanitize_callback' => 'PROYECTO_sanitize_url',
+        'capability'        => 'edit_theme_options',
+        'type'           => 'option',
+
+    ));
+
+    $wp_customize->add_control( 'instagram', array(
+        'type' => 'url',
+        'section' => 'PREFIJO_social_settings',
+        'settings' => 'PREFIJO_social_settings[instagram]',
+        'label' => __( 'Instagram', 'PROYECTO' ),
+    ) );
+
+    $wp_customize->add_setting('PREFIJO_social_settings[linkedin]', array(
+        'default'           => '',
+        'sanitize_callback' => 'PROYECTO_sanitize_url',
+        'capability'        => 'edit_theme_options',
+        'type'           => 'option',
+
+    ));
+
+    $wp_customize->add_control( 'linkedin', array(
+        'type' => 'url',
+        'section' => 'PREFIJO_social_settings',
+        'settings' => 'PREFIJO_social_settings[linkedin]',
+        'label' => __( 'LinkedIn', 'PROYECTO' ),
+    ) );
+
+    $wp_customize->add_setting('PREFIJO_social_settings[youtube]', array(
+        'default'           => '',
+        'sanitize_callback' => 'PROYECTO_sanitize_url',
+        'capability'        => 'edit_theme_options',
+        'type'           => 'option',
+
+    ));
+
+    $wp_customize->add_control( 'youtube', array(
+        'type' => 'url',
+        'section' => 'PREFIJO_social_settings',
+        'settings' => 'PREFIJO_social_settings[youtube]',
+        'label' => __( 'YouTube', 'PROYECTO' ),
+    ) );
+
+    $wp_customize->add_setting('PREFIJO_social_settings[yelp]', array(
+        'default'           => '',
+        'sanitize_callback' => 'PROYECTO_sanitize_url',
+        'capability'        => 'edit_theme_options',
+        'type'           => 'option',
+
+    ));
+
+    $wp_customize->add_control( 'yelp', array(
+        'type' => 'url',
+        'section' => 'PREFIJO_social_settings',
+        'settings' => 'PREFIJO_social_settings[yelp]',
+        'label' => __( 'Yelp', 'PROYECTO' ),
+    ) );
+
+
+    $wp_customize->add_section('PREFIJO_cookie_settings', array(
+        'title'    => __('Cookies', 'PROYECTO'),
+        'description' => __('Opciones de Cookies', 'PROYECTO'),
+        'priority' => 176,
+    ));
+
+    $wp_customize->add_setting('PREFIJO_cookie_settings[cookie_text]', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+        'capability'        => 'edit_theme_options',
+        'type'           => 'option'
+
+    ));
+
+    $wp_customize->add_control( 'cookie_text', array(
+        'type' => 'textarea',
+        'label'    => __('Cookie consent', 'PROYECTO'),
+        'description' => __( 'Texto del Cookie consent.' ),
+        'section'  => 'PREFIJO_cookie_settings',
+        'settings' => 'PREFIJO_cookie_settings[cookie_text]'
+    ));
+
+    $wp_customize->add_setting('PREFIJO_cookie_settings[cookie_link]', array(
+        'default'           => '',
+        'sanitize_callback' => 'absint',
+        'capability'        => 'edit_theme_options',
+        'type'           => 'option',
+
+    ));
+
+    $wp_customize->add_control( 'cookie_link', array(
+        'type'     => 'dropdown-pages',
+        'section' => 'PREFIJO_cookie_settings',
+        'settings' => 'PREFIJO_cookie_settings[cookie_link]',
+        'label' => __( 'Link de Cookies', 'PROYECTO' ),
+    ) );
+
 }
 
-function my_admin_menu() {
-    add_menu_page( 'Opciones del Sitio', 'Opciones del Sitio', 'manage_options', 'PROYECTO_custom_options', 'my_custom_menu_page', get_template_directory_uri() . '/images/plugin-icon.png', 120  );
-    /* call register settings function */
+function PROYECTO_sanitize_url( $url ) {
+    return esc_url_raw( $url );
+}
+
+/* --------------------------------------------------------------
+CUSTOM CONTROL PANEL
+-------------------------------------------------------------- */
+
+function register_PROYECTO_settings() {
+    register_setting( 'PROYECTO-settings-group', 'monday_start' );
+    register_setting( 'PROYECTO-settings-group', 'monday_end' );
+    register_setting( 'PROYECTO-settings-group', 'monday_all' );
+}
+
+add_action('admin_menu', 'PROYECTO_custom_panel_control');
+
+function PROYECTO_custom_panel_control() {
+    add_menu_page(
+        __( 'Panel de Control', 'PROYECTO' ),
+        __( 'Panel de Control','PROYECTO' ),
+        'manage_options',
+        'PROYECTO-control-panel',
+        'PROYECTO_control_panel_callback',
+        'dashicons-admin-generic',
+        120
+    );
     add_action( 'admin_init', 'register_PROYECTO_settings' );
 }
 
-add_action( 'admin_menu', 'my_admin_menu' );
-
-
-
-/* CUSTOM CSS FOR THIS SECTION */
-function load_custom_wp_admin_style($hook) {
-    if( $hook != 'toplevel_page_PROYECTO_custom_options' ) {
-        return;
-    }
-    /* ENQUEUE THE CSS */
-    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i' );
-    wp_enqueue_style( 'custom_wp_admin_css', get_template_directory_uri() . '/css/custom-wordpress-admin-style.css' );
-}
-
-add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
-
-/* SEPARATOR FOR STYLING THE CUSTOM PAGE */
-function add_admin_menu_separator( $position ) {
-
-    global $menu;
-
-    $menu[ $position ] = array(
-        0    =>    '',
-        1    =>    'read',
-        2    =>    'separator' . $position,
-        3    =>    '',
-        4    =>    'wp-menu-separator'
-    );
-
-}
-
-function set_admin_menu_separator() {  do_action( 'admin_init', 119 );  }
-
-add_action( 'admin_init', 'add_admin_menu_separator' );
-add_action( 'admin_menu', 'set_admin_menu_separator' );
-
-/* CUSTOM MENU PAGE CONTENT */
-function my_custom_menu_page() { ?>
-
-<div class="PROYECTO_custom_options-header">
-    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/logo.png" alt="<?php echo get_bloginfo('name'); ?>" class="logo-header" />
-    <h1><?php echo get_admin_page_title(); ?></h1>
-    <div class="custom-clearfix"></div>
+function PROYECTO_control_panel_callback() {
+    ob_start();
+?>
+<div class="PROYECTO-admin-header-container">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="PROYECTO" />
+    <h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
 </div>
-<div class="PROYECTO_custom_options-content">
-    <form method="post" action="options.php">
-        <?php settings_fields( 'PROYECTO-settings-group' ); ?>
-        <?php do_settings_sections( 'PROYECTO-settings-group' ); ?>
+<form method="post" action="options.php" class="PROYECTO-admin-content-container">
+    <?php settings_fields( 'PROYECTO-settings-group' ); ?>
+    <?php do_settings_sections( 'PROYECTO-settings-group' ); ?>
+    <div class="PROYECTO-admin-content-item">
         <table class="form-table">
-
-            <tr valign="top">
-                <th scope="row"><?php _e('Dirección', 'PROYECTO'); ?></th>
-                <td><textarea name="PROYECTO_dir" cols="95" rows="5"><?php echo esc_attr( get_option('PROYECTO_dir') ); ?></textarea></td>
+            <tr valign="center">
+                <th scope="row"><?php _e('Monday', 'PROYECTO'); ?></th>
+                <td>
+                    <label for="monday_start">Starting Hour: <input type="time" name="monday_start" value="<?php echo esc_attr( get_option('monday_start') ); ?>"></label>
+                    <label for="monday_end">Ending Hour: <input type="time" name="monday_end" value="<?php echo esc_attr( get_option('monday_end') ); ?>"></label>
+                    <label for="monday_all">All Day: <input type="checkbox" name="monday_all" value="1" <?php checked( get_option('monday_all'), 1 ); ?>></label>
+                </td>
             </tr>
-
-            <tr valign="top">
-                <th scope="row"><?php _e('Correo Electrónico', 'PROYECTO'); ?></th>
-                <td><input type="text" size="90" name="PROYECTO_email" value="<?php echo esc_attr( get_option('PROYECTO_email') ); ?>" /></td>
-            </tr>
-
-            <tr valign="top">
-                <th scope="row"><?php _e('Teléfono', 'PROYECTO'); ?></th>
-                <td><input type="text" size="90" name="PROYECTO_telf" value="<?php echo esc_attr( get_option('PROYECTO_telf') ); ?>" /></td>
-            </tr>
-
-            <tr valign="top">
-                <th scope="row"><?php _e('Móvil', 'PROYECTO'); ?></th>
-                <td><input type="text" size="90" name="PROYECTO_mob" value="<?php echo esc_attr( get_option('PROYECTO_mob') ); ?>" /></td>
-            </tr>
-
-            <tr valign="top">
-                <th scope="row" colspan="2"><h3><?php _e('Redes Sociales', 'PROYECTO'); ?></h3></th>
-            </tr>
-
-            <tr valign="top">
-                <th scope="row"><?php _e('Perfil de Facebook', 'PROYECTO'); ?></th>
-                <td><input type="text" size="90" name="PROYECTO_fb" value="<?php echo esc_attr( get_option('PROYECTO_fb') ); ?>" /></td>
-            </tr>
-
-            <tr valign="top">
-                <th scope="row"><?php _e('Perfil de Twitter', 'PROYECTO'); ?></th>
-                <td><input type="text" size="90" name="PROYECTO_tw" value="<?php echo esc_attr( get_option('PROYECTO_tw') ); ?>" /></td>
-            </tr>
-
-            <tr valign="top">
-                <th scope="row"><?php _e('Perfil de Instagram', 'PROYECTO'); ?></th>
-                <td><input type="text" size="90" name="PROYECTO_ig" value="<?php echo esc_attr( get_option('PROYECTO_ig') ); ?>" /></td>
-            </tr>
-
-            <tr valign="top">
-                <th scope="row"><?php _e('Canal de Youtube', 'PROYECTO'); ?></th>
-                <td><input type="text" size="90" name="PROYECTO_yt" value="<?php echo esc_attr( get_option('PROYECTO_yt') ); ?>" /></td>
-            </tr>
-
         </table>
+    </div>
+    <div class="PROYECTO-admin-content-submit">
         <?php submit_button(); ?>
-    </form>
-</div>
-<?php }
+    </div>
+</form>
+<?php 
+    $content = ob_get_clean();
+    echo $content;
+}
