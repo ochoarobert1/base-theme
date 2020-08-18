@@ -7,7 +7,7 @@ add_action( 'customize_register', 'PROYECTO_customize_register' );
 
 function PROYECTO_customize_register( $wp_customize ) {
 
-    /* SOCIAL */
+    /* SOCIAL SETTINGS */
     $wp_customize->add_section('PREFIJO_social_settings', array(
         'title'    => __('Redes Sociales', 'PROYECTO'),
         'description' => __('Agregue aqui las redes sociales de la página, serán usadas globalmente', 'PROYECTO'),
@@ -19,7 +19,6 @@ function PROYECTO_customize_register( $wp_customize ) {
         'sanitize_callback' => 'PROYECTO_sanitize_url',
         'capability'        => 'edit_theme_options',
         'type'           => 'option',
-
     ));
 
     $wp_customize->add_control( 'facebook', array(
@@ -27,14 +26,13 @@ function PROYECTO_customize_register( $wp_customize ) {
         'section' => 'PREFIJO_social_settings',
         'settings' => 'PREFIJO_social_settings[facebook]',
         'label' => __( 'Facebook', 'PROYECTO' ),
-    ) );
+    ));
 
     $wp_customize->add_setting('PREFIJO_social_settings[twitter]', array(
         'default'           => '',
         'sanitize_callback' => 'PROYECTO_sanitize_url',
         'capability'        => 'edit_theme_options',
         'type'           => 'option',
-
     ));
 
     $wp_customize->add_control( 'twitter', array(
@@ -42,7 +40,7 @@ function PROYECTO_customize_register( $wp_customize ) {
         'section' => 'PREFIJO_social_settings',
         'settings' => 'PREFIJO_social_settings[twitter]',
         'label' => __( 'Twitter', 'PROYECTO' ),
-    ) );
+    ));
 
     $wp_customize->add_setting('PREFIJO_social_settings[instagram]', array(
         'default'           => '',
@@ -57,14 +55,13 @@ function PROYECTO_customize_register( $wp_customize ) {
         'section' => 'PREFIJO_social_settings',
         'settings' => 'PREFIJO_social_settings[instagram]',
         'label' => __( 'Instagram', 'PROYECTO' ),
-    ) );
+    ));
 
     $wp_customize->add_setting('PREFIJO_social_settings[linkedin]', array(
         'default'           => '',
         'sanitize_callback' => 'PROYECTO_sanitize_url',
         'capability'        => 'edit_theme_options',
         'type'           => 'option',
-
     ));
 
     $wp_customize->add_control( 'linkedin', array(
@@ -72,7 +69,7 @@ function PROYECTO_customize_register( $wp_customize ) {
         'section' => 'PREFIJO_social_settings',
         'settings' => 'PREFIJO_social_settings[linkedin]',
         'label' => __( 'LinkedIn', 'PROYECTO' ),
-    ) );
+    ));
 
     $wp_customize->add_setting('PREFIJO_social_settings[youtube]', array(
         'default'           => '',
@@ -89,22 +86,7 @@ function PROYECTO_customize_register( $wp_customize ) {
         'label' => __( 'YouTube', 'PROYECTO' ),
     ) );
 
-    $wp_customize->add_setting('PREFIJO_social_settings[yelp]', array(
-        'default'           => '',
-        'sanitize_callback' => 'PROYECTO_sanitize_url',
-        'capability'        => 'edit_theme_options',
-        'type'           => 'option',
-
-    ));
-
-    $wp_customize->add_control( 'yelp', array(
-        'type' => 'url',
-        'section' => 'PREFIJO_social_settings',
-        'settings' => 'PREFIJO_social_settings[yelp]',
-        'label' => __( 'Yelp', 'PROYECTO' ),
-    ) );
-
-
+    /* COOKIES SETTINGS */
     $wp_customize->add_section('PREFIJO_cookie_settings', array(
         'title'    => __('Cookies', 'PROYECTO'),
         'description' => __('Opciones de Cookies', 'PROYECTO'),
@@ -151,7 +133,7 @@ function PROYECTO_sanitize_url( $url ) {
 /* --------------------------------------------------------------
 CUSTOM CONTROL PANEL
 -------------------------------------------------------------- */
-
+/*
 function register_PROYECTO_settings() {
     register_setting( 'PROYECTO-settings-group', 'monday_start' );
     register_setting( 'PROYECTO-settings-group', 'monday_end' );
@@ -199,7 +181,8 @@ function PROYECTO_control_panel_callback() {
         <?php submit_button(); ?>
     </div>
 </form>
-<?php 
+<?php
     $content = ob_get_clean();
     echo $content;
 }
+*/

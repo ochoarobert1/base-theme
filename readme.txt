@@ -9,8 +9,7 @@ Este tema custom fue construido en su totalidad, pasando por su etapa de Wirefra
 
 ### Componentes Principales ###
 
-* Twitter Bootstrap 4.4.1
-* Font Awesome 4.7.0
+* Twitter Bootstrap 4.5.3
 
 ### Funciones Incluídas ###
 

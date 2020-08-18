@@ -1,5 +1,5 @@
 <?php
-
+/*
 function PROYECTO_custom_post_type() {
 
 	$labels = array(
@@ -57,3 +57,4 @@ function PROYECTO_custom_post_type() {
 }
 
 add_action( 'init', 'PROYECTO_custom_post_type', 0 );
+*/
