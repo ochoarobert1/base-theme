@@ -110,7 +110,8 @@ add_theme_support( 'html5', array(
 -------------------------------------------------------------- */
 
 register_nav_menus( array(
-    'header_menu' => __( 'Menu Header - Principal', 'PROYECTO' )
+    'header_menu' => __( 'Menu Header - Principal', 'PROYECTO' ),
+    'footer_menu' => __( 'Menu Footer - Principal', 'PROYECTO' ),
 ) );
 
 /* --------------------------------------------------------------
