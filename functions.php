@@ -21,7 +21,7 @@ function PROYECTO_jquery_enqueue() {
         wp_register_script( 'jquery-migrate', get_template_directory_uri() . '/js/jquery-migrate.min.js',  array('jquery'), '3.1.0', false);
     } else {
         /*- JQUERY ON WEB  -*/
-        wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.4.1.min.js', false, '3.4.1', false);
+        wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.5.1.min.js', false, '3.5.1', false);
         /*- JQUERY MIGRATE ON WEB  -*/
         wp_register_script( 'jquery-migrate', 'https://code.jquery.com/jquery-migrate-3.1.0.min.js', array('jquery'), '3.1.0', true);
     }
