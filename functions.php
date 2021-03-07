@@ -74,7 +74,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 -------------------------------------------------------------- */
 
 register_nav_menus( array(
-    'header_menu' => __( 'Menu Header - Principal', 'PROYECTO' )
+    'header_menu' => __( 'Menu Header - Principal', 'PROYECTO' ),
+    'footer_menu' => __( 'Menu Footer - Principal', 'PROYECTO' ),
 ) );
 
 /* --------------------------------------------------------------
