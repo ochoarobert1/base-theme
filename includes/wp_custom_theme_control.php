@@ -1,11 +1,17 @@
 <?php
+
+if (!defined('ABSPATH')) {
+    die('Invalid request.');
+}
+
 /* --------------------------------------------------------------
 WP CUSTOMIZE SECTION - CUSTOM SETTINGS
 -------------------------------------------------------------- */
 
-add_action( 'customize_register', 'PROYECTO_customize_register' );
+add_action('customize_register', 'PROYECTO_customize_register');
 
-function PROYECTO_customize_register( $wp_customize ) {
+function PROYECTO_customize_register($wp_customize)
+{
 
     /* SOCIAL SETTINGS */
     $wp_customize->add_section('PREFIJO_social_settings', array(
@@ -21,11 +27,11 @@ function PROYECTO_customize_register( $wp_customize ) {
         'type'           => 'option',
     ));
 
-    $wp_customize->add_control( 'facebook', array(
+    $wp_customize->add_control('facebook', array(
         'type' => 'url',
         'section' => 'PREFIJO_social_settings',
         'settings' => 'PREFIJO_social_settings[facebook]',
-        'label' => __( 'Facebook', 'PROYECTO' ),
+        'label' => __('Facebook', 'PROYECTO'),
     ));
 
     $wp_customize->add_setting('PREFIJO_social_settings[twitter]', array(
@@ -35,11 +41,11 @@ function PROYECTO_customize_register( $wp_customize ) {
         'type'           => 'option',
     ));
 
-    $wp_customize->add_control( 'twitter', array(
+    $wp_customize->add_control('twitter', array(
         'type' => 'url',
         'section' => 'PREFIJO_social_settings',
         'settings' => 'PREFIJO_social_settings[twitter]',
-        'label' => __( 'Twitter', 'PROYECTO' ),
+        'label' => __('Twitter', 'PROYECTO'),
     ));
 
     $wp_customize->add_setting('PREFIJO_social_settings[instagram]', array(
@@ -50,11 +56,11 @@ function PROYECTO_customize_register( $wp_customize ) {
 
     ));
 
-    $wp_customize->add_control( 'instagram', array(
+    $wp_customize->add_control('instagram', array(
         'type' => 'url',
         'section' => 'PREFIJO_social_settings',
         'settings' => 'PREFIJO_social_settings[instagram]',
-        'label' => __( 'Instagram', 'PROYECTO' ),
+        'label' => __('Instagram', 'PROYECTO'),
     ));
 
     $wp_customize->add_setting('PREFIJO_social_settings[linkedin]', array(
@@ -64,11 +70,11 @@ function PROYECTO_customize_register( $wp_customize ) {
         'type'           => 'option',
     ));
 
-    $wp_customize->add_control( 'linkedin', array(
+    $wp_customize->add_control('linkedin', array(
         'type' => 'url',
         'section' => 'PREFIJO_social_settings',
         'settings' => 'PREFIJO_social_settings[linkedin]',
-        'label' => __( 'LinkedIn', 'PROYECTO' ),
+        'label' => __('LinkedIn', 'PROYECTO'),
     ));
 
     $wp_customize->add_setting('PREFIJO_social_settings[youtube]', array(
@@ -79,12 +85,12 @@ function PROYECTO_customize_register( $wp_customize ) {
 
     ));
 
-    $wp_customize->add_control( 'youtube', array(
+    $wp_customize->add_control('youtube', array(
         'type' => 'url',
         'section' => 'PREFIJO_social_settings',
         'settings' => 'PREFIJO_social_settings[youtube]',
-        'label' => __( 'YouTube', 'PROYECTO' ),
-    ) );
+        'label' => __('YouTube', 'PROYECTO'),
+    ));
 
     /* COOKIES SETTINGS */
     $wp_customize->add_section('PREFIJO_cookie_settings', array(
@@ -101,10 +107,10 @@ function PROYECTO_customize_register( $wp_customize ) {
 
     ));
 
-    $wp_customize->add_control( 'cookie_text', array(
+    $wp_customize->add_control('cookie_text', array(
         'type' => 'textarea',
         'label'    => __('Cookie consent', 'PROYECTO'),
-        'description' => __( 'Texto del Cookie consent.' ),
+        'description' => __('Texto del Cookie consent.'),
         'section'  => 'PREFIJO_cookie_settings',
         'settings' => 'PREFIJO_cookie_settings[cookie_text]'
     ));
@@ -117,17 +123,17 @@ function PROYECTO_customize_register( $wp_customize ) {
 
     ));
 
-    $wp_customize->add_control( 'cookie_link', array(
+    $wp_customize->add_control('cookie_link', array(
         'type'     => 'dropdown-pages',
         'section' => 'PREFIJO_cookie_settings',
         'settings' => 'PREFIJO_cookie_settings[cookie_link]',
-        'label' => __( 'Link de Cookies', 'PROYECTO' ),
-    ) );
-
+        'label' => __('Link de Cookies', 'PROYECTO'),
+    ));
 }
 
-function PROYECTO_sanitize_url( $url ) {
-    return esc_url_raw( $url );
+function PROYECTO_sanitize_url($url)
+{
+    return esc_url_raw($url);
 }
 
 /* --------------------------------------------------------------

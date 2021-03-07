@@ -1,5 +1,9 @@
 <?php
-add_action( 'tgmpa_register', 'PROYECTO_register_required_plugins' );
+if (!defined('ABSPATH')) {
+    die('Invalid request.');
+}
+
+add_action('tgmpa_register', 'PROYECTO_register_required_plugins');
 
 /**
  * Register the required plugins for this theme.
@@ -18,7 +22,8 @@ add_action( 'tgmpa_register', 'PROYECTO_register_required_plugins' );
  *
  * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
  */
-function PROYECTO_register_required_plugins() {
+function PROYECTO_register_required_plugins()
+{
     /*
      * Array of plugin arrays. Required keys are name and slug.
      * If the source is NOT from the .org repo, then source is also required.
@@ -41,12 +46,6 @@ function PROYECTO_register_required_plugins() {
             'name'      => 'WordPress Importer',
             'slug'      => 'wordpress-importer',
             'required'  => true,
-        ),
-
-        array(
-            'name'      => 'Jetpack for WordPress',
-            'slug'      => 'jetpack',
-            'required'  => false,
         )
     );
 
@@ -73,11 +72,11 @@ function PROYECTO_register_required_plugins() {
 
 
         'strings'      => array(
-            'page_title'                      => __( 'Instalar Plugins Requeridos', 'PROYECTO' ),
-            'menu_title'                      => __( 'Instalar Plugins', 'PROYECTO' ),
-            'installing'                      => __( 'Instalando Plugin: %s', 'PROYECTO' ),
-            'updating'                        => __( 'Actualizando Plugin: %s', 'PROYECTO' ),
-            'oops'                            => __( 'Ocurrió un error con el API del plugin.', 'PROYECTO' ),
+            'page_title'                      => __('Instalar Plugins Requeridos', 'PROYECTO'),
+            'menu_title'                      => __('Instalar Plugins', 'PROYECTO'),
+            'installing'                      => __('Instalando Plugin: %s', 'PROYECTO'),
+            'updating'                        => __('Actualizando Plugin: %s', 'PROYECTO'),
+            'oops'                            => __('Ocurrió un error con el API del plugin.', 'PROYECTO'),
             'notice_can_install_required'     => _n_noop(
                 'Este tema requiere el siguiente plugin: %1$s.',
                 'Este tema requiere los siguientes plugins: %1$s.',
@@ -123,19 +122,19 @@ function PROYECTO_register_required_plugins() {
                 'Iniciar la activación de los plugins',
                 'PROYECTO'
             ),
-            'return'                          => __( 'Volver al Instalador de plugins requeridos', 'PROYECTO' ),
-            'plugin_activated'                => __( 'Plugin activado con éxito.', 'PROYECTO' ),
-            'activated_successfully'          => __( 'El siguiente plugin ha sido activado exitosamente:', 'PROYECTO' ),
-            'plugin_already_active'           => __( 'No se tomón ninguna acción. El plugin %1$s ya estaba activado.', 'PROYECTO' ),
-            'plugin_needs_higher_version'     => __( 'Plugin no activo. Una versión mas alta de %s es necesaria para este tema. Por favor, actualiza el plugin.', 'PROYECTO' ),
-            'complete'                        => __( 'Todos los plugins han sido instalados y activados exitosamente. %1$s', 'PROYECTO' ),
-            'dismiss'                         => __( 'Ocultar este aviso', 'PROYECTO' ),
-            'notice_cannot_install_activate'  => __( 'Hay uno o más plugins necesarios o recomendados para instalar, actualizar o activar.', 'PROYECTO' ),
-            'contact_admin'                   => __( 'Por favor, contacte con el administrador de este sitio para mas ayuda.', 'PROYECTO' ),
+            'return'                          => __('Volver al Instalador de plugins requeridos', 'PROYECTO'),
+            'plugin_activated'                => __('Plugin activado con éxito.', 'PROYECTO'),
+            'activated_successfully'          => __('El siguiente plugin ha sido activado exitosamente:', 'PROYECTO'),
+            'plugin_already_active'           => __('No se tomón ninguna acción. El plugin %1$s ya estaba activado.', 'PROYECTO'),
+            'plugin_needs_higher_version'     => __('Plugin no activo. Una versión mas alta de %s es necesaria para este tema. Por favor, actualiza el plugin.', 'PROYECTO'),
+            'complete'                        => __('Todos los plugins han sido instalados y activados exitosamente. %1$s', 'PROYECTO'),
+            'dismiss'                         => __('Ocultar este aviso', 'PROYECTO'),
+            'notice_cannot_install_activate'  => __('Hay uno o más plugins necesarios o recomendados para instalar, actualizar o activar.', 'PROYECTO'),
+            'contact_admin'                   => __('Por favor, contacte con el administrador de este sitio para mas ayuda.', 'PROYECTO'),
 
             'nag_type'                        => 'notice-info', // Determines admin notice type - can only be one of the typical WP notice classes, such as 'updated', 'update-nag', 'notice-warning', 'notice-info' or 'error'. Some of which may not work as expected in older WP versions.
         ),
     );
 
-    tgmpa( $plugins, $config );
+    tgmpa($plugins, $config);
 }

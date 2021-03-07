@@ -1,7 +1,7 @@
 /* CUSTOM ON LOAD FUNCTIONS */
-function documentCustomLoad() {
+function proyectoCustomLoad() {
     "use strict";
     console.log('Functions Correctly Loaded');
 }
 
-document.addEventListener("DOMContentLoaded", documentCustomLoad, false);
+document.addEventListener("DOMContentLoaded", proyectoCustomLoad, false);

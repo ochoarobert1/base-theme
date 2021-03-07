@@ -17,6 +17,10 @@
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die( 'Invalid request.' );
+}
+
 // Check if Class Exists.
 if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 	/**

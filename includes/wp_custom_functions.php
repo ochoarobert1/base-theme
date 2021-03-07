@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die( 'Invalid request.' );
+}
+
 /* --------------------------------------------------------------
     ADD THEME SUPPORT
 -------------------------------------------------------------- */
@@ -136,6 +140,6 @@ function dashboard_footer() {
     _e ('Gracias por crear con ', 'PROYECTO' );
     echo '<a href="http://wordpress.org/" target="_blank">WordPress.</a> - ';
     _e ('Tema desarrollado por ', 'PROYECTO' );
-    echo '<a href="http://robertochoa.com.ve/?utm_source=footer_admin&utm_medium=link&utm_content=PROYECTO" target="_blank">Robert Ochoa</a></span>';
+    echo '<a href="http://robertochoaweb.com/?utm_source=footer_admin&utm_medium=link&utm_content=PROYECTO" target="_blank">Robert Ochoa</a></span>';
 }
 add_filter('admin_footer_text', 'dashboard_footer');

@@ -1,4 +1,9 @@
 <?php
+
+if (!defined('ABSPATH')) {
+	die('Invalid request.');
+}
+
 /*
 function PROYECTO_custom_post_type() {
 
