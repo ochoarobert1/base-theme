@@ -10,16 +10,12 @@ function proyecto_load_scripts()
         if ($_SERVER['REMOTE_ADDR'] == '::1') {
 
             /*- BOOTSTRAP ON LOCAL  -*/
-            wp_register_script('bootstrap-bundle', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array('jquery'), '4.5.3', true);
+            wp_register_script('bootstrap-bundle', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array('jquery'), '5.0.2', true);
             wp_enqueue_script('bootstrap-bundle');
 
-            /*- JQUERY STICKY ON LOCAL  -*/
-            //wp_register_script('sticky', get_template_directory_uri() . '/js/jquery.sticky.js', array('jquery'), '1.0.4', true);
+            /*- STICKY ON LOCAL  -*/
+            //wp_register_script('sticky', get_template_directory_uri() . '/js/sticky.min.js', array('jquery'), '1.3.0', true);
             //wp_enqueue_script('sticky');
-
-            /*- LETTERING  -*/
-            //wp_register_script('lettering', get_template_directory_uri() . '/js/jquery.lettering.js', array('jquery'), '0.7.0', true);
-            //wp_enqueue_script('lettering');
 
             /*- AOS ON LOCAL -*/
             //wp_register_script('aos-js', get_template_directory_uri() . '/js/aos.js', array('jquery'), '3.0.0', true);
@@ -28,25 +24,20 @@ function proyecto_load_scripts()
         } else {
 
             /*- BOOTSTRAP -*/
-            wp_register_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js', array('jquery'), '4.5.3', true);
+            wp_register_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', array('jquery'), '5.0.2', true);
             wp_enqueue_script('bootstrap');
 
-            /*- JQUERY STICKY -*/
-            //wp_register_script('sticky', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js', array('jquery'), '1.0.4', true);
+            /*- STICKY -*/
+            //wp_register_script('sticky', 'https://cdnjs.cloudflare.com/ajax/libs/sticky-js/1.3.0/sticky.min.js', array('jquery'), '1.3.0', true);
             //wp_enqueue_script('sticky');
-
-            /*- LETTERING  -*/
-            //wp_register_script('lettering', 'https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js', array('jquery'), '0.7.0', true);
-            //wp_enqueue_script('lettering');
 
             /*- AOS -*/
             //wp_register_script('aos-js', 'https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js', array('jquery'), '2.3.4', true);
             //wp_enqueue_script('aos-js');
-
         }
 
         /*- SWIPER JS -*/
-        //wp_register_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array('jquery'), '6.1.2', true);
+        //wp_register_script('swiper-js', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.5/swiper-bundle.min.js', array('jquery'), '6.7.5', true);
         //wp_enqueue_script('swiper-js');
 
         /*- MAIN FUNCTIONS -*/
